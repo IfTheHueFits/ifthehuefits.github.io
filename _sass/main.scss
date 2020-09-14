@@ -1,3 +1,15 @@
 .current {
   color: green;
 }
+
+body{
+    display: flex;
+    height: 1000px;
+    margin: 0, 0;
+}
+
+.side_bar{
+    display: block;
+    background-image: url(../../assets/images/paint.jpg);
+    height: 100%;
+}
