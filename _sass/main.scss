@@ -1,26 +1,37 @@
-html {
-    height: 100%;
+$side_width : 20vw;
+
+.nav_button {
+    bottom: 0;
+    border: 1px solid coral;
+    text_align: center;
 }
 
 .current {
   color: green;
 }
 
-body{
+body {
+    margin: 0;
     display: flex;
 }
 
 .side_bar{
-    display: block;
+    display: flex;
+    flex-direction:  row;
     background-image: url(../../assets/images/paint.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
     height: 100vh;
-    width: 30%;
+    width: $side_width;
     position: fixed;
+    justify-items: center;
+    align-items: flex-end;
 }
 
 .main_window{
-    margin-left: 30%
+    margin-left: $side_width + 2;
+    margin-right: 2vw;
+    max-width: 100vw;
+    overflow: hidden;
 }
