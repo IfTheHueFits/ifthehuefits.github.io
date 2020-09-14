@@ -3,21 +3,27 @@ $side_width : 20vw;
 nav {
     border: 1px solid aqua;
     margin-bottom: 10vh;
-    width: 100px;
+    width: 300px;
+    text-align: center;
 }
 
 .nav_button {
     bottom: 0;
     border: 1px solid coral;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .socials {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .social_icon {
     width: 40px;
+    margin: 5px 5px;
 }
 
 .current {
@@ -26,7 +32,6 @@ nav {
 
 body {
     margin: 0;
-    display: flex;
 }
 
 .side_bar{
