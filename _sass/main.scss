@@ -1,9 +1,23 @@
 $side_width : 20vw;
 
+nav {
+    border: 1px solid aqua;
+    margin-bottom: 10vh;
+    width: 100px;
+}
+
 .nav_button {
     bottom: 0;
     border: 1px solid coral;
-    text_align: center;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.social_icon {
+    width: 40px;
 }
 
 .current {
@@ -25,7 +39,7 @@ body {
     height: 100vh;
     width: $side_width;
     position: fixed;
-    justify-items: center;
+    justify-content: center;
     align-items: flex-end;
 }
 

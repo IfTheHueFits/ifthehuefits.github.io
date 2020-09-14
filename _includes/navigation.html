@@ -4,4 +4,13 @@
 		<a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
 	</div>
 	{% endfor %}
+	
+	<div class="socials">
+		{% for item in site.data.socials %}
+		<a href="{{item.link}}" class="social_icon">
+			<img src="/assets/images/icons/{{item.name}}.svg" alt="{{item.name}} icon"></img>
+		</a>
+		{% endfor %}
+	</div>
 </nav>
+
