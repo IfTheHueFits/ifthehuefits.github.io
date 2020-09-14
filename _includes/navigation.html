@@ -1,10 +1,12 @@
 <nav>
 	{% for item in site.data.navigation %}
 	<div class="nav_button">
-		<a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+		<a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+			{{ item.name }}
+		</a>
 	</div>
 	{% endfor %}
-	
+
 	<div class="socials">
 		{% for item in site.data.socials %}
 		<a href="{{item.link}}" class="social_icon">
