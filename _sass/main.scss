@@ -32,7 +32,6 @@ body {
     width: $side_width;
     position: fixed;
     justify-content: flex-end;
-    // align-items: flex-end;
     padding: 0 40px;
     box-sizing: border-box;
 }
@@ -47,8 +46,9 @@ body {
 }
 
 .main_window{
-    margin-left: $side_width + 2;
-    margin-right: 2vw;
+    margin-left: $side_width;
+    padding: 10px 0px 10px 40px;
+    margin-right: 40px;
     max-width: 100vw;
     overflow: hidden;
 }
