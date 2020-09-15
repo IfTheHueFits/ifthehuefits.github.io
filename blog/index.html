@@ -6,10 +6,12 @@ subheading: Keep up to date with the latest news on the blog.
 <h1>Latest Posts</h1>
 
 {% for post in paginator.posts %}
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		{{ post.excerpt }}
+		{% assign post_data = post %}
+		{% assign post_content = post.excerpt %}
+		{% include post_wrap.html %}
 		<p><a href="{{ post.url }}"> More after the jump...</a></p>
 		<hr>
+
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
