@@ -1,0 +1,38 @@
+nav {
+    border: 1px solid aqua;
+    margin-bottom: 10vh;
+    // width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav_button {
+	bottom: 0;
+	border: 1px solid coral;
+	width: 50px;
+	// margin-left: auto;
+	// margin-right: auto;
+	margin-bottom: 10px;
+}
+
+.nav_button a{
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    color: darkgray;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+}
+
+.social_icon {
+    width: 40px;
+    margin: 5px 5px;
+}
+
+.nav_button .current {
+  color: white;
+}
