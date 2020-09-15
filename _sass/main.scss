@@ -1,7 +1,7 @@
 $side_width : 20vw;
 
-@import fonts;
-@import navigation;
+@import './fonts';
+@import './navigation';
 
 h1{
     font-family: 'Merriweather', serif;
@@ -23,7 +23,7 @@ body {
 
 .side_bar{
     display: flex;
-    flex-direction:  row;
+    flex-direction:  column;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../../assets/images/paint.jpg);
     background-repeat: none;
     background-size: cover;
@@ -31,8 +31,21 @@ body {
     height: 100vh;
     width: $side_width;
     position: fixed;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    // align-items: flex-end;
+}
+
+.side_bar h1{
+    margin-left: 40px;
+    margin-right: 40px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.side_bar p{
+    margin-left: 40px;
+    margin-right: 40px;
+    color: lightgray;
 }
 
 .main_window{
