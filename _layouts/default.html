@@ -9,17 +9,22 @@
 	</head>
 	<body>
 		<div class="side_bar">
-			<h1>
-				{{page.title}}
-			</h1>
-			<p>
-				{{page.subheading}}
-			</p>
+			<div id="swup" class="transition-fade">
+				<h1>
+					{{page.title}}
+				</h1>
+				<p>
+					{{page.subheading}}
+				</p>
+			</div>
 
 			{% include navigation.html %}
 		</div>
-		<div class="main_window">
+		<main id="swup" class="main_window transition-fade">
 			{{ content }}
-		</div>
+		</main>
+
+	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+	<script src="/assets/js/script.js"></script>
 	</body>
 </html>

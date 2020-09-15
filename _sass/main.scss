@@ -32,7 +32,7 @@ body {
 .side_bar{
     display: flex;
     flex-direction:  column;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../../assets/images/paint.jpg);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../../assets/images/splash.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
@@ -53,7 +53,7 @@ body {
     color: lightgray;
 }
 
-.main_window{
+main{
     margin-left: $side_width;
     padding: 10px 0px 10px $content_margin;
     margin-right: $content_margin;
@@ -71,4 +71,15 @@ img {
 hr {
     border: 1px solid darkgrey;
     width: auto;
+}
+
+// For object leaving
+.transition-fade {
+  opacity: 1;
+  transition: 250ms;
+}
+
+// For object entering, start invisible
+html.is-animating .transition-fade {
+  opacity: 0;
 }
