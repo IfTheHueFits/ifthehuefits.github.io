@@ -8,4 +8,6 @@ subheading: Keep up to date with the latest news on the blog.
 {% for post in site.posts %}
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 		{{ post.excerpt }}
+		<p><a href="{{ post.url }}"> More after the jump...</a></p>
+		<hr>
 {% endfor %}

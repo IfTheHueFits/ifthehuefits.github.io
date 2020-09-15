@@ -1,14 +1,22 @@
 $side_width : 20vw;
+$content_margin : 100px;
 
 @import './fonts';
 @import './navigation';
 
 h1{
     font-family: 'Merriweather', serif;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
 }
 
 p {
     font-family: 'Mulish', sans-serif;
+    font-size: 18px;
 }
 
 a {
@@ -47,8 +55,20 @@ body {
 
 .main_window{
     margin-left: $side_width;
-    padding: 10px 0px 10px 40px;
-    margin-right: 40px;
+    padding: 10px 0px 10px $content_margin;
+    margin-right: $content_margin;
     max-width: 100vw;
     overflow: hidden;
+}
+
+img {
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+hr {
+    border: 1px solid darkgrey;
+    width: auto;
 }
