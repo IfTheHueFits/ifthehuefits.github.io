@@ -1,11 +1,26 @@
 $side_width : 20vw;
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish&display=swap');
+
 nav {
     border: 1px solid aqua;
     margin-bottom: 10vh;
     width: 300px;
     text-align: center;
 }
+
+h1{
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-family: 'Mulish', sans-serif;
+}
+
+a{
+    font-family: 'Mulish', sans-serif;
+}
+
 
 .nav_button {
     bottom: 0;
@@ -37,7 +52,7 @@ body {
 .side_bar{
     display: flex;
     flex-direction:  row;
-    background-image: url(../../assets/images/paint.jpg);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../../assets/images/paint.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
