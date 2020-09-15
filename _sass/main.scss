@@ -33,18 +33,16 @@ body {
     position: fixed;
     justify-content: flex-end;
     // align-items: flex-end;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .side_bar h1{
-    margin-left: 40px;
-    margin-right: 40px;
     color: white;
     margin-bottom: 0;
 }
 
 .side_bar p{
-    margin-left: 40px;
-    margin-right: 40px;
     color: lightgray;
 }
 
