@@ -1,0 +1,12 @@
+<h1><a href="{{ post_data.url }}">{{ post_data.title }}</a></h1>
+
+
+<p>
+	{{ post_data.date | date_to_string }}
+	{% assign author = site.authors | where: 'short_name', post_data.author | first %}
+	{% if author %}
+		- <a href="{{ author.url }}">{{ author.name }}</a>
+	{% endif %}
+</p>
+
+{{ post_content }}
