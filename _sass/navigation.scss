@@ -15,6 +15,11 @@ nav {
     color: lightgrey;
 }
 
+.nav_button a:hover{
+    color: white;
+    transition: 500ms;
+}
+
 .socials {
     display: flex;
     flex-direction: row;
