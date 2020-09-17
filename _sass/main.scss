@@ -4,6 +4,7 @@ $content_margin : 100px;
 @import './fonts';
 @import './navigation';
 @import './post_wrap';
+@import './lightbox';
 
 h1{
     font-family: 'Merriweather', serif;
@@ -62,11 +63,20 @@ main{
     overflow: hidden;
 }
 
-img {
-    max-height: 300px;
+.main_window img {
+    width: 30vw;
+    min-width: 400px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.main_window img {
+    transition: opacity .3s ease-in-out;
+}
+
+.main_window img:hover {
+    opacity: .75;
 }
 
 hr {
