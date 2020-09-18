@@ -1,0 +1,15 @@
+Responsive design:
+- Side bar moves to top and stays fixed
+
+Photo displaying:
+- Carousel forms in lightbox when image is selected
+- Sort out gallery to make sure that website doesn't slow down massively
+
+Blog posts:
+- Nicer buttons to transition between each page and expand a post
+- Fix the side bar title fading in and out when it stays the same
+- Add some form of comments/ engagement
+
+About page:
+- Add information with contact form on this page.
+- Information on how the website was made and reporting bugs.
