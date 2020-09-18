@@ -23,6 +23,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll_picture_tag
 
 excerpt_separator: <!--more-->
 

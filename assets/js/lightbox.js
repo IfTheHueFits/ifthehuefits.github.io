@@ -22,9 +22,17 @@ function lightboxClick(event) {
             lightboxImg.src = this.src;
         }
 
-        lightboxImg.src = '';
         newImg.src = elem.getAttribute('data-lightbox');
         lightbox.classList.add('visible');
+    }
+
+    else if (elem.tagName == "IMG") {
+        newImg.onload = function() {
+            lightboxImg.src = this.src;
+        }
+        newImg.src = elem.getAttribute('src');
+        lightbox.classList.add('visible');
+
     }
 
     // If we click any of these 2 elements, close the lightbox
