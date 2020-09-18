@@ -11,7 +11,7 @@
 	<div class="socials">
 		{% for item in site.data.socials %}
 		<a href="{{item.link}}" class="social_icon">
-			<img src="/assets/images/icons/{{item.name}}.svg" alt="{{item.name}} icon"></img>
+			{% include icons/{{item.name}}.svg %}
 		</a>
 		{% endfor %}
 	</div>
