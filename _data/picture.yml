@@ -3,7 +3,7 @@ presets:
     smaller:
         markup: img
         formats: [original]
-        widths: [400, 600, 732]
+        widths: [20, 250, 400, 600, 732]
         fallback_width: 732
         fallback_format: original
         noscript: false
@@ -16,7 +16,7 @@ presets:
     default:
         markup: img
         formats: [original]
-        widths: [400, 600, 800, 1000]
+        widths: [20, 250, 400, 600, 800, 1000]
         fallback_width: 800
         fallback_format: original
         noscript: false

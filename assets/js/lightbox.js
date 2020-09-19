@@ -13,6 +13,8 @@ function lightboxClick(event) {
         lightboxImg = document.getElementById('lightbox-image'),
         lightbox = document.getElementById("lightbox-overlay"),
         newImg = new Image();
+        fp = '';
+        extension = '';
 
     // If we click an element with the attribute "data-lightbox", show the lightbox
     if (elem.hasAttribute('data-lightbox')) {
@@ -30,7 +32,12 @@ function lightboxClick(event) {
         newImg.onload = function() {
             lightboxImg.src = this.src;
         }
-        newImg.src = elem.getAttribute('src');
+
+        fp = elem.getAttribute('src').split('/').slice(-1)[0];
+        extension = fp.split('.').slice(-1)[0];
+        fp = '/assets/images/' + fp.split('-')[0] + '.' + extension;
+
+        newImg.src = fp;
         lightbox.classList.add('visible');
 
     }
