@@ -75,6 +75,10 @@ main{
     transition: opacity .3s ease-in-out;
 }
 
+.pig-figure img {
+    min-width: 0;
+}
+
 .main_window img:hover {
     opacity: .75;
 }
