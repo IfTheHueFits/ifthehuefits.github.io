@@ -1,11 +1,7 @@
-nav {
-    margin-bottom: 10vh;
-}
-
 .nav_button {
 	bottom: 0;
 	width: 50px;
-	margin-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 .nav_button a{
@@ -24,11 +20,7 @@ nav {
 .socials {
     display: flex;
     flex-direction: row;
-}
-
-.social_icon {
-    width: 40px;
-    margin: 5px 5px;
+    width: 135px;
 }
 
 .nav_button .current {
@@ -36,6 +28,8 @@ nav {
 }
 
 svg {
+    width: 40px;
+    margin: 5px 5px;
     fill: lightgrey;
     transition: 500ms;
 }
@@ -45,8 +39,18 @@ svg:hover {
     transition: 500ms;
 }
 
+.mobile {
+    display: none;
+    width: 40px;
+    margin: 5px 5px;
+}
+
 @media (max-width: 799px) {
     nav {
         display: none;
+    }
+
+    .mobile{
+        display: block;
     }
 }
