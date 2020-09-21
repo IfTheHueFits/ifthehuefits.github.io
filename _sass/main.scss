@@ -39,17 +39,17 @@ body {
     background-repeat: none;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     width: $side_width;
     position: fixed;
     justify-content: flex-end;
-    padding: 0 40px;
+    padding: 40px;
     box-sizing: border-box;
 }
 
 .side_bar h1{
     color: white;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .side_bar p{
@@ -109,8 +109,16 @@ html.is-animating .transition-fade {
 
 .side_bar {
     position: relative;
+    flex-direction: row;
     width: 100vw;
     height: auto;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.side_bar h1{
+    color: white;
+    margin-top: 10px;
 }
 
 main {

@@ -8,6 +8,7 @@
     left: 0;
     background-color: rgba(29, 31, 33, .95);
     transition: opacity .3s ease-in;
+    padding: 20px;
 }
 
     #lightbox-overlay.visible {
@@ -16,12 +17,19 @@
     }
 
 #lightbox-image {
+    display: none;
     max-height: 90%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     max-width: 90%;
-    // background: transparent url("images/loading.gif") 50% 50% no-repeat;
-    text-indent: -99999px;
+}
+
+#lightbox-overlay .mobile {
+    display: none;
+}
+
+#lightbox-overlay nav {
+    display: none;
 }
