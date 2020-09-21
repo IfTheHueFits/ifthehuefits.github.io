@@ -1,5 +1,6 @@
 $side_width : 30vw;
 $content_margin : 100px;
+$mobile_content_margin: 20px;
 
 @import './fonts';
 @import './navigation';
@@ -64,8 +65,8 @@ main{
 }
 
 .main_window img {
-    width: 30vw;
-    min-width: 400px;
+    width: 100%;
+    // min-width: 400px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -77,6 +78,10 @@ main{
 
 .pig-figure img {
     min-width: 0;
+}
+
+#pig img:hover {
+    opacity: .5;
 }
 
 .main_window img:hover {
@@ -97,4 +102,26 @@ hr {
 // For object entering, start invisible
 html.is-animating .transition-fade {
   opacity: 0;
+}
+
+// Tablet View
+@media (max-width: 799px) {
+
+.side_bar {
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+main {
+    margin-left: $mobile_content_margin;
+    margin-right: $mobile_content_margin;
+    padding: 10px 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 }
