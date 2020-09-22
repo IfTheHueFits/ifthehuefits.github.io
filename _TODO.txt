@@ -1,9 +1,9 @@
 Responsive design:
-- Side bar moves to top and stays fixed
+- Side bar moves to top and stays fixed DONE
 
 Photo displaying:
 - Carousel forms in lightbox when image is selected
-- Sort out gallery to make sure that website doesn't slow down massively
+- Sort out gallery to make sure that website doesn't slow down massively DONE
 
 Blog posts:
 - Nicer buttons to transition between each page and expand a post

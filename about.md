@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+subheading: Who's this handsome fella? And what's this all about?
 ---
 # About page
 

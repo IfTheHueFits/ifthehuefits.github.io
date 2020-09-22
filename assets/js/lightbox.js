@@ -20,6 +20,7 @@ function lightboxClick(event) {
 	if (elemID == 'lightbox-image' || elemID == 'lightbox-overlay' || elem.tagName == "NAV") {
 		event.preventDefault();
 
+		lightboxImg.src = "";	// stops old image flashing up when selecting new one
 		lightbox.classList.remove('visible');
 		lightboxImg.style.display = "none";
 		lightbox.getElementsByTagName("NAV")[0].style.display = "none";
