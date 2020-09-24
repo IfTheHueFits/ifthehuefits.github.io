@@ -1,3 +1,6 @@
+---
+layout: none
+---
 const swup = new Swup()
 
 function getGalleryData() {
@@ -13,6 +16,10 @@ function init(){
 			urlForSize: function(filename, size, hash) {
 					return 'generated/assets/images/' + filename + '-' + size + '-' + hash + '.jpg';
 				},
+
+			sizes: [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}].sort(function(a,b) {return a-b;}),
+
+			scroller: document.getElementsByClassName("main_window")[0]
 		};
 
 		getGalleryData().then( function(response){
