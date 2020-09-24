@@ -16,7 +16,7 @@ presets:
     default:
         markup: img
         formats: [original]
-        widths: [20, 250, 400, 600, 800, 1000]
+        widths: [20, 100, 250, 400, 600, 800, 1000]
         fallback_width: 800
         fallback_format: original
         noscript: false
