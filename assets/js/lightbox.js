@@ -47,8 +47,8 @@ function lightboxClick(event) {
 		extension = fp.split('.').slice(-1)[0];
 		fp = fp.replace(/-[0-9]+-[0-9a-f]{9}\.(je?pg|png|gif)/, '');
 
-		if (fp.includes('generated')){
-			fp = fp.replace('generated', '');
+		if (fp.includes('generated/')){
+			fp = fp.replace('generated/', '');
 		}
 
 		newImg.src = fp + '.' + extension;

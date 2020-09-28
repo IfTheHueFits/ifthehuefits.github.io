@@ -25,6 +25,7 @@ function init(){
 		getGalleryData().then( function(response){
 			imageData = response;
 			pig = new Pig(imageData, options).enable();
+			pig.enable();
 		});
 	}
 }
