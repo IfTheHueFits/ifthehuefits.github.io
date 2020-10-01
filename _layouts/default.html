@@ -13,11 +13,17 @@
 			<a href="/" class="logo">
 				{% include icons/logo_text.svg %}
 			</a>
-			<div>
-				<div id="swup" class="transition-fade">
-					<h1>
-						{{page.title}}
-					</h1>
+			<div class="side_content">
+				<div id="swup" class="transition-fade side_heading">
+					<div class="banner">
+						<h1>
+							{{page.title}}
+						</h1>
+
+						<div class="mobile">
+							{% include icons/burger_menu.svg %}
+						</div>
+					</div>
 					<p>
 						{{page.subheading}}
 					</p>
