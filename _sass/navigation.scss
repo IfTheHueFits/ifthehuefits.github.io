@@ -1,7 +1,14 @@
+nav {
+	text-align: center;
+
+}
+
 .nav_button {
 	bottom: 0;
 	width: 50px;
 	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav_button a{
@@ -20,7 +27,9 @@
 .socials {
     display: flex;
     flex-direction: row;
-    width: 135px;
+    width: 150px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav_button .current {
