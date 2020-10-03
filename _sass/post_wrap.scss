@@ -1,6 +1,9 @@
 $indent: 15%;
 $wide_indent: 25%;
 
+.heading{
+	margin-bottom: 20px;
+}
 
 h1 a {
 	text-decoration: none;
@@ -49,28 +52,37 @@ main p, li {
 }
 
 
-a {
+a, span {
 	font-family: 'Merriweather', serif;
 	text_decoration: none;
 	color: black;
+	font-size: 1em;
 }
 
 main h1, h2, .post_data, li{
 	margin: 10px $wide_indent;
 }
 
+hr {
+	margin: 10px 20%;
+}
+
 @media (max-width: $standard_screen) {
-	main h1, h2, .post_data, li{
+	main h1, .post_data, li{
+		margin: 10px $indent;
+	}
+
+	h2 {
 		margin: 20px $indent;
 	}
 
-	main p {
+	main p, hr, .pagination{
 		margin: 10px 10%;
 	}
 }
 
 @media (max-width: $tablet){
-	main h1, main p, h2, li, .post_data{
+	main h1, main p, h2, li, .post_data, hr, .pagination{
 		margin: 10px 5%;
 	}
 }
