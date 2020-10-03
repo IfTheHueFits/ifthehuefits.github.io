@@ -1,9 +1,76 @@
+$indent: 15%;
+$wide_indent: 25%;
+
+
 h1 a {
 	text-decoration: none;
 	transition: 500ms;
+	color: #2a2f36;
 }
 
 h1 a:hover{
 	color: grey;
 	transition: 500ms;
+}
+
+.post_data {
+	color: grey;
+}
+
+.post_data  > a{
+	color: grey;
+	transition: 500ms;
+}
+
+.post_data  > a:hover{
+	color: lightgrey;
+	transition: 500ms;
+}
+
+
+main h1{
+	font-family: 'Merriweather', serif;
+	font-size: 2.5em;
+	color: #2a2f36;
+}
+
+h2 {
+	font-family: 'Merriweather', serif;
+	font-size: 1.5em;
+	color: #2a2f36;
+}
+
+main p, li {
+	font-family: 'Mulish', sans-serif;
+	font-size: 1.125em;
+	line-height: 1.4;
+	color: #2a2f36;
+	margin: 10px 20%;
+}
+
+
+a {
+	font-family: 'Merriweather', serif;
+	text_decoration: none;
+	color: black;
+}
+
+main h1, h2, .post_data, li{
+	margin: 10px $wide_indent;
+}
+
+@media (max-width: $standard_screen) {
+	main h1, h2, .post_data, li{
+		margin: 20px $indent;
+	}
+
+	main p {
+		margin: 10px 10%;
+	}
+}
+
+@media (max-width: $tablet){
+	main h1, main p, h2, li, .post_data{
+		margin: 10px 5%;
+	}
 }

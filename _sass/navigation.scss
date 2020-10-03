@@ -54,7 +54,7 @@ svg:hover {
     margin: 5px 5px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $tablet) {
     nav {
         display: none;
     }
