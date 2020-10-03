@@ -2,9 +2,8 @@
 layout: post
 author: jill
 head_img: /assets/images/apples.jpg
+heading: Is this thing on?
 ---
-
-# Is this thing on?
 
 Well hey there, thanks for dropping in, and welcome to the inaugural post on Toil & Stubble! I'm Ollie the blog's creator and I hope this site can act a a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold not illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at Tale of Painters.
 
@@ -13,10 +12,11 @@ Well hey there, thanks for dropping in, and welcome to the inaugural post on Toi
 ## What can I expect?
 
 Hopefully this blog will contain a myriad of articles that might pique your interest, including (but not limited too):
-	- Works in Progress/ Showcases of my latest projects to help give me the motivation to reduce my pile of shame.
-	- Tutorials on certain models that you guys like, or things that I know I struggled with when I was first starting out.
-	- Reviews, not necessarily on anything newly released, but on anything I may have bought without knowing much about it in the hope it may help you avoid making the same mistakes or promote great new discoveries!
-	- Editorials, or just random articles on anything from what may be in my painting box, updates to the webiste or great gaming discoveries that I have found.
+
+- Works in Progress/ Showcases of my latest projects to help give me the motivation to reduce my pile of shame.
+- Tutorials on certain models that you guys like, or things that I know I struggled with when I was first starting out.
+- Reviews, not necessarily on anything newly released, but on anything I may have bought without knowing much about it in the hope it may help you avoid making the same mistakes or promote great new discoveries!
+- Editorials, or just random articles on anything from what may be in my painting box, updates to the webiste or great gaming discoveries that I have found.
 
 If those things sound up your street then stick around, follow me on the socials and I look forward to going on this journey with you.
 

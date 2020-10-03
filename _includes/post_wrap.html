@@ -1,14 +1,13 @@
 <!-- Wraps the content with an appropriate header with a title, date and authors
 formatted at the top before begginning the post_content -->
 
-<h1><a href="{{ post_data.url }}">{{ post_data.title }}</a></h1>
-
-<p>
-	{{ post_data.date | date_to_string }}
-	{% assign author = site.authors | where: 'short_name', post_data.author | first %}
+<h1><a href="{{ include.post_data.url }}">{{ include.post_data.title }}</a></h1>
+<p class="post_data">
+	{{ include.post_data.date | date_to_string }}
+	{% assign author = site.authors | where: 'short_name', include.post_data.author | first %}
 	{% if author %}
 		- <a href="{{ author.url }}">{{ author.name }}</a>
 	{% endif %}
 </p>
 
-{{ post_content }}
+{{ include.post_content }}
