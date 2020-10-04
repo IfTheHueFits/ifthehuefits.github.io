@@ -85,21 +85,17 @@ main{
     transition: opacity .3s ease-in-out;
 }
 
-.pig-figure img {
-    min-width: 0;
+.main_window img:hover {
+    opacity: .75;
 }
 
 #pig img:hover {
     opacity: .5;
 }
 
-.main_window img:hover {
-    opacity: .75;
-}
-
-hr {
-    border: 1px solid darkgrey;
-    width: auto;
+#pig {
+    width: 80%;
+    margin: 10px auto;
 }
 
 // For object leaving
