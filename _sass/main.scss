@@ -5,7 +5,7 @@ $mobile_content_margin: 20px;
 $tablet: 1024px;
 $standard_screen: 1600px;
 
-// @import './reset.scss';
+@import './reset.scss';
 @import './fonts';
 @import './navigation';
 @import './post_wrap';
@@ -67,15 +67,12 @@ body {
 main{
     margin-left: $wide_side_width;
     padding: 10px 0;
-    // padding: 10px 0px 10px $content_margin;
-    // margin-right: $content_margin;
     max-width: 100vw;
     overflow: hidden;
 }
 
 .main_window img {
     width: 100%;
-    // min-width: 400px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -159,8 +156,7 @@ html.is-animating .transition-fade {
     }
 
     main {
-        margin-left: $mobile_content_margin;
-        margin-right: $mobile_content_margin;
+        margin: 0;
         padding: 10px 0;
     }
 
@@ -191,7 +187,6 @@ html.is-animating .transition-fade {
     }
 
     .side_bar p{
-        // color: lightgray;
         margin: 0;
         text-align: left;
     }
