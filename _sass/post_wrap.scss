@@ -63,8 +63,14 @@ main h1, h2, .post_data, li{
 	margin: 10px $wide_indent;
 }
 
+
 hr {
-	margin: 10px 20%;
+    border: 1px solid darkgrey;
+    width: auto;
+}
+
+hr, .pagination {
+	margin: 30px 20%;
 }
 
 @media (max-width: $standard_screen) {
@@ -78,6 +84,10 @@ hr {
 
 	main p, hr, .pagination{
 		margin: 10px 10%;
+	}
+
+	hr, .pagination {
+		margin: 30px 10%;
 	}
 }
 

@@ -28,7 +28,7 @@ plugins:
 excerpt_separator: <!--more-->
 
 paginate: 2
-paginate_path: "blog/page:num/"
+paginate_path: "page:num/"
 
 sass:
     style: compressed

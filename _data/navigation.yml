@@ -2,8 +2,6 @@
   link: /
 - name: About
   link: /about.html
-- name: Blog
-  link: /blog/
 - name: Staff
   link: /staff.html
 - name: Gallery

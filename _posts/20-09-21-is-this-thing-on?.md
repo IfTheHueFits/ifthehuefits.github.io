@@ -1,6 +1,6 @@
 ---
 layout: post
-author: jill
+author: ollie
 head_img: /assets/images/apples.jpg
 heading: Is this thing on?
 ---
