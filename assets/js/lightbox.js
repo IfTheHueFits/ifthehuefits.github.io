@@ -45,7 +45,8 @@ function lightboxClick(event) {
 
 		fp = elem.getAttribute('src')
 		extension = fp.split('.').slice(-1)[0];
-		fp = fp.replace(/-[0-9]+-[0-9a-f]{9}\.(je?pg|png|gif)/, '');
+		fp = fp.replace(/(-[0-9]+-[0-9a-f]{9})?\.(je?pg|png|gif)/, '');
+		console.log(fp);
 
 		if (fp.includes('generated/')){
 			fp = fp.replace('generated/', '');
