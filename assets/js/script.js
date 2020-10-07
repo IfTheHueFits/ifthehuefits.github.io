@@ -8,7 +8,13 @@ function getGalleryData() {
 	return $.getJSON("assets/js/pictures.json")
 }
 
+function topFunction() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 function init(){
+	topFunction();
 	if (document.querySelector("#pig")){
 		var imageData;
 		var pig;
@@ -27,6 +33,14 @@ function init(){
 			pig = new Pig(imageData, options).enable();
 			pig.enable();
 		});
+	}
+
+	if (document.querySelector("aside")){
+		var aside_element = document.querySelector("aside");
+		document.querySelector(".side_bar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)),url(" + aside_element.id + ")"
+	}
+	else {
+		document.querySelector(".side_bar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(/assets/images/splash.jpg)"
 	}
 }
 

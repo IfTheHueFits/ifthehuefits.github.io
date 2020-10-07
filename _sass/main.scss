@@ -36,7 +36,7 @@ body {
 .side_bar{
     display: flex;
     flex-direction:  column;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../../assets/images/splash.jpg);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(/assets/images/splash.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
@@ -46,6 +46,7 @@ body {
     justify-content: space-between;
     padding: 40px;
     box-sizing: border-box;
+    transition: 500ms;
 }
 
 .side_bar h1{
