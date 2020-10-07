@@ -1,13 +1,13 @@
 ---
 layout: post
 author: ollie
-head_img: /assets/images/apples.jpg
+head_img: /assets/images/warhammer/canoptek_spyder_5.jpg
 heading: Is this thing on?
 categories: Editorial
 ---
-![Kiwi](/assets/images/kiwi.jpg)
+![Canoptek Spyder](/assets/images/warhammer/canoptek_spyder_4.jpg)
 
-Well hey there, thanks for dropping in, and welcome to the inaugural post on Toil & Stubble! I'm Ollie the blog's creator and I hope this site can act a a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold not illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at Tale of Painters.
+Well hey there, thanks for dropping in, and welcome to the inaugural post on In the Hue Fits! I'm Ollie the blog's creator and I hope this site can act a a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold not illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at Tale of Painters.
 
 <!--more-->
 
