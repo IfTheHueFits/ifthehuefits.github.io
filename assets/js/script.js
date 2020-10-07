@@ -35,13 +35,13 @@ function init(){
 		});
 	}
 
-	if (document.querySelector("aside")){
-		var aside_element = document.querySelector("aside");
-		document.querySelector(".side_bar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)),url(" + aside_element.id + ")"
-	}
-	else {
-		document.querySelector(".side_bar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(/assets/images/splash.jpg)"
-	}
+	// if (document.querySelector("aside")){
+	// 	var aside_element = document.querySelector("aside");
+	// 	document.querySelector(".side_bar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)),url(" + aside_element.id + ")"
+	// }
+	// else {
+	// 	document.querySelector(".side_bar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(/assets/images/splash.jpg)"
+	// }
 }
 
 init();

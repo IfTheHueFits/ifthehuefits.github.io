@@ -9,36 +9,39 @@
 		{% seo %}
 	</head>
 	<body>
-		<div class="side_bar">
-			<a href="/" class="logo">
-				{% include icons/logo.svg %}
-			</a>
-			<div class="side_content">
-				<div id="swup" class="transition-fade side_heading">
-					<div class="banner">
-						<h1>
-							{{page.title}}
-						</h1>
+		<header>
+			<div class="side_bar_img img_on" style="background-image: url(/assets/images/splash.jpg)"> </div>
+			<!-- <div class="side_bar_img img_on"> </div> -->
+			<div class="side_bar">
+				<a href="/" class="logo">
+					{% include icons/logo.svg %}
+				</a>
+				<div class="side_content">
+					<div id="swup" class="transition-fade side_heading">
+						<div class="banner">
+							<h1>
+								{{page.title}}
+							</h1>
 
-						<div class="mobile">
-							{% include icons/burger_menu.svg %}
+							<div class="mobile">
+								{% include icons/burger_menu.svg %}
+							</div>
 						</div>
+						<p>
+							{{page.subheading}}
+						</p>
 					</div>
-					<p>
-						{{page.subheading}}
-					</p>
-				</div>
 
-				{% include navigation.html %}
+					{% include navigation.html %}
+				</div>
 			</div>
-		</div>
+		</header>
 		<main id="swup" class="main_window transition-fade">
 			{{ content }}
 		</main>
 
 	{% include lightbox.html%}
 
-	<!-- Include the pig.js library -->
 	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/assets/js/pig.min.js"></script>

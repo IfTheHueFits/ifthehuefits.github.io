@@ -33,19 +33,30 @@ body {
     transition: 500ms;
 }
 
-.side_bar{
-    display: flex;
-    flex-direction:  column;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(/assets/images/splash.jpg);
-    background-repeat: none;
-    background-size: cover;
-    background-position: center;
+header, .side_bar, .side_bar_img{
     height: 100%;
     width: $wide_side_width;
     position: fixed;
+    box-sizing: border-box;
+}
+
+.side_bar_img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+.img_on {
+    opacity: 1;
+}
+
+.side_bar{
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    display: flex;
+    flex-direction:  column;
     justify-content: space-between;
     padding: 40px;
-    box-sizing: border-box;
     transition: 500ms;
 }
 
@@ -108,7 +119,7 @@ html.is-animating .transition-fade {
 }
 
 @media (max-width: $standard_screen) {
-    .side_bar {
+    .side_bar, .side_bar_img {
         width : $side_width
     }
 
@@ -141,12 +152,24 @@ html.is-animating .transition-fade {
         width: 100%;
     }
 
+    .side_bar_img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
 
-    .side_bar {
+    header {
+        position: relative;
+        width: 100%;
+    }
+
+    .side_bar{
         position: relative;
         flex-direction: row;
         width: 100%;
-        height: auto;
         justify-content: left;
         padding: 10px 40px;
         align-items: center;
