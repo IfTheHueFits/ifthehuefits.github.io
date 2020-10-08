@@ -45,10 +45,14 @@ header, .side_bar, .side_bar_img{
     background-size: cover;
     background-position: center;
     opacity: 0;
+    transition-delay: 1s;
+    transition: 1s ease-in-out;
 }
 
 .img_on {
     opacity: 1;
+    transition-delay: 1s;
+    transition: 1s ease-in-out;
 }
 
 .side_bar{
@@ -110,12 +114,13 @@ main{
 // For object leaving
 .transition-fade {
   opacity: 1;
-  transition: 250ms;
+  transition: 500ms;
 }
 
 // For object entering, start invisible
 html.is-animating .transition-fade {
   opacity: 0;
+  transition: 500ms
 }
 
 @media (max-width: $standard_screen) {
