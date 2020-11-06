@@ -2,7 +2,7 @@ const swup = new Swup()
 
 function getGalleryData() {
 	// return promise of JSON data
-	return $.getJSON("assets/js/pictures.json")
+	return $.getJSON("/assets/js/pictures.json")
 }
 
 function topFunction() {
@@ -17,7 +17,7 @@ function init(){
 		var pig;
 		var options = {
 			urlForSize: function(filename, size, hash) {
-					return 'generated/assets/images/' + filename + '-' + size + '-' + hash + '.jpg';
+					return '/generated/assets/images/' + filename + '-' + size + '-' + hash + '.jpg';
 				},
 
 			sizes: [ 20,  100,  250,  400,  600,  800,  1000, ].sort(function(a,b) {return a-b;}),
