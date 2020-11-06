@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /about/
 title: About
 subheading: Who's this handsome fella? And what's this all about?
 ---
