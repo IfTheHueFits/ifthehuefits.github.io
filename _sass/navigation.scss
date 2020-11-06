@@ -1,25 +1,21 @@
 nav {
-	text-align: center;
-
+	display: flex;
+	flex-direction: column;
 }
+
 
 .nav_button {
 	bottom: 0;
-	width: 50px;
-	padding-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.nav_button a{
+	margin: 5px auto;
+	text-align: center;
     font-family: 'Mulish', sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
     text-decoration: none;
     color: lightgrey;
     transition: 500ms;
 }
 
-.nav_button a:hover{
+.nav_button:hover{
     color: white;
     transition: 500ms;
 }

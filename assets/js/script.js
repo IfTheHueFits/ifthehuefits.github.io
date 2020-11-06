@@ -42,8 +42,6 @@ function init(){
 		new_background = 'url("' + aside_element.id + '")';
 	}
 	if (document.querySelector(".img_on").style.backgroundImage != new_background){
-		console.log(document.querySelector(".img_on").style.backgroundImage);
-		console.log(new_background);
 		for (i=0; i<2; i++){
 			if (backgrounds[i].className.includes("img_on")){
 				backgrounds[i].className = backgrounds[i].className.replace(" img_on", "")
