@@ -4,7 +4,7 @@
 		{{ include.post_data.date | date_to_string }}
 		{% assign author = site.authors | where: 'short_name', include.post_data.author | first %}
 		{% if author %}
-			- <a href="/about.html">{{ author.name }}</a>
+			- <a href="/about/">{{ author.name }}</a>
 		{% endif %}
 	</p>
 </div>
