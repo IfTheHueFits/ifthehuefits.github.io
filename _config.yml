@@ -32,3 +32,5 @@ paginate_path: "page:num/"
 
 sass:
     style: compressed
+
+include: [".nojekyll"]
