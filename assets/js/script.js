@@ -41,6 +41,23 @@ function init(){
 		var aside_element = document.querySelector("aside");
 		new_background = 'url("' + aside_element.id + '")';
 	}
+
+	if (document.querySelector(".fb-comments")){
+		console.log("LOADING COMMENTS");
+		(function(d, s, id){
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)){ return; }
+		    js = d.createElement(s); js.id = id;
+		    js.onload = function(){
+		        // remote script has loaded
+		    };
+		    js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=2837989939777329&autoLogAppEvents=1";
+			js.setAttribute("nonce", "TUPtOgUd");
+			js.setAttribute("crossorigin", "anonymous");
+		    fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'fb-script'));
+	}
+
 	if (document.querySelector(".img_on").style.backgroundImage != new_background){
 		for (i=0; i<2; i++){
 			if (backgrounds[i].className.includes("img_on")){
@@ -54,5 +71,20 @@ function init(){
 	}
 }
 
+// remove variables no longer used on other pages
+function unload() {
+	if (document.querySelector("#pig")){
+		imageData.destroy();
+		pig.destroy();
+		options.destroy();
+	}
+
+	if (document.querySelector(".fb-comments")){
+		document.querySelector("#fb-script").remove();
+	}
+
+}
+
 init();
+swup.on('willReplaceContent', unload);
 swup.on('contentReplaced', init);

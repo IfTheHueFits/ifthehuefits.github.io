@@ -34,3 +34,5 @@ sass:
     style: compressed
 
 include: [".nojekyll"]
+
+url: https://ifthehuefits.github.io/
