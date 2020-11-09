@@ -60,7 +60,7 @@ function lightboxClick(event) {
 
 	else if (elemID == "mobile") {
 		lightbox.classList.add('visible');
-		lightbox.getElementsByTagName("NAV")[0].style.display = "block";
+		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
 		lightbox.style.display = "block";
 	}
 

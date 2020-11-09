@@ -43,19 +43,23 @@ function init(){
 	}
 
 	if (document.querySelector(".fb-comments")){
-		console.log("LOADING COMMENTS");
 		(function(d, s, id){
 		    var js, fjs = d.getElementsByTagName(s)[0];
 		    if (d.getElementById(id)){ return; }
 		    js = d.createElement(s); js.id = id;
 		    js.onload = function(){
 		        // remote script has loaded
+				return;
 		    };
 		    js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=2837989939777329&autoLogAppEvents=1";
 			js.setAttribute("nonce", "TUPtOgUd");
 			js.setAttribute("crossorigin", "anonymous");
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'fb-script'));
+		try{
+			FB.XFBML.parse();
+		}
+		catch(ReferenceError){ /*first time page loads*/ }
 	}
 
 	if (document.querySelector(".img_on").style.backgroundImage != new_background){

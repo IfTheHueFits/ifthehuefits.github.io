@@ -77,6 +77,12 @@ hr, .pagination {
 	margin: 30px 20%;
 }
 
+.fb-comments {
+	padding: 10px 20%;
+    width:100% !important;
+	box-sizing: border-box;
+}
+
 @media (max-width: $standard_screen) {
 	main h1, .post_data, li{
 		margin: 10px $indent;
@@ -90,6 +96,10 @@ hr, .pagination {
 		margin: 10px 10%;
 	}
 
+	.fb-comments{
+		padding: 10px 10%
+	}
+
 	hr, .pagination {
 		margin: 30px 10%;
 	}
@@ -98,6 +108,10 @@ hr, .pagination {
 @media (max-width: $tablet){
 	main h1, main p, h2, li, .post_data, hr, .pagination{
 		margin: 10px 5%;
+	}
+
+	.fb-comments{
+		padding: 10px 5%;
 	}
 
 	main h1 {
