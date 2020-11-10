@@ -41,6 +41,11 @@ function init(){
 	// scroll to top on page change
 	topFunction();
 
+	// close lightbox on page change
+	lightbox = document.getElementById("lightbox-overlay")
+	lightbox.classList.remove('visible');
+	lightbox.getElementsByTagName("NAV")[0].style.display = "none";
+
 	// trigger image gallery if present
 	if (document.querySelector("#pig")){
 		var pig;
