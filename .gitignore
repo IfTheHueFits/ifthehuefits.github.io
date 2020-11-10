@@ -3,3 +3,4 @@ _site
 Gemfile.lock
 *pictures.json
 *warhammer/
+*hidden_image*
