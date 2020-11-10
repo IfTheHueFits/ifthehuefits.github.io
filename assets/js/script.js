@@ -13,33 +13,92 @@ function topFunction() {
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+function gen_background_file(orig_file, ratio, hash){
+	var width = screen.width;
+	var load_width = 0;
+
+	if (screen.width > 1024){
+		width = screen.height*ratio;
+	}
+
+	for(i=0; i<sizes.length; i++){
+		if (sizes[i] > width){
+			load_width = sizes[i];
+			break;
+		}
+	}
+
+	// if width of screen is wider than generated images, use original fullsize
+	if(load_width == 0){
+		return orig_file;
+	}
+	else{
+		return "/generated" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + ".jpg";
+	}
+}
+
+var imageData; // as image data gets bit this may slow down the page if it hangs around
+var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
+
 function init(){
+	// scroll to top on page change
 	topFunction();
+
+	// trigger image gallery if present
 	if (document.querySelector("#pig")){
-		var imageData;
 		var pig;
 		var options = {
 			urlForSize: function(filename, size, hash) {
 					return '/generated/assets/images/' + filename + '-' + size + '-' + hash + '.jpg';
 				},
 
-			sizes: [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}].sort(function(a,b) {return a-b;}),
+			sizes: sizes.sort(function(a,b) {return a-b;}),
 
 			scroller: document.getElementsByClassName("main_window")[0]
 		};
 
-		getGalleryData().then( function(response){
-			imageData = response;
+		// don't send unecessary request if variable is already loaded
+		if (imageData){
 			pig = new Pig(imageData, options).enable();
 			pig.enable();
-		});
+		}
+		else {
+			getGalleryData().then( function(response){
+				imageData = response;
+				pig = new Pig(imageData, options).enable();
+				pig.enable();
+			});
+		}
 	}
 
-	var new_background = 'url("/assets/images/splash.jpg")';
+	// default background image
+	var orig_file = "/assets/images/splash.jpg"
+	var ratio = 0.747;
+	var hash = "df42ed768";
+
 	var backgrounds = document.getElementsByClassName("side_bar_img");
+
+	// if aside element is present containing the background img info
 	if (document.querySelector("aside")){
 		var aside_element = document.querySelector("aside");
-		new_background = 'url("' + aside_element.id + '")';
+		orig_file = aside_element.id
+		hash = $(aside_element).data("hash")
+		ratio = $(aside_element).data("ratio")
+	}
+
+	new_background = 'url("' + gen_background_file(orig_file, ratio, hash) + '")';
+
+	// check if background image is actually different and switch if so
+	if (document.querySelector(".img_on").style.backgroundImage != new_background){
+		for (i=0; i<2; i++){
+			if (backgrounds[i].className.includes("img_on")){
+				backgrounds[i].className = backgrounds[i].className.replace(" img_on", "")
+			}
+			else {
+				backgrounds[i].style.backgroundImage = new_background;
+				backgrounds[i].className += " img_on";
+			}
+		}
 	}
 
 	if (document.querySelector(".fb-comments")){
@@ -61,28 +120,10 @@ function init(){
 		}
 		catch(ReferenceError){ /*first time page loads*/ }
 	}
-
-	if (document.querySelector(".img_on").style.backgroundImage != new_background){
-		for (i=0; i<2; i++){
-			if (backgrounds[i].className.includes("img_on")){
-				backgrounds[i].className = backgrounds[i].className.replace(" img_on", "")
-			}
-			else {
-				backgrounds[i].style.backgroundImage = new_background;
-				backgrounds[i].className += " img_on";
-			}
-		}
-	}
 }
 
 // remove variables no longer used on other pages
 function unload() {
-	if (document.querySelector("#pig")){
-		imageData.destroy();
-		pig.destroy();
-		options.destroy();
-	}
-
 	if (document.querySelector(".fb-comments")){
 		document.querySelector("#fb-script").remove();
 	}

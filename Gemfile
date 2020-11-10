@@ -9,3 +9,5 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll_picture_tag'
 end
+
+gem 'dimensions'
