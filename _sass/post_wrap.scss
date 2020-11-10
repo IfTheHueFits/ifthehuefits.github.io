@@ -43,7 +43,7 @@ h2 {
 	color: #2a2f36;
 }
 
-main p, li {
+main p, li, form {
 	font-family: 'Mulish', sans-serif;
 	font-size: 1.125em;
 	line-height: 1.4;
@@ -83,6 +83,26 @@ hr, .pagination {
 	box-sizing: border-box;
 }
 
+form, label{
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-bottom: 20px
+}
+
+button {
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.message {
+	height: 300px;
+	resize: none;
+}
+
 @media (max-width: $standard_screen) {
 	main h1, .post_data, li{
 		margin: 10px $indent;
@@ -92,7 +112,7 @@ hr, .pagination {
 		margin: 30px $indent 10px $indent;
 	}
 
-	main p, hr, .pagination{
+	main p, hr, .pagination, form{
 		margin: 10px 10%;
 	}
 
@@ -106,7 +126,7 @@ hr, .pagination {
 }
 
 @media (max-width: $tablet){
-	main h1, main p, h2, li, .post_data, hr, .pagination{
+	main h1, main p, h2, li, .post_data, hr, .pagination, form{
 		margin: 10px 5%;
 	}
 
@@ -122,7 +142,7 @@ hr, .pagination {
 		font-size: 1.25em;
 	}
 
-	main p, li {
+	main p, li, form {
 		font-size: 1em;
 	}
 }
