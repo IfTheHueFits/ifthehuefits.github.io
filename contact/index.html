@@ -2,20 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Gallery</title>
+		<title>Contact</title>
 		 <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="/assets/css/styles.css">
 		<div class="meta_seo" id="swup">
 			<link type="application/atom+xml" rel="alternate" href="https://ifthehuefits.github.io//feed.xml" />
 			<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Gallery</title>
+<title>Contact</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Gallery" />
+<meta property="og:title" content="Contact" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="https://ifthehuefits.github.io//contact/" />
 <meta property="og:url" content="https://ifthehuefits.github.io//contact/" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://ifthehuefits.github.io//contact/","headline":"Gallery","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://ifthehuefits.github.io//contact/","headline":"Contact","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		</div>
@@ -34,7 +34,7 @@
 					<div id="swup" class="transition-fade side_heading">
 						<div class="banner">
 							<h1>
-								Gallery
+								Contact
 							</h1>
 
 							<div class="mobile">
@@ -99,29 +99,32 @@
 			</div>
 		</header>
 		<main id="swup" class="main_window transition-fade">
-			<div class="container">
-  <form action="action_page.php">
+			<!-- See more examples of how to use Formbutton at formspree.io/formbutton/docs -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<!-- <script>
+window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+formbutton("create", {action: "https://formspree.io/f/mrgolbzz"})
+</script> -->
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<h1>Contact</h1>
+<p> If you want to get in touch, pop your details in the box below, or just get in touch on social media - You do you. </p>
+<form
+	action="https://formspree.io/f/mrgolbzz"
+	method="POST"
+>
+	<label>
+		Your email:
+		<input type="text" name="_replyto" required>
+	</label>
+	<label>
+		Your message:
+		<textarea class="message" name="message" required></textarea>
+	</label>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+	<!-- your other form fields go here -->
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-
-  </form>
-</div>
+	<button type="submit">Send</button>
+</form>
 		</main>
 
 	<!-- lightbox snippet for images to be expanded into, styling in lightbox.scss -->
