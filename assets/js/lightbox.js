@@ -20,21 +20,10 @@ function lightboxClick(event) {
 	if (elemID == 'lightbox-image' || elemID == 'lightbox-overlay' || elem.tagName == "NAV") {
 		event.preventDefault();
 
-		lightboxImg.src = "";	// stops old image flashing up when selecting new one
+		lightboxImg.src = "/assets/images/spinner.svg";	// stops old image flashing up when selecting new one
 		lightbox.classList.remove('visible');
 		lightboxImg.style.display = "none";
 		lightbox.getElementsByTagName("NAV")[0].style.display = "none";
-	}
-	// If we click an element with the attribute "data-lightbox", show the lightbox
-	else if (elem.hasAttribute('data-lightbox')) {
-		event.preventDefault();
-		newImg.src = elem.getAttribute('data-lightbox');
-
-		newImg.onload = function() {
-			lightboxImg.src = this.src;
-			lightbox.classList.add('visible');
-			lightboxImg.style.display = "block";
-		}
 	}
 
 	else if (elem.tagName == "IMG") {
