@@ -28,10 +28,10 @@ function lightboxClick(event) {
 	// If we click an element with the attribute "data-lightbox", show the lightbox
 	else if (elem.hasAttribute('data-lightbox')) {
 		event.preventDefault();
+		newImg.src = elem.getAttribute('data-lightbox');
 
 		newImg.onload = function() {
 			lightboxImg.src = this.src;
-			newImg.src = elem.getAttribute('data-lightbox');
 			lightbox.classList.add('visible');
 			lightboxImg.style.display = "block";
 		}
