@@ -31,11 +31,10 @@ function lightboxClick(event) {
 
 		newImg.onload = function() {
 			lightboxImg.src = this.src;
+			newImg.src = elem.getAttribute('data-lightbox');
+			lightbox.classList.add('visible');
+			lightboxImg.style.display = "block";
 		}
-
-		newImg.src = elem.getAttribute('data-lightbox');
-		lightbox.classList.add('visible');
-		lightboxImg.style.display = "block";
 	}
 
 	else if (elem.tagName == "IMG") {
