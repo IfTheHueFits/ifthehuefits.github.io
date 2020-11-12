@@ -13,7 +13,29 @@ function topFunction() {
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-function gen_background_file(orig_file, ratio, hash){
+function swap_background(file, backgrounds) {
+	for (i=0; i<2; i++){
+		if (backgrounds[i].className.includes("img_on")){
+			backgrounds[i].className = backgrounds[i].className.replace(" img_on", "")
+		}
+		else {
+			backgrounds[i].style.backgroundImage = 'url("' + file + '")';
+			backgrounds[i].className += " img_on";
+		}
+	}
+}
+
+function executeIfFileExist(src, callback) {
+    var xhr = new XMLHttpRequest()
+    xhr.onreadystatechange = function() {
+        if (this.readyState === this.DONE) {
+            callback()
+        }
+    }
+    xhr.open('HEAD', src)
+}
+
+function gen_background_file(orig_file, ratio, hash, backgrounds){
 	var width = screen.width;
 	var load_width = 0;
 
@@ -30,11 +52,19 @@ function gen_background_file(orig_file, ratio, hash){
 
 	// if width of screen is wider than generated images, use original fullsize
 	if(load_width == 0){
-		return orig_file;
+		swap_background(orig_file, backgrounds);
 	}
 	else{
-		return "/generated" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + ".jpg";
-	}
+		var new_file = "/generated" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + "." + orig_file.split(".")[1];
+		swap_background(new_file, backgrounds);
+		// $.get(new_file)
+		// 	.done(function() {
+		// 		swap_background(new_file, backgrounds)
+		// 	})
+		// 	.fail(function () {
+		// 		swap_background(orig_file, backgrounds)
+		// 	})
+	};
 }
 
 var imageData; // as image data gets bit this may slow down the page if it hangs around
@@ -86,24 +116,14 @@ function init(){
 	// if aside element is present containing the background img info
 	if (document.querySelector("aside")){
 		var aside_element = document.querySelector("aside");
-		orig_file = aside_element.id
-		hash = $(aside_element).data("hash")
-		ratio = $(aside_element).data("ratio")
-	}
-
-	new_background = 'url("' + gen_background_file(orig_file, ratio, hash) + '")';
+		orig_file = aside_element.id;
+		hash = $(aside_element).data("hash");
+		ratio = $(aside_element).data("ratio");
+	};
 
 	// check if background image is actually different and switch if so
-	if (document.querySelector(".img_on").style.backgroundImage != new_background){
-		for (i=0; i<2; i++){
-			if (backgrounds[i].className.includes("img_on")){
-				backgrounds[i].className = backgrounds[i].className.replace(" img_on", "")
-			}
-			else {
-				backgrounds[i].style.backgroundImage = new_background;
-				backgrounds[i].className += " img_on";
-			}
-		}
+	if (!document.querySelector(".img_on").style.backgroundImage.includes(orig_file.split('.')[0])) {
+		gen_background_file(orig_file, ratio, hash, backgrounds);
 	}
 
 	if (document.querySelector(".fb-comments")){
