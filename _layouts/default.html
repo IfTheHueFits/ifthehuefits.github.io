@@ -39,6 +39,9 @@
 			</div>
 		</header>
 		<main id="swup" class="main_window transition-fade">
+			{% if page.head_img %}
+			<aside id="{{ page.head_img }}"></aside>
+			{% endif %}
 			{{ content }}
 		</main>
 

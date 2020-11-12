@@ -1,0 +1,7 @@
+<div class="row-images">
+{% for img in include.files %}
+	<div class="col" style="width: calc(100% / {{include.files.size}}); overflow:hidden;">
+		{% picture {{img}} %}
+	</div>
+{% endfor %}
+</div>
