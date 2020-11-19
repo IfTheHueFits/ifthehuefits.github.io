@@ -137,8 +137,12 @@ button {
 }
 
 @media (max-width: $tablet){
-	main h1, main p, h2, li, .post_data, hr, .pagination, form, .fb-comments{
+	main h1, main p, h2, li, .post_data, hr, .pagination, form{
 		margin: 10px 5%;
+	}
+
+	.fb-comments{
+		padding: 10px 5%
 	}
 
 	main h1 {
