@@ -26,7 +26,7 @@ function lightboxClick(event) {
 		lightbox.getElementsByTagName("NAV")[0].style.display = "none";
 	}
 
-	else if (elem.tagName == "IMG") {
+	else if ((elem.tagName == "IMG") && !(lightbox.classList.contains('visible'))) {
 		newImg.onload = function() {
 			lightboxImg.src = this.src;
 		}
@@ -48,8 +48,8 @@ function lightboxClick(event) {
 
 	else if (elemID == "mobile") {
 		lightbox.classList.add('visible');
-		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
-		lightbox.style.display = "block";
+		// lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
+		lightbox.style.display = "flex";
 	}
 
 }
