@@ -2,10 +2,6 @@
 layout: none
 ---
 const swup = new Swup()
-var flkty = new Flickity( '.main-gallery', {
-  // options
-  "cellAlign": 'center',
-});
 
 
 function getGalleryData() {
