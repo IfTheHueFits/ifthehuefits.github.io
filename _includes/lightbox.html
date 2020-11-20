@@ -1,26 +1,21 @@
 <!-- lightbox snippet for images to be expanded into, styling in lightbox.scss -->
 
 <div id="lightbox-overlay">
-	<div class="main-gallery">
+	<div id="lightbox-carousel">
 		<div class="gallery-cell">
-			{% picture /assets/images/warhammer/canoptek_spyder_1.jpg class="carousel-image" %}
+			<img src="/assets/images/spinner.svg" alt="Lightbox image" class="carousel-image"/>
 		</div>
 		<div class="gallery-cell">
-			{% picture /assets/images/warhammer/canoptek_spyder_2.jpg class="carousel-image" %}
+			<img src="/assets/images/spinner.svg" alt="Lightbox image" class="carousel-image"/>
 		</div>
 		<div class="gallery-cell">
-			{% picture /assets/images/warhammer/canoptek_spyder_3.jpg class="carousel-image" %}
+			<img src="/assets/images/spinner.svg" alt="Lightbox image" class="carousel-image"/>
 		</div>
 		<div class="gallery-cell">
-			{% picture /assets/images/warhammer/canoptek_spyder_4.jpg class="carousel-image" %}
-		</div>
-		<div class="gallery-cell">
-			{% picture /assets/images/warhammer/canoptek_spyder_5.jpg class="carousel-image" %}
+			<img src="/assets/images/spinner.svg" alt="Lightbox image" class="carousel-image"/>
 		</div>
 	</div>
 
-	<img src="/assets/images/spinner.svg" alt="Lightbox image" title="Click anywhere to close" id="lightbox-image" />
 	{% include navigation.html %}
 </div> <!-- end lightbox-overlay -->
 
-<script src="/assets/js/lightbox.js"></script>
