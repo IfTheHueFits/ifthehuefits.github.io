@@ -4,10 +4,8 @@
  */
 
 // configure carousel.
-var flkty = new Flickity( '#lightbox-carousel', {
-	// options
-	"cellAlign": 'center',
-});
+var flkty
+var flkty_set = false;
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
@@ -28,11 +26,47 @@ function lightboxClick(event) {
 
 		// lightboxImg.src = "/assets/images/spinner.svg";	// stops old image flashing up when selecting new one
 		lightbox.classList.remove('visible');
+		if (flkty_set){
+			flkty.destroy()
+			lightboxCar.innerHTML = '';
+			flkty_set = false;
+		}
 		lightboxCar.style.display = "none";
 		lightbox.getElementsByTagName("NAV")[0].style.display = "none";
 	}
 
 	else if ((elem.tagName == "IMG") && !(lightbox.classList.contains('visible'))) {
+		lightboxCar.style.display = "initial";
+		var pageImgs = document.querySelector("main").getElementsByTagName("img");
+		flkty = new Flickity( '#lightbox-carousel', {
+			// options
+			"cellAlign": 'center',
+		});
+		flkty_set = true;
+
+		// find clicked element in list
+		var i;
+		for (i=0; i<pageImgs.length; i++){
+			if (pageImgs[i] == elem){
+				break;
+			}
+		}
+
+		if (pageImgs.length < 5 ){
+			carousel_len = pageImgs.length;
+			for (j=0; j<pageImgs.length; j++){
+				var newCell = document.createElement("div");
+				newCell.className = "gallery-cell";
+
+				var newImg = pageImgs[j].cloneNode(true);
+				newImg.className = "carousel-image";
+				newCell.appendChild(newImg);
+				lightboxCar.appendChild(newCell);
+				flkty.append(newCell);
+			}
+		}
+
+
 		// newImg.onload = function() {
 		// 	lightboxImg.src = this.src;
 		// }
@@ -49,8 +83,6 @@ function lightboxClick(event) {
 		lightbox.classList.add('visible');
 		lightbox.style.alignItems = "center";
 		lightbox.style.display = "flex";
-		lightboxCar.style.display = "block";
-
 	}
 
 	else if (elemID == "mobile") {
