@@ -70,3 +70,23 @@
     align-items: center;
     position: relative;
 }
+
+.close{
+    position: absolute;
+    top:2vh;
+    right:2vw;
+}
+
+.close svg{
+    height: 50px;
+}
+
+.close svg path{
+    fill: lightgrey;
+    transition: 500ms;
+}
+
+.close svg:hover path{
+    fill: white;
+    transition: 500ms;
+}

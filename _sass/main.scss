@@ -205,10 +205,17 @@ html.is-animating .transition-fade {
         display: block;
     }
 
-	.mobile svg {
-		fill: white;
-		height: 40px;
-	}
+    	.mobile svg {
+    		fill: white;
+    		height: 40px;
+            transition: 500ms;
+    	}
+
+        .mobile svg:hover {
+            fill: lightgrey;
+            height: 40px;
+            transition: 500ms;
+        }
 
     .side_heading {
         width: 100%;
