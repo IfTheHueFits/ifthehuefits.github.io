@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Staff</title>
-		 <meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
 		<link rel="stylesheet" href="/assets/css/styles.css">
 		<div class="meta_seo" id="swup">
 			<link type="application/atom+xml" rel="alternate" href="https://ifthehuefits.github.io//feed.xml" />
@@ -131,7 +132,8 @@
 	<!-- lightbox snippet for images to be expanded into, styling in lightbox.scss -->
 
 <div id="lightbox-overlay">
-	<img src="/assets/images/spinner.svg" alt="Lightbox image" title="Click anywhere to close" id="lightbox-image" />
+	<div id="lightbox-carousel">
+	</div>
 	<!-- Generates all the navigation and social media buttons in the side bar -->
 <nav>
 	
@@ -181,12 +183,17 @@
 </nav>
 
 
+	<div class="close">
+		<?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title/><path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.21,11.79a1,1,0,0,1,0,1.42,1,1,0,0,1-1.42,0L12,13.41l-1.79,1.8a1,1,0,0,1-1.42,0,1,1,0,0,1,0-1.42L10.59,12l-1.8-1.79a1,1,0,0,1,1.42-1.42L12,10.59l1.79-1.8a1,1,0,0,1,1.42,1.42L13.41,12Z" fill="#464646"/></svg>
+	</div>
 </div> <!-- end lightbox-overlay -->
 
-<script src="/assets/js/lightbox.js"></script>
+
 
 	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/assets/js/flickity.pkgd.js"></script>
+	<script src="/assets/js/lightbox.js"></script>
 	<script src="/assets/js/pig.min.js"></script>
 	<script src="/assets/js/script.js"></script>
 	</body>

@@ -1,5 +1,6 @@
 const swup = new Swup()
 
+
 function getGalleryData() {
 	// return promise of JSON data
 	return $.getJSON("/assets/js/pictures.json")
@@ -70,11 +71,6 @@ var sizes = [ 20,  100,  250,  400,  600,  800,  1000, ];
 function init(){
 	// scroll to top on page change
 	topFunction();
-
-	// close lightbox on page change
-	lightbox = document.getElementById("lightbox-overlay")
-	lightbox.classList.remove('visible');
-	lightbox.getElementsByTagName("NAV")[0].style.display = "none";
 
 	// trigger image gallery if present
 	if (document.querySelector("#pig")){
