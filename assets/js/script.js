@@ -1,5 +1,7 @@
 const swup = new Swup()
-
+var imageData; // as image data gets bit this may slow down the page if it hangs around
+// NOTE sizes also defined in lightbox.js
+var sizes = [ 20,  100,  250,  400,  600,  800,  1000, ];
 
 function getGalleryData() {
 	// return promise of JSON data
@@ -64,9 +66,6 @@ function gen_background_file(orig_file, ratio, hash, backgrounds){
 		// 	})
 	};
 }
-
-var imageData; // as image data gets bit this may slow down the page if it hangs around
-var sizes = [ 20,  100,  250,  400,  600,  800,  1000, ];
 
 function init(){
 	// scroll to top on page change
