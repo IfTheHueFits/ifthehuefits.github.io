@@ -21,10 +21,9 @@ function lightboxClick(event) {
 
 	// If we click any of these 2 elements, close the lightbox
 	if (lightbox_visible){
-		if (elemID == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elem.className == "close" || elem.tagName == "path" || elem.tagName == "svg") {
+		if (elemID == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elemID == "close") {
 			event.preventDefault();
 
-			// lightboxImg.src = "/assets/images/spinner.svg";	// stops old image flashing up when selecting new one
 			lightbox.classList.remove('visible');
 			if (flkty_set){
 				flkty.destroy()
@@ -43,8 +42,7 @@ function lightboxClick(event) {
 		flkty = new Flickity( '#lightbox-carousel', {
 			cellAlign: 'center',
 			lazyLoad: true,
-			pageDots: false,
-			imagesLoaded: true
+			pageDots: false
 		});
 
 		flkty_set = true;
@@ -87,12 +85,14 @@ function lightboxClick(event) {
 			if(!newImg.srcset){
 				var fp = newImg.getAttribute('src')
 				extension = fp.split('.').slice(-1)[0];
-				fp = fp.replace(/(-[0-9]+-[0-9a-f]{9})?\.(je?pg|png|gif)/, '');
-				fp = fp.replace('generated/', '');
-				newImg.setAttribute("data-flickity-lazyload", fp + '.' + extension);
+				fp = fp.replace(/(-[0-9]+-)/, 1000);
+				newImg.setAttribute("data-flickity-lazyload", fp );
 			}
 			else{
-				newImg.style.opacity = 1;
+				newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
+				newImg.setAttribute("data-flickity-lazyload", newImg.src );
+				newImg.srcset = '';
+				newImg.src = '';
 			}
 			newCell.appendChild(newImg);
 			flkty.append(newCell);
