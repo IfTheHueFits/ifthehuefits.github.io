@@ -43,7 +43,8 @@ function lightboxClick(event) {
 		flkty = new Flickity( '#lightbox-carousel', {
 			cellAlign: 'center',
 			lazyLoad: true,
-			pageDots: false
+			pageDots: false,
+			imagesLoaded: true
 		});
 
 		flkty_set = true;
