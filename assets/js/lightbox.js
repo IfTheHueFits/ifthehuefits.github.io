@@ -21,7 +21,7 @@ function lightboxClick(event) {
 
 	// If we click any of these 2 elements, close the lightbox
 	if (lightbox_visible){
-		if (elemID == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elem.className == "close" || elem.tagName == "path" || elem.tagName == "svg") {
+		if (elemID == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elemID == "close") {
 			event.preventDefault();
 
 			// lightboxImg.src = "/assets/images/spinner.svg";	// stops old image flashing up when selecting new one
