@@ -22,3 +22,16 @@ Covered in this website should hopefully be everything I do related to our wonde
 Being an Engineering graduate, I'm a big fan of tinkering, so built this whole website from scratch using Jekyll and it is currently hosted on GitHub. Feel free to take a peak at the [repository](https://github.com/IfTheHueFits/ifthehuefits.github.io) too if you want a look under the hood and see how it all works. If for some reason you are as mad as me and want to try something similar but have no experience (like me when I first started this) then I would highly recommend [Bring Your Own Laptop](https://www.bringyourownlaptop.com/) - Daniel Scott has a number of great website tutorials, and in fact the first part of the responsive web design course is free on youtube. I learnt everything I know from his online classes so its a great place to start.
 
 Speaking of, if you do find a problem/ bug with the site, then let me know through the contact form and I will be eternally grateful - I'm still very much learning so feedback is really appreciated.
+
+## Licenses
+Social media and navigation icons are provided by the following licenses:
+- [Facebook](https://www.iconfinder.com/icons/5279111/facebook_fb_fcb_network_social_media_facebook_logo_icon), [Instagram](https://www.iconfinder.com/icons/5279112/camera_instagram_social_media_instagram_logo_icon) and [Twitter](https://www.iconfinder.com/icons/5279123/tweet_twitter_twitter_logo_icon) icons by [Iconfinder](https://www.iconfinder.com/iconfinder) is licensed under Free for Commercial Use.
+- [Burger menu](https://www.iconfinder.com/icons/4781852/burger_line_list_menu_nav_navigation_option_icon) icon by [Sabr Studio](https://www.iconfinder.com/perpixel) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- [Close](https://www.iconfinder.com/icons/5402366/close_cross_delete_remove_cancel_ui_icon) icon by [amoghdesign](https://www.iconfinder.com/amoghdesign) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
+Software libraries are provided by the following licenses:
+- [jQuery](https://jquery.org/license/) by [The OpenJS Foundation](https://openjsf.org/) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
+- [Flickity](https://flickity.metafizzy.co/) by [Metafizzy](https://github.com/metafizzy) is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
+- [Jekyll](https://jekyllrb.com/) by [Jekyll](https://github.com/jekyll) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
+- [Progressive Image Grid](https://github.com/schlosser/pig.js/) by [Dan Schlosser](https://github.com/schlosser) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
+- [Jekyll Picture Tag](https://github.com/rbuchberger/jekyll_picture_tag) by [Robert Buchberger](https://github.com/rbuchberger) is licensed under [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)
