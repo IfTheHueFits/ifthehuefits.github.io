@@ -2,7 +2,9 @@
 layout: none
 ---
 const swup = new Swup()
-
+var imageData; // as image data gets bit this may slow down the page if it hangs around
+// NOTE sizes also defined in lightbox.js
+var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
 
 function getGalleryData() {
 	// return promise of JSON data
@@ -67,9 +69,6 @@ function gen_background_file(orig_file, ratio, hash, backgrounds){
 		// 	})
 	};
 }
-
-var imageData; // as image data gets bit this may slow down the page if it hangs around
-var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
 
 function init(){
 	// scroll to top on page change
