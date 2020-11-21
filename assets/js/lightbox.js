@@ -1,3 +1,6 @@
+---
+layout: none
+---
 /*
  * - Add an event listener for document click
  * - Define a function that filters the unwanted click events on the document
@@ -7,6 +10,8 @@
 var flkty
 var flkty_set = false;
 var lightbox_visible = false;
+// NOTE sizes also defined in script.js
+var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
@@ -24,7 +29,6 @@ function lightboxClick(event) {
 		if (elemID == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elemID == "close") {
 			event.preventDefault();
 
-			// lightboxImg.src = "/assets/images/spinner.svg";	// stops old image flashing up when selecting new one
 			lightbox.classList.remove('visible');
 			if (flkty_set){
 				flkty.destroy()
@@ -65,16 +69,13 @@ function lightboxClick(event) {
 			if (pageImgs[j] == elem){
 				i = j;
 			}
-			if(!pageImgs[j].srcset){
-				var fp = pageImgs[j].getAttribute('src');
-				var extension = fp.split('.').slice(-1)[0];
-				fp = fp.replace(/(-[0-9]+-[0-9a-f]{9})?\.(je?pg|png|gif)/, '');
-				fp = fp.replace('generated/', '');
-				pageImgs[j].src = fp + '.jpg';
-			}
 		}
 
 		// load images
+		// NOTE if not lazloaded, opacity needs to be set to 1
+		/* NOTE in jekyll serve, the lazyload appears that it might be causing
+		some timeout or bad requests, if this causes a problem on the server
+		a manual lazy load needs to be implemented*/
 		for (j=0; j<pageImgs.length; j++){
 			var newCell = document.createElement("div");
 			newCell.className = "gallery-cell";
@@ -85,14 +86,20 @@ function lightboxClick(event) {
 			// i.e. if pig, just load full size image
 			if(!newImg.srcset){
 				var fp = newImg.getAttribute('src')
-				extension = fp.split('.').slice(-1)[0];
-				fp = fp.replace(/(-[0-9]+-[0-9a-f]{9})?\.(je?pg|png|gif)/, '');
-				fp = fp.replace('generated/', '');
-				newImg.setAttribute("data-flickity-lazyload", fp + '.' + extension);
+				fp = fp.replace(/-([0-9]+)-/, '-@-');
+				srcset = ''
+				for(k=0; k<sizes.length; k++){
+					srcset += fp.replace(/(@)/, sizes[k]) + ' ' + sizes[k] + 'w, '
+				}
+				newImg.setAttribute("data-flickity-lazyload", fp.replace(/(@)/, 1000) );
+				newImg.setAttribute("data-flickity-lazyload-srcset", srcset );
 			}
 			else{
-				newImg.style.opacity = 1;
+				newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
+				newImg.setAttribute("data-flickity-lazyload", newImg.src );
 			}
+			newImg.srcset = '';
+			newImg.src = '';
 			newCell.appendChild(newImg);
 			flkty.append(newCell);
 		}

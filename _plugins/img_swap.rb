@@ -12,8 +12,8 @@ Jekyll::Hooks.register :posts, :pre_render do |post, payload|
 	end
 end
 
-Jekyll::Hooks.register :documents, :post_render do |post|
-	if post.output.include? "aside"
+Jekyll::Hooks.register :pages, :post_render do |post|
+	if post.output.include? "</aside>"
 		aside_group = post.output.scan(/<aside id=["'](.+).jpg["']><\/aside>/)[0][0]
 		files = Dir.glob("./_site/generated/" + aside_group + "*")
 		hash = files[0].scan(/-([0-9a-f]{9})\.jpg/)[0][0]
