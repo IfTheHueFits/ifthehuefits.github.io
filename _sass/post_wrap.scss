@@ -108,6 +108,12 @@ button {
     flex-direction: row;
 	margin: 40px 10%;
     overflow: hidden;
+	align-items: center;
+	justify-content: center;
+}
+
+.col{
+	padding: 5px
 }
 
 @media (max-width: $standard_screen) {
@@ -155,5 +161,9 @@ button {
 
 	main p, li, form {
 		font-size: 1em;
+	}
+
+	.row-images {
+		flex-direction: column;
 	}
 }

@@ -7,7 +7,7 @@ categories: Editorial
 ---
 {% picture /assets/images/warhammer/canoptek_spyder_4.jpg %}
 
-Well hey there, thanks for dropping in, and welcome to the inaugural post on In the Hue Fits! I'm Ollie the blog's creator and I hope this site can act a a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold no illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at Tale of Painters.
+Well hey there, thanks for dropping in, and welcome to the inaugural post on If the Hue Fits! I'm Ollie the blog's creator and I hope this site can act a a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold no illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at Tale of Painters.
 
 <!--more-->
 
@@ -32,4 +32,7 @@ There is also a smattering of Tau that will appear every now and then, which I h
 
 ## And Next?
 
-So things may be a bit quiet for now just while I work the kinks out of this website, as I very much taught myself web-dev so I could make this, but currently I am making my first foray into the Adeptus Astartes so I may be needing some help with some test themes coming up. In the meantime, here is a cheeky smattering of Necrons to whet your appetite.
+So things may be a bit quiet for now just while I work the kinks out of this website, as I very much taught myself web-dev so I could make this, but currently I am making my first foray into the Adeptus Astartes so I may be needing some help with some test themes coming up. In the meantime, here is a cheeky smattering of Necrons that I made about 6 years ago to whet your appetite.
+
+{% assign img_file = "assets/images/warhammer/tomb_blades_6.jpg,assets/images/warhammer/triarch_stalker_3.jpg" | split: ',' %}
+{% include row.html files = img_file %}
