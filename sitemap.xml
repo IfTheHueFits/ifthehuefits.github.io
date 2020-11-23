@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/authors/ollie.html</loc>
-<lastmod>2020-11-21T23:42:45+00:00</lastmod>
+<loc>https://ifthehuefits.github.io//authors/ollie.html</loc>
+<lastmod>2020-11-23T22:26:10+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/editorial/2020/09/21/is-this-thing-on.html</loc>
-<lastmod>2020-09-21T00:00:00+01:00</lastmod>
+<loc>https://ifthehuefits.github.io//editorial/2020/11/22/is-this-thing-on.html</loc>
+<lastmod>2020-11-22T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>https://ifthehuefits.github.io//about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/contact/</loc>
+<loc>https://ifthehuefits.github.io//contact/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/gallery/</loc>
+<loc>https://ifthehuefits.github.io//gallery/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>https://ifthehuefits.github.io//</loc>
 </url>
 </urlset>
