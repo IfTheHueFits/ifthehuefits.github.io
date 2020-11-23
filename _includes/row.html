@@ -1,6 +1,6 @@
 <div class="row-images">
 {% for img in include.files %}
-	<div class="col" style="flex: calc(100% / {{include.files.size}}); overflow:hidden;">
+	<div class="col">
 		{% picture {{img}} %}
 	</div>
 {% endfor %}
