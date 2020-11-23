@@ -106,10 +106,14 @@ button {
 .row-images {
     display: flex;
     flex-direction: row;
-	margin: 40px 10%;
+	margin: 40px calc(10% - 5px); // subtracting padding of column
     overflow: hidden;
 	align-items: center;
 	justify-content: center;
+}
+
+.col img {
+	height: 100%;
 }
 
 .col{
@@ -138,7 +142,7 @@ button {
 	}
 
 	.row-images{
-		margin: 40px 5%;
+		margin: 40px calc(5% - 5px);
 	}
 }
 
@@ -148,7 +152,7 @@ button {
 	}
 
 	.fb-comments{
-		padding: 10px 5%
+		padding: 10px 0
 	}
 
 	main h1 {
@@ -162,8 +166,14 @@ button {
 	main p, li, form {
 		font-size: 1em;
 	}
+}
 
+@media (max-width: $mobile){
 	.row-images {
 		flex-direction: column;
+	}
+
+	.col{
+		padding: 5px 0px
 	}
 }
