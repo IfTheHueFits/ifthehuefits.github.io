@@ -28,7 +28,7 @@ plugins:
 excerpt_separator: <!--more-->
 incremental: true
 
-paginate: 2
+paginate: 5
 paginate_path: "page:num/"
 
 sass:

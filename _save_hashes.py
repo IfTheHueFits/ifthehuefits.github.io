@@ -2,6 +2,7 @@ import os
 import json
 import yaml
 import re
+import glob
 from PIL import Image
 
 # get list of images in the gallery
@@ -11,21 +12,12 @@ with open("./_data/gallery.yml") as file:
 # search the generated site for the hash that is added to the end to reduce
 # recompilation in jekyll_picture_tag
 
-# counter keeps track of number of hashes found a breaks when all found
-counter = 0
-entries = os.scandir("./_site/generated/assets/images/warhammer")
-for entry in entries:
-	for file in imgdata:
-		if file["filename"].split('/')[-1] == re.sub(r'-[0-9]+-[0-9a-f]{9}\.jpg', '', entry.name):
-			if "hash" not in file.keys():
-				file["hash"] = entry.name.split('-')[-1].split('.')[0]
-				counter += 1
-			break
-	if counter == len(imgdata):
-		break
+os.chdir("./_site/generated/assets/images/")
+for file in imgdata:
+	genfp = glob.glob(file["filename"]+ "*", recursive=True)[0]
+	file["hash"] = genfp.split('-')[-1].split('.')[0]
 
-print(imgdata)
-
+os.chdir("../../../../")
 for file in imgdata:
 	img = Image.open("./assets/images/{}.jpg".format(file["filename"]))
 	file["aspectRatio"] = img.size[0]/img.size[1]
@@ -33,4 +25,5 @@ for file in imgdata:
 with open("./assets/js/pictures.json", 'w') as outfile:
 	json.dump(imgdata, outfile)
 
+print(imgdata)
 

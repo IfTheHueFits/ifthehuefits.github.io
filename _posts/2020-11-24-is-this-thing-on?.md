@@ -36,3 +36,4 @@ So things may be a bit quiet for now just while I work the kinks out of this web
 
 {% assign img_file = "assets/images/warhammer/tomb_blades_6.jpg,assets/images/warhammer/triarch_stalker_3.jpg" | split: ',' %}
 {% include row.html files = img_file %}
+{% include row2.html files = img_file %}
