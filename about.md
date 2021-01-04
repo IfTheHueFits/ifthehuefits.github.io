@@ -13,6 +13,7 @@ Well that's me - Ollie! By day I'm a recent university Engineering graduate turn
 Other things that keep me going is a massive love for theatre, an alto saxophone which admittedly has not had a breathe of fresh air for a while, and the occasional sailing trip. This website is very much a personal journal to try and record my hobby for a) my own posterity and b) to try and motivate me to deal with my pile of shame, so the fact that you are even hear reading this means a lot. If you want to reach out - please do get in touch! Either take a look at the [contact page](/contact/) or simply drop me a line on any of the socials.
 
 {% assign img_file = "assets/images/about/IMG_2297.jpg,assets/images/about/subway.jpg" | split: ',' %}
+{% assign style = "flex-direction: row;"%}
 {% include row.html files = img_file %}
 
 ## The Blog
