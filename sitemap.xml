@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://ifthehuefits.github.io//authors/ollie.html</loc>
-<lastmod>2020-11-24T22:23:21+00:00</lastmod>
+<loc>http://localhost:4000/authors/ollie.html</loc>
+<lastmod>2021-01-05T17:09:12+00:00</lastmod>
 </url>
 <url>
-<loc>https://ifthehuefits.github.io//editorial/2020/11/24/is-this-thing-on.html</loc>
+<loc>http://localhost:4000/editorial/2020/11/24/is-this-thing-on.html</loc>
 <lastmod>2020-11-24T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://ifthehuefits.github.io//about/</loc>
+<loc>http://localhost:4000/editorial/2021/01/03/han-leia.html</loc>
+<lastmod>2021-01-03T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://ifthehuefits.github.io//contact/</loc>
+<loc>http://localhost:4000/about/</loc>
 </url>
 <url>
-<loc>https://ifthehuefits.github.io//gallery/</loc>
+<loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
-<loc>https://ifthehuefits.github.io//</loc>
+<loc>http://localhost:4000/gallery/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
 </url>
 </urlset>
