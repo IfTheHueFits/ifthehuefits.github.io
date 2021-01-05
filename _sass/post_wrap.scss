@@ -41,6 +41,7 @@ h2 {
 	font-family: 'Merriweather', serif;
 	font-size: 1.5em;
 	color: #2a2f36;
+	margin: 30px $wide_indent 10px $wide_indent;
 }
 
 main p, li, form {
@@ -62,11 +63,6 @@ a, span {
 main h1, .post_data, li{
 	margin: 10px $wide_indent;
 }
-
-h2 {
-	margin: 30px $wide_indent 10px $wide_indent;
-}
-
 
 hr {
     border: 1px solid darkgrey;

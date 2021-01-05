@@ -26,7 +26,7 @@ plugins:
   - jekyll_picture_tag
 
 excerpt_separator: <!--more-->
-incremental: true
+incremental: false
 
 paginate: 5
 paginate_path: "page:num/"
