@@ -14,7 +14,10 @@ with open("./_data/gallery.yml") as file:
 
 os.chdir("./_site/generated/assets/images/")
 for file in imgdata:
-	genfp = glob.glob(file["filename"]+ "*", recursive=True)[0]
+	try:
+		genfp = glob.glob(file["filename"]+ "*", recursive=True)[0]
+	except IndexError as e:
+		print(file["filename"] + " not in use... skipping")
 	file["hash"] = genfp.split('-')[-1].split('.')[0]
 
 os.chdir("../../../../")
@@ -25,5 +28,4 @@ for file in imgdata:
 with open("./assets/js/pictures.json", 'w') as outfile:
 	json.dump(imgdata, outfile)
 
-print(imgdata)
-
+print("Success, data saved in /assets/js/picture.json")
