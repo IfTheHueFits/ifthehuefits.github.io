@@ -1,6 +1,5 @@
 ---
 layout: default
 ---
-<div id="fb-root"></div>
 {% include post_wrap.html post_data = page post_content = content %}
-<div class="fb-comments" data-href="{{site.url}}{{page.url}}" data-numposts="5" data-width="100%"></div>
+<div id="graphcomment" data-uid={{site.url}}{{page.url}}></div>
