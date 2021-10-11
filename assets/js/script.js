@@ -60,13 +60,6 @@ function gen_background_file(orig_file, ratio, hash, backgrounds){
 	else{
 		var new_file = "/generated" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + "." + orig_file.split(".")[1];
 		swap_background(new_file, backgrounds);
-		// $.get(new_file)
-		// 	.done(function() {
-		// 		swap_background(new_file, backgrounds)
-		// 	})
-		// 	.fail(function () {
-		// 		swap_background(orig_file, backgrounds)
-		// 	})
 	};
 }
 
@@ -74,7 +67,7 @@ function init(){
 	// scroll to top on page change
 	topFunction();
 
-	// trigger image gallery if present
+	// PART 1 trigger image gallery if present
 	if (document.querySelector("#pig")){
 		var pig;
 		var options = {
@@ -101,6 +94,7 @@ function init(){
 		}
 	}
 
+	// PART 2 Change background of side pannel
 	// default background image
 	var orig_file = "/assets/images/splash.jpg"
 	var ratio = 0.747;
@@ -121,33 +115,38 @@ function init(){
 		gen_background_file(orig_file, ratio, hash, backgrounds);
 	}
 
-	if (document.querySelector(".fb-comments")){
-		(function(d, s, id){
-		    var js, fjs = d.getElementsByTagName(s)[0];
-		    if (d.getElementById(id)){ return; }
-		    js = d.createElement(s); js.id = id;
-		    js.onload = function(){
-		        // remote script has loaded
-				return;
-		    };
-		    js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=2837989939777329&autoLogAppEvents=1";
-			js.setAttribute("nonce", "TUPtOgUd");
-			js.setAttribute("crossorigin", "anonymous");
-		    fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'fb-script'));
-		try{
-			FB.XFBML.parse();
+	//PART 3 setup comments box
+	if (document.querySelector("#graphcomment")){
+		var commentbox = document.querySelector("#graphcomment");
+
+		// comment box parameters that need to be set based on the website
+		var __semio__params = {
+			graphcommentId: "If-the-Hue-Fits", // do not change, used to match with commentbox
+
+			behaviour: {
+				// HIGHLY RECOMMENDED
+				uid: commentbox.dataset.uid, // uniq identifer for the comments thread on your page (ex: your page id)
+			}
 		}
-		catch(ReferenceError){ /*first time page loads*/ }
+
+		// commentbox setup DO NOT EDIT
+		function __semio__onload() {
+			__semio__gc_graphlogin(__semio__params)
+		}
+
+
+		(function() {
+			var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+			gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+		})();
+
 	}
 }
 
 // remove variables no longer used on other pages
 function unload() {
-	if (document.querySelector(".fb-comments")){
-		document.querySelector("#fb-script").remove();
-	}
-
+	//Not currently doing anything
 }
 
 init();
