@@ -111,34 +111,6 @@ function init(){
 	if (!document.querySelector(".img_on").style.backgroundImage.includes(orig_file.split('.')[0])) {
 		gen_background_file(orig_file, ratio, hash, backgrounds);
 	}
-
-	//PART 3 setup comments box
-	if (document.querySelector("#graphcomment")){
-		var commentbox = document.querySelector("#graphcomment");
-
-		// comment box parameters that need to be set based on the website
-		var __semio__params = {
-			graphcommentId: "If-the-Hue-Fits", // do not change, used to match with commentbox
-
-			behaviour: {
-				// HIGHLY RECOMMENDED
-				uid: commentbox.dataset.uid, // uniq identifer for the comments thread on your page (ex: your page id)
-			}
-		}
-
-		// commentbox setup DO NOT EDIT
-		function __semio__onload() {
-			__semio__gc_graphlogin(__semio__params)
-		}
-
-
-		(function() {
-			var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-			gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-		})();
-
-	}
 }
 
 // remove variables no longer used on other pages

@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ifthehuefits.github.io//authors/ollie.html</loc>
-<lastmod>2021-10-11T16:47:09+01:00</lastmod>
+<lastmod>2021-10-17T17:20:37+01:00</lastmod>
 </url>
 <url>
 <loc>https://ifthehuefits.github.io//editorial/2020/11/24/is-this-thing-on.html</loc>
@@ -17,6 +17,10 @@
 <lastmod>2021-10-11T00:00:00+01:00</lastmod>
 </url>
 <url>
+<loc>https://ifthehuefits.github.io//review/2021/10/17/noki-class.html</loc>
+<lastmod>2021-10-17T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>https://ifthehuefits.github.io//about/</loc>
 </url>
 <url>
@@ -24,9 +28,6 @@
 </url>
 <url>
 <loc>https://ifthehuefits.github.io//gallery/</loc>
-</url>
-<url>
-<loc>https://ifthehuefits.github.io//hidden_image.html</loc>
 </url>
 <url>
 <loc>https://ifthehuefits.github.io//</loc>
