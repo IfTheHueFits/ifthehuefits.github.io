@@ -1,7 +1,11 @@
-<div class="row-images" style="{{ style }}">
+{% if include.style %}
+<div class="row-images" style="{{include.style}}">
+{% else %}
+<div class="row-images" style="flex-direction: row; margin:0;">
+{% endif %}
 {% for img in include.files %}
 	<div class="col">
-		{% picture {{img}} %}
+		{% picture {{img}} --alt {{include.alt}} %}
 	</div>
 {% endfor %}
 </div>

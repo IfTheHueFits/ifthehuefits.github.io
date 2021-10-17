@@ -1,3 +1,6 @@
-<!-- formates the inlcuded image so that it appears in the correct lightbox format -->
-<img data-enlargeable style="cursor: zoom-in"  src="assets/images/{{ include.file }}" alt="{{ include.description }}" data-lightbox="assets/images/{{ include.file }}" />
-<span class="caption" style="font-size: 80%"><i>{{ include.description }}</i></span>
+<figure>
+	{% picture {{include.img}} --alt {{include.alt}}%}
+	{% if include.caption %}
+	<figcaption>{{include.caption}}</figcaption>
+	{% endif %}
+</figure>

@@ -50,6 +50,7 @@ Jekyll::Hooks.register :posts, :pre_render do |post, payload|
 	end
 end
 
+# Applies the functions at the top to each post
 # documents don't seem to include pages and vice versa, so run snippet on both
 Jekyll::Hooks.register :pages, :post_render do |post|
 	post = formatAside(post)
