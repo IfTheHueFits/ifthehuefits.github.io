@@ -26,7 +26,6 @@ So I bit the bullet, and rather than stripping and repainting the same 5 space m
 There are some still minor details that I want to sort with the colours, in particular the colour of the chest Aquila, and I might play around with the tone of the heads a bit more. Finally, there are the transfers to add as well, along with the black knee caps, but I don't think that will massively affect anyone's preference so I've left it for now.
 
 ## Emerald
-{% assign style = "flex-direction: row; margin:0;"%}
 <div class="row-images">
 {% assign img_file = "assets/images/indomitus1_marines/Emerald5.jpg,assets/images/indomitus1_marines/Emerald1.jpg,assets/images/indomitus1_marines/Emerald3.jpg" | split: ',' %}
 {% include row.html files = img_file %}
