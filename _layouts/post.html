@@ -2,4 +2,9 @@
 layout: default
 ---
 {% include post_wrap.html post_data = page post_content = content %}
-<div id="graphcomment" data-uid={{site.url}}{{page.url}}></div>
+<p style="display:flex; justify-items: center;">
+	<a class="button" id="comments">
+		View Comments
+	</a>
+</p>
+<div class="comments" style="min-height:262px" data-uid={{site.url}}{{page.url}}></div>

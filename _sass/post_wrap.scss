@@ -53,11 +53,9 @@ main p, li, form {
 }
 
 
-p > a, span {
+p > a, li > a, span {
 	font-family: 'Mulish', sans-serif;
-	text_decoration: none;
 	color: black;
-	// font-size: 1.125em;
 }
 
 main h1, .post_data, li{
@@ -114,6 +112,30 @@ button {
 
 .col{
 	padding: 5px
+}
+
+.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 10px auto 0 auto;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: 500ms
+}
+
+.button:hover {
+	transition: 500ms;
+	opacity: 0.7;
+}
+
+#off.button {
+	opacity: 0;
+	cursor: default;
+	transition: 500ms;
 }
 
 @media (max-width: $standard_screen) {

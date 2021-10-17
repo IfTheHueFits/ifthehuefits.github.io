@@ -5,7 +5,7 @@ subheading: An assortment of miniature showcases, thoughts, tutorials and inspir
 ---
 {% for post in paginator.posts %}
 		{% include post_wrap.html post_data = post post_content = post.excerpt %}
-		<p><a href="{{ post.url }}"> More after the jump...</a></p>
+		<p style="display:flex; justify-items: center;"><a href="{{ post.url }}" class="button"> More after the jump.</a></p>
 		<hr>
 
 {% endfor %}
