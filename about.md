@@ -5,16 +5,14 @@ title: About
 subheading: Who's this handsome fella? And what's this all about?
 head_img: /assets/images/about/holi.jpg
 ---
-# About page
+# About
 
 ## The Man Behind the Keyboard
 Well that's me - Ollie! By day I'm a recent university Engineering graduate turned (trainee) Patent Attorney arguing with lawyers about science. By mid to late evening I'm an avid gamer, general nerd and most importantly, miniature enthusiast. Collecting Warhammer since the age of 7, and actually getting into the painting side of the hobby properly about 10 years later, in these lockdown days its how I am spending most of my time. In fact Warhammer has become such a big part of my life that my final year dissertation project at uni was base on creating a Computer Vision framework that could play (or at least help play) a game of Warhammer. It had limited success, but hey if you are interested in the maths feel free to have a look at it [here](https://github.com/falcoso/Vision-Hammer/raw/master/ogj21_final_report.pdf).
 
 Other things that keep me going is a massive love for theatre, an alto saxophone which admittedly has not had a breathe of fresh air for a while, and the occasional sailing trip. This website is very much a personal journal to try and record my hobby for a) my own posterity and b) to try and motivate me to deal with my pile of shame, so the fact that you are even hear reading this means a lot. If you want to reach out - please do get in touch! Either take a look at the [contact page](/contact/) or simply drop me a line on any of the socials.
 
-{% assign img_file = "assets/images/about/IMG_2297.jpg,assets/images/about/subway.jpg" | split: ',' %}
-{% assign style = "flex-direction: row;"%}
-{% include row.html files = img_file %}
+{% include row.html files = "assets/images/about/IMG_2297.jpg,assets/images/about/subway.jpg" style="flex-direction: row;"%}
 
 ## The Blog
 Covered in this website should hopefully be everything I do related to our wonderful hobby, largely showcases and works in progress, but occasionally with enough foresight I should be posting the odd tutorial here and there. I will certainly aim to try and keep the gallery up to date with everything in the hope it may act as some inspiration to someone somewhere. If you have something that you think could be contributed to the blog then do let me know. I'm open to the idea of guest contributors, and similarly if you have something miniature painting related to plug, be it a model, tool or paint, I would love to give it a try!

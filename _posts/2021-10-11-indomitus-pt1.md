@@ -27,20 +27,17 @@ There are some still minor details that I want to sort with the colours, in part
 
 ## Emerald
 <div class="row-images">
-{% assign img_file = "assets/images/indomitus1_marines/Emerald5.jpg,assets/images/indomitus1_marines/Emerald1.jpg,assets/images/indomitus1_marines/Emerald3.jpg" | split: ',' %}
-{% include row.html files = img_file %}
+{% include row.html files = "assets/images/indomitus1_marines/Emerald5.jpg,assets/images/indomitus1_marines/Emerald1.jpg,assets/images/indomitus1_marines/Emerald3.jpg" %}
 </div>
 
 ## Jade
 <div class="row-images">
-{% assign img_file = "assets/images/indomitus1_marines/Jade1.jpg,assets/images/indomitus1_marines/Jade3.jpg,assets/images/indomitus1_marines/Jade4.jpg" | split: ',' %}
-{% include row.html files = img_file %}
+{% include row.html files = "assets/images/indomitus1_marines/Jade1.jpg,assets/images/indomitus1_marines/Jade3.jpg,assets/images/indomitus1_marines/Jade4.jpg"%}
 </div>
 
 ## Park Green Flat
 <div class="row-images">
-{% assign img_file = "assets/images/indomitus1_marines/Park1.jpg,assets/images/indomitus1_marines/Park5.jpg,assets/images/indomitus1_marines/Park4.jpg" | split: ',' %}
-{% include row.html files = img_file %}
+{% include row.html files = "assets/images/indomitus1_marines/Park1.jpg,assets/images/indomitus1_marines/Park5.jpg,assets/images/indomitus1_marines/Park4.jpg"%}
 </div>
 
 I've also been trying to refine my miniature photography a bit too to try and improve the quality of the images. Annoyingly I haven't been able to hit the sweet spot with the colour correction so my physical favourite (by a slim margin) is not the same as my favourite picked straight from the images.

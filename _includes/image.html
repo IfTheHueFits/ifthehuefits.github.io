@@ -1,5 +1,9 @@
+{% if include.class %}
+<figure class="{{include.class}}">
+{% else %}
 <figure>
-	{% picture {{include.img}} --alt {{include.alt}}%}
+{% endif %}
+	{% picture {{include.img}} --alt {{include.alt}} --img style="{{include.style}}"%}
 	{% if include.caption %}
 	<figcaption>{{include.caption}}</figcaption>
 	{% endif %}
