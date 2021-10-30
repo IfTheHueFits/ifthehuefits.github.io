@@ -3,9 +3,13 @@
 {% else %}
 <div class="row-images" style="flex-direction: row; margin:0;">
 {% endif %}
-{% for img in include.files %}
-	<div class="col">
-		{% picture {{img}} --alt {{include.alt}} %}
-	</div>
+{% assign files = include.files | split: ','%}
+{% if include.caption %}
+{% assign captions = include.caption | split: ';' %}
+{% endif %}
+{% for img in files %}
+	{% assign alt = alts[forloop.index0] %}
+	{% assign caption = captions[forloop.index0] %}
+	{% include image.html img=img class="col" caption=caption alt=alt %}
 {% endfor %}
 </div>

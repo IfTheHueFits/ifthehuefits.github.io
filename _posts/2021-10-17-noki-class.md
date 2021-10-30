@@ -31,10 +31,7 @@ With the foundation of the 'standard' NMM sword ready, we then started adding gl
 
 After a quick 45-minute lunch break (which for me was closer to an hour after finding out a nearby store had Imperium magazine \#5 in stock with the exclusive captain) we were back and then on to trying gold. This was the part that I was really interested in as we were painting the hand and other features on the sword which had more complex surfaces that interacted with the lights in different ways. Having now done the main blade of the sword I felt much better equipped tackling the other bits of the part (parts of the bit?) that I don't think I would have been as confident in had we just jumped into complex surfaces. Being able to ask not just what should be done but *why* really helped improve the depth of my understanding and a lot of explanation was done in the context of some incredible display models that were brought along so we could see, for example, how and why you might shift around the reflections on a hand in different scenarios.
 
-<div class="row-images">
-{% assign img_file = "assets/images/2021-10-17-niko-class/glaive.jpg,assets/images/2021-10-17-niko-class/longsword.jpg " | split: ',' %}
-{% include row.html files = img_file %}
-</div>
+{% include row.html files = "assets/images/2021-10-17-niko-class/glaive.jpg,assets/images/2021-10-17-niko-class/longsword.jpg" style=""%}
 
 ## Conclusion
 
@@ -42,8 +39,10 @@ All in all, I had a really excellent time, and I am so happy with how my sword t
 
 {% include image.html img="assets/images/2021-10-17-niko-class/groupshot.jpg" alt="Everyone's final piece from the class" caption="Everyone's final pieces" %}
 
-Perhaps my only minor critique would be that I wish we had a full arm with the sword on which to play around with so that we could try NMM on more shapes and surfaces, but also I very much appreciate that sourcing enough bits for us to paint is likely a pain, and there aren't many boxes of miniatures that come with more than one or two! Also, since we pretty much went to time anyway on just the sword and hand, I don't even know if we would have had time to do more. Not to mention, there was a wide range of skill levels from people going into the class and I was really happy with the balance struck to allow everyone to get the most out of the session. In any case, I certainly learnt so much more than I was expecting and I have the confidence to try this out on characters and other special models in the future.
+Perhaps my only minor critique (and I do mean minor) would be that it would have been nice if we had a full arm with the sword on which to play around with so that we could try NMM on more shapes and surfaces. However, I very much appreciate that sourcing enough bits for us to paint is likely a pain and, since we pretty much went to time on just the sword and hand, I don't even know if we would have had time to do more. Overall there was also a really good balance struck to allow the wide range of skill levels to get the most out of the session. I certainly learnt so much more than I was expecting and I'm looking forward to trying this out on characters and other special models in the future to build my confidence further.
 
 I believe there are several more classes planned on basing and faces with Mamikon so if you are interested in getting some classes with him (which I heartily recommend), feel free to message him on [Instagram](https://www.instagram.com/nokipaintingstudio/) or [Twitter](https://twitter.com/MamikonPaints). I definitely know that now I have the itch I want to get involved in many more classes where I can over the next year.
+
+Thanks for such a great day!
 
 {% include image.html img="assets/images/2021-10-17-niko-class/final_result.jpg" alt="Non-metallic metal swords" %}
