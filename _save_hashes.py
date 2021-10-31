@@ -12,7 +12,7 @@ with open("./_data/gallery.yml") as file:
 # search the generated site for the hash that is added to the end to reduce
 # recompilation in jekyll_picture_tag
 
-os.chdir("./_site/generated/assets/images/")
+os.chdir("./_site/generated/images/")
 for file in imgdata:
 	try:
 		genfp = glob.glob(file["filename"]+ "*", recursive=True)[0]
@@ -20,7 +20,7 @@ for file in imgdata:
 		print(file["filename"] + " not in use... skipping")
 	file["hash"] = genfp.split('-')[-1].split('.')[0]
 
-os.chdir("../../../../")
+os.chdir("../../../")
 for file in imgdata:
 	img = Image.open("./assets/images/{}.jpg".format(file["filename"]))
 	file["aspectRatio"] = img.size[0]/img.size[1]
