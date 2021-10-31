@@ -37,15 +37,14 @@ function executeIfFileExist(src, callback) {
 
 function gen_background_file(orig_file, ratio, hash, backgrounds){
 	var width = screen.width;
-	var load_width = 0;
+	var load_width = 1000; //default load resolution
 
-	//take assets out of the filepath
-	orig_file.replace("assets", "");
-
+	// correct width if it is in a column
 	if (screen.width > 1024){
 		width = screen.height*ratio;
 	}
 
+	// check the available sizes and see which one is the smallest size for the width
 	for(i=0; i<sizes.length; i++){
 		if (sizes[i] > width){
 			load_width = sizes[i];
@@ -53,14 +52,8 @@ function gen_background_file(orig_file, ratio, hash, backgrounds){
 		}
 	}
 
-	// if width of screen is wider than generated images, use original fullsize
-	if(load_width == 0){
-		swap_background(orig_file, backgrounds);
-	}
-	else{
-		var new_file = "/generated" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + "." + orig_file.split(".")[1];
-		swap_background(new_file, backgrounds);
-	};
+	var new_file = "/generated/images/" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + "." + orig_file.split(".")[1];
+	swap_background(new_file, backgrounds);
 }
 
 function init(){
@@ -96,7 +89,7 @@ function init(){
 
 	// PART 2 Change background of side pannel
 	// default background image
-	var orig_file = "/images/splash.jpg"
+	var orig_file = "splash.jpg"
 	var ratio = 0.747;
 	var hash = "df42ed768";
 
