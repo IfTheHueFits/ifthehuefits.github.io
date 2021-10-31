@@ -56,7 +56,12 @@ function gen_background_file(orig_file, ratio, hash, backgrounds){
 	}
 
 	var new_file = "/generated/images/" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + "." + orig_file.split(".")[1];
-	swap_background(new_file, backgrounds);
+	try{
+		swap_background(new_file, backgrounds);
+	}
+	catch(err){
+		swap_background("/assets/images/" + orig_file, backgrounds);
+	}
 }
 
 function init(){
