@@ -9,7 +9,7 @@ var flkty_set = false;
 var lightbox_visible = false;
 var comments_on = false;
 // NOTE sizes also defined in script.js
-var sizes = [ 20,  100,  250,  400,  600,  800,  1000, ];
+var sizes = [ 400,  600,  800,  1000, ];
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
@@ -98,7 +98,7 @@ function lightboxClick(event) {
 			}
 		}
 
-		// load images
+		// load images as new div in page
 		// NOTE if not lazloaded, opacity needs to be set to 1
 		/* NOTE in jekyll serve, the lazyload appears that it might be causing
 		some timeout or bad requests, if this causes a problem on the server
@@ -107,10 +107,12 @@ function lightboxClick(event) {
 			var newCell = document.createElement("div");
 			newCell.className = "gallery-cell";
 
+			// clone img from the main page
 			var newImg = pageImgs[j].cloneNode(true);
 			newImg.className = "carousel-image";
 
-			// i.e. if pig, just load full size image
+			// set the data load attributes for flickity from the img div
+			// if pig image/ no srcset just set to largest image
 			if(!newImg.srcset){
 				var fp = newImg.getAttribute('src')
 				fp = fp.replace(/-([0-9]+)-/, '-@-');
@@ -125,8 +127,11 @@ function lightboxClick(event) {
 				newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
 				newImg.setAttribute("data-flickity-lazyload", newImg.src );
 			}
+			// now clear the src attributes in the actual image so they don't automatically load
 			newImg.srcset = '';
 			newImg.src = '';
+			// remove any bespoke styling such as height limits
+			newImg.style = '';
 			newCell.appendChild(newImg);
 			flkty.append(newCell);
 		}

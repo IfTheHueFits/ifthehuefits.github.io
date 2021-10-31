@@ -1,7 +1,7 @@
 const swup = new Swup()
 var imageData; // as image data gets bit this may slow down the page if it hangs around
 // NOTE sizes also defined in lightbox.js
-var sizes = [ 20,  100,  250,  400,  600,  800,  1000, ];
+var sizes = [ 400,  600,  800,  1000, ];
 
 function getGalleryData() {
 	// return promise of JSON data
@@ -39,6 +39,9 @@ function gen_background_file(orig_file, ratio, hash, backgrounds){
 	var width = screen.width;
 	var load_width = 0;
 
+	//take assets out of the filepath
+	orig_file.replace("assets", "");
+
 	if (screen.width > 1024){
 		width = screen.height*ratio;
 	}
@@ -69,7 +72,7 @@ function init(){
 		var pig;
 		var options = {
 			urlForSize: function(filename, size, hash) {
-					return '/generated/assets/images/' + filename + '-' + size + '-' + hash + '.jpg';
+					return '/generated/images/' + filename + '-' + size + '-' + hash + '.jpg';
 				},
 
 			sizes: sizes.sort(function(a,b) {return a-b;}),
@@ -93,7 +96,7 @@ function init(){
 
 	// PART 2 Change background of side pannel
 	// default background image
-	var orig_file = "/assets/images/splash.jpg"
+	var orig_file = "/images/splash.jpg"
 	var ratio = 0.747;
 	var hash = "df42ed768";
 
