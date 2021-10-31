@@ -3,7 +3,7 @@
 {% else %}
 <figure>
 {% endif %}
-	{% picture {{include.img}} --alt {{include.alt}} --img style="{{include.style}}"%}
+	{% picture {{include.preset}} {{include.img}} --alt {{include.alt}} --img style="{{include.style}}"%}
 	{% if include.caption %}
 	<figcaption>{{include.caption}}</figcaption>
 	{% endif %}

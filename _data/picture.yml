@@ -1,27 +1,44 @@
 #Settings for jekyll_picture_tag
-presets:
-    smaller:
-        markup: img
-        formats: [original]
-        widths: [20, 250, 400, 600, 732]
-        fallback_width: 732
-        fallback_format: original
-        noscript: false
-        link_source: false
-        quality: 75
-        data_sizes: true
-        gravity: center
-        dimension_attributes: false
 
+media_queries:
+    mobile: 'max-width: 500px'
+    tablet: 'max-width: 1024px'
+    standard_screen: 'max-width: 1600px'
+    wide: 'min-width: 1601px'
+
+presets:
     default:
-        markup: img
+        markup: auto
         formats: [original]
-        widths: [20, 100, 250, 400, 600, 800, 1000]
+        widths: [400, 600, 800, 1000]
         fallback_width: 800
         fallback_format: original
         noscript: false
         link_source: false
         quality: 75
-        data_sizes: true
-        gravity: center
+        strip_metadata: true
         dimension_attributes: false
+        sizes:
+            mobile: calc(100vw-10px)
+            tablet: calc(100vw-25px)
+            standard_screen: calc(70vw-100px)
+            wide: calc(75vw-300px)
+
+    smaller:
+        formats: [original]
+        widths: [400, 600]
+        sizes:
+            mobile: calc(100vw-10px)
+            tablet: calc(100vw-25px)
+            standard_screen: 601px
+            wide: 601px
+
+    gallery:
+        markup: img
+        formats: [original]
+        widths: [20, 100, 250, 400, 600, 800, 1000]
+        sizes:
+            mobile: calc(100vw-10px)
+            tablet: calc(100vw-25px)
+            standard_screen: calc(70vw-100px)
+            wide: calc(75vw-300px)
