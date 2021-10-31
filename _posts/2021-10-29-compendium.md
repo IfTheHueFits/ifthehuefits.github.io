@@ -6,7 +6,7 @@ title: Compendium&#58 Volume 1
 categories: Review
 head_img: /assets/images/2021-10-30-compendium/spine.jpg
 ---
-{% include image.html img="assets/images/2021-10-30-compendium/cover_angle.jpg" alt="Compendium cover" %}
+{% include image.html preset="smaller" img="assets/images/2021-10-30-compendium/cover_angle.jpg" alt="Compendium cover" %}
 
 Impulse purchase definitely isn't the right word here, but I certainly don't think I have progressed from seeing something to buying it quite as quickly as when the kickstarter went live for Compendium: Volume 1. Produced by [The Miniatures Compendium](https://www.theminiaturescompendium.com/), it is clear from start to finish that this is a labour of love. Launched on [kickstarter](https://www.kickstarter.com/projects/miniaturescompendium/compendium-volume-one/description) back in March 2021, this mighty tome collects Golden Demon winners from over the past 30 years with additional commentary and even works in progress photos.
 
@@ -20,7 +20,7 @@ For those of you that don't follow The Miniatures Compendium on [their instagram
 
 Going all the way back to 1988, it is really interesting to see how painting styles have evolved and improved as the hobby has grown as well as seeing the winners from the days back when I attended Games Day. Each entry is presented over several pages, with brand new high res photography to really capture every detail and every angle of the model that you don't normally see on websites like [Demon Winner](http://demonwinner.free.fr/) or [Golden Demon](https://golden-demon.com/). Such detail also works to make the entries feel so much more attainable - I am absolutely not knocking the quality of any golden demon entry, but being able to see the brush strokes and where the highlights are makes me realise that even the world's best miniatures aren't 100% perfectly smooth once you look at them properly, and such a level of attainment is unnecessary.
 
-{% include row.html files="assets/images/2021-10-30-compendium/soper.jpg,assets/images/2021-10-30-compendium/penaut.jpg" alt="David Soper's Eldar Warrior;Maxime Penaud's Dankhold Troggoth"  caption="David Soper's 1988 Eldar Warrior;Maxime Penaud's 2019 Dankhold Troggoth" style="flex-direction: row;"%}
+{% include row.html presets="smaller;smaller" files="assets/images/2021-10-30-compendium/soper.jpg,assets/images/2021-10-30-compendium/penaut.jpg" alt="David Soper's Eldar Warrior;Maxime Penaud's Dankhold Troggoth"  caption="David Soper's 1988 Eldar Warrior;Maxime Penaud's 2019 Dankhold Troggoth" style="flex-direction: row;"%}
 
 Many of the miniatures also have an excellent commentary from the artist themselves about the process and story behind the models. Since so many of the entries are often heavily converted its hard to know where us mere mortals could even start by creating such incredible pieces, but understanding the thought process, and even in some cases have an image of the unpainted model so that all the materials can clearly be seen (and a much greater appreciation of how many of these artists are excellent sculptors too). A particular favourite of mine is seeing [Iago Pineda's](https://www.instagram.com/iagop_works/) 2003 Youngbloods entry followed by his 2004 Slayer Sword winning entry (At the age of 15!) and the process behind how his styles improved and changed over the intervening year.
 

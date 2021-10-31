@@ -1,3 +1,9 @@
+{% comment %}
+Inputs
+------
+files: string of img file paths delimited by ;
+
+{% endcomment %}
 {% if include.style %}
 <div class="row-images" style="{{include.style}}">
 {% else %}
@@ -7,9 +13,13 @@
 {% if include.caption %}
 {% assign captions = include.caption | split: ';' %}
 {% endif %}
+{% if include.presets %}
+{% assign presets = include.presets | split: ';' %}
+{% endif %}
 {% for img in files %}
 	{% assign alt = alts[forloop.index0] %}
 	{% assign caption = captions[forloop.index0] %}
-	{% include image.html img=img class="col" caption=caption alt=alt %}
+	{% assign preset = preset[forloop.index0] %}
+	{% include image.html preset=preset img=img class="col" caption=caption alt=alt %}
 {% endfor %}
 </div>
