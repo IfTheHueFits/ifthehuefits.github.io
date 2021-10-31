@@ -4,10 +4,10 @@ author: ollie
 subheading: Well over a year after I started I have finally settled on a scheme for my space marines.
 title: The Road to Indomitus Part 1&#58 The Sons of Medusa
 categories: Showcase
-head_img: /assets/images/indomitus1_marines/Emerald3.jpg
+head_img: /assets/images/2021-10-11-indomitus-pt1/Emerald3.jpg
 ---
 
-{% picture assets/images/indomitus1_marines/group_black.jpg %}
+{% picture 2021-10-11-indomitus-pt1/group_black.jpg %}
 
 TLDR: I finally have my Space Marine chapter decided, I just need help with the greens...
 
@@ -27,17 +27,17 @@ There are some still minor details that I want to sort with the colours, in part
 
 ## Emerald
 <div class="row-images">
-{% include row.html files = "assets/images/indomitus1_marines/Emerald5.jpg;assets/images/indomitus1_marines/Emerald1.jpg;assets/images/indomitus1_marines/Emerald3.jpg" %}
+{% include row.html files = "2021-10-11-indomitus-pt1/Emerald5.jpg;2021-10-11-indomitus-pt1/Emerald1.jpg;2021-10-11-indomitus-pt1/Emerald3.jpg" %}
 </div>
 
 ## Jade
 <div class="row-images">
-{% include row.html files = "assets/images/indomitus1_marines/Jade1.jpg;assets/images/indomitus1_marines/Jade3.jpg;assets/images/indomitus1_marines/Jade4.jpg"%}
+{% include row.html files = "2021-10-11-indomitus-pt1/Jade1.jpg;2021-10-11-indomitus-pt1/Jade3.jpg;2021-10-11-indomitus-pt1/Jade4.jpg"%}
 </div>
 
 ## Park Green Flat
 <div class="row-images">
-{% include row.html files = "assets/images/indomitus1_marines/Park1.jpg;assets/images/indomitus1_marines/Park5.jpg;assets/images/indomitus1_marines/Park4.jpg"%}
+{% include row.html files = "2021-10-11-indomitus-pt1/Park1.jpg;2021-10-11-indomitus-pt1/Park5.jpg;2021-10-11-indomitus-pt1/Park4.jpg"%}
 </div>
 
 I've also been trying to refine my miniature photography a bit too to try and improve the quality of the images. Annoyingly I haven't been able to hit the sweet spot with the colour correction so my physical favourite (by a slim margin) is not the same as my favourite picked straight from the images.

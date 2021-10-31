@@ -1,8 +1,19 @@
 {% comment %}
+Will format all the input images in a single row on the page when combined with
+the appropriate css
+
 Inputs
 ------
 files: string of img file paths delimited by ;
 
+style: string containing any css style to be applied to the whole row
+
+caption: string of captions for each image delimited by ;
+
+alt: string of img alts for each image delimited by ;
+
+presets: string of prests to be pass to jekyll picture tag for formatting
+	delimited by ;
 {% endcomment %}
 {% if include.style %}
 <div class="row-images" style="{{include.style}}">
@@ -13,13 +24,16 @@ files: string of img file paths delimited by ;
 {% if include.caption %}
 {% assign captions = include.caption | split: ';' %}
 {% endif %}
+{% if include.alt %}
+{% assign alts = include.alt | split: ';' %}
+{% endif %}
 {% if include.presets %}
 {% assign presets = include.presets | split: ';' %}
 {% endif %}
 {% for img in files %}
 	{% assign alt = alts[forloop.index0] %}
 	{% assign caption = captions[forloop.index0] %}
-	{% assign preset = preset[forloop.index0] %}
+	{% assign preset = presets[forloop.index0] %}
 	{% include image.html preset=preset img=img class="col" caption=caption alt=alt %}
 {% endfor %}
 </div>

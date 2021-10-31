@@ -37,3 +37,8 @@ sass:
 include: [".nojekyll"]
 
 url: https://ifthehuefits.github.io/
+
+picture:
+    source: "assets/images"
+    output: "generated/images"
+    suppress_warnings: true
