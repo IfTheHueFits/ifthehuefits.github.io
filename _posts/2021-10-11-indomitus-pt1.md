@@ -4,7 +4,7 @@ author: ollie
 subheading: Well over a year after I started I have finally settled on a scheme for my space marines.
 title: The Road to Indomitus Part 1&#58 The Sons of Medusa
 categories: Showcase
-head_img: /assets/images/2021-10-11-indomitus-pt1/Emerald3.jpg
+head_img: 2021-10-11-indomitus-pt1/Emerald3.jpg
 ---
 
 {% picture 2021-10-11-indomitus-pt1/group_black.jpg %}

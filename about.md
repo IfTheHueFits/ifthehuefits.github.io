@@ -3,7 +3,7 @@ layout: default
 permalink: /about/
 title: About
 subheading: Who's this handsome fella? And what's this all about?
-head_img: /assets/images/about/holi.jpg
+head_img: about/holi.jpg
 ---
 # About
 
