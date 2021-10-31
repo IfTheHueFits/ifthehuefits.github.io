@@ -26,7 +26,8 @@ presets:
 
     smaller:
         formats: [original]
-        widths: [400, 600]
+        widths: [400, 600, 800]
+        fallback_width: 600
         sizes:
             mobile: calc(100vw-10px)
             tablet: calc(100vw-25px)
