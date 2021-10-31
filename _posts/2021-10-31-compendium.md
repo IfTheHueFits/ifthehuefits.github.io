@@ -4,7 +4,7 @@ author: ollie
 subheading: A deep dive into this trove of Warhammer inspiration.
 title: Compendium&#58 Volume 1
 categories: Review
-head_img: /assets/images/2021-10-31-compendium/spine.jpg
+head_img: 2021-10-31-compendium/spine.jpg
 ---
 {% picture "2021-10-31-compendium/cover_angle.jpg" --alt Compendium cover %}
 
@@ -12,7 +12,7 @@ Impulse purchase definitely isn't the right word here, but I certainly don't thi
 
 <!--more-->
 
-{% include image.html img="2021-10-31-compendium/cover.jpg" alt="Compendium cover" caption="Cover artwork designed by Orniris Terensi" style="max-height: 600px; width: auto;" %}
+{% include image.html img="2021-10-31-compendium/cover.jpg" alt="Compendium cover" caption="Cover artwork designed by Orniris Terensi" style="max-width: 450px; height: auto;" %}
 
 For those of you that don't follow The Miniatures Compendium on [their instagram](https://www.instagram.com/thegoldendemoncompendium/), for years it has been an incredible archive of past and present Golden Demon winners, with every person they follow being a Golden Demon winning artist. This volume is a culmination of nearly 4 years of work, covering 94 miniatures from 54 different artists all presented in a gorgeous 320-page hardback volume with additional art by [Orniris Terensi](https://www.instagram.com/orniris/).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 author: ollie
-head_img: /assets/images/warhammer/canoptek_spyder_5.jpg
+head_img: warhammer/canoptek_spyder_5.jpg
 heading: Is this thing on?
 categories: Editorial
 ---

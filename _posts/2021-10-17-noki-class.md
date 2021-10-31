@@ -4,7 +4,7 @@ author: ollie
 subheading: Attending my first ever painting class and getting hands on with NMM.
 title: Non-Metallic Metals Class with Noki Studios
 categories: Review
-head_img: /assets/images/2021-10-17-niko-class/longsword.jpg
+head_img: 2021-10-17-niko-class/longsword.jpg
 ---
 
 {% include image.html img="2021-10-17-niko-class/both_l.jpg" alt="Non-metallic metal swords" %}
