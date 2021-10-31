@@ -34,4 +34,4 @@ There is also a smattering of Tau that will appear every now and then, which I h
 
 So things may be a bit quiet for now just while I work the kinks out of this website, as I very much taught myself web-dev so I could make this. Currently, with Indomitus, I am making my first foray into the Adeptus Astartes so I may be needing some help with some test themes coming up, I'm also hopefully starting work on some busts by [Reuben Lowde](https://www.instagram.com/reubenlowde/) which you should definitely check out also. In the meantime, enjoy the cheeky smattering of Necrons currently scattered across here and the gallery.
 
-{% include row.html files = "assets/images/warhammer/tomb_blades_6.jpg,assets/images/warhammer/triarch_stalker_3.jpg" style="flex-direction: row;"%}
+{% include row.html files = "assets/images/warhammer/tomb_blades_6.jpg;assets/images/warhammer/triarch_stalker_3.jpg" style="flex-direction: row;"%}

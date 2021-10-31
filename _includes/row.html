@@ -9,7 +9,7 @@ files: string of img file paths delimited by ;
 {% else %}
 <div class="row-images" style="flex-direction: row; margin:0;">
 {% endif %}
-{% assign files = include.files | split: ','%}
+{% assign files = include.files | split: ';'%}
 {% if include.caption %}
 {% assign captions = include.caption | split: ';' %}
 {% endif %}
