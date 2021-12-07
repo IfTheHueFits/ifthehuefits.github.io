@@ -95,6 +95,7 @@ function lightboxClick(event) {
 		for (j=0; j<pageImgs.length; j++){
 			if (pageImgs[j] == elem){
 				i = j;
+				break;
 			}
 		}
 
@@ -115,7 +116,8 @@ function lightboxClick(event) {
 			// if pig image/ no srcset just set to largest image
 			if(!newImg.srcset){
 				var fp = newImg.getAttribute('src')
-				fp = fp.replace(/-([0-9]+)-/, '-@-');
+				fp = fp.replace(/-([0-9]+)-([a-f0-9]+\.)/, '-@-$2');
+				console.log(fp);
 				srcset = ''
 				for(k=0; k<sizes.length; k++){
 					srcset += fp.replace(/(@)/, sizes[k]) + ' ' + sizes[k] + 'w, '
