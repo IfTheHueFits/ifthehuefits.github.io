@@ -120,7 +120,6 @@ function lightboxClick(event) {
 			if(!newImg.srcset){
 				var fp = newImg.getAttribute('src')
 				fp = fp.replace(/-([0-9]+)-([a-f0-9]+\.)/, '-@-$2');
-				console.log(fp);
 				srcset = ''
 				for(k=0; k<sizes.length; k++){
 					srcset += fp.replace(/(@)/, sizes[k]) + ' ' + sizes[k] + 'w, '

@@ -1,7 +1,6 @@
 ---
 layout: none
 ---
-const swup = new Swup()
 var imageData; // as image data gets bit this may slow down the page if it hangs around
 // NOTE sizes also defined in lightbox.js
 var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
@@ -68,7 +67,8 @@ function init(){
 	// scroll to top on page change
 	topFunction();
 
-	// PART 1 trigger image gallery if present
+
+	// PART 2 trigger image gallery if present
 	if (document.querySelector("#pig")){
 		var pig;
 		var options = {
@@ -95,7 +95,7 @@ function init(){
 		}
 	}
 
-	// PART 2 Change background of side pannel
+	// PART 1 Change background of side pannel
 	// default background image
 	var orig_file = "splash.jpg"
 	var ratio = 0.747;
@@ -115,6 +115,7 @@ function init(){
 	if (!document.querySelector(".img_on").style.backgroundImage.includes(orig_file.split('.')[0])) {
 		gen_background_file(orig_file, ratio, hash, backgrounds);
 	}
+
 }
 
 // remove variables no longer used on other pages
@@ -122,6 +123,15 @@ function unload() {
 	//Not currently doing anything
 }
 
+//first load
 init();
-swup.on('willReplaceContent', unload);
-swup.on('contentReplaced', init);
+
+//add swup event listeners
+try {
+	const swup = new Swup();
+	swup.on('willReplaceContent', unload);
+	swup.on('contentReplaced', init);
+}
+catch(err){
+	console.log(err.message);
+}
