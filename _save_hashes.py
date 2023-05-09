@@ -5,28 +5,48 @@ import re
 import glob
 from PIL import Image
 
-# NOTE: MAKE SURE THAT FILE TYPE IS NOT INCLUDED ON THE END OF THE GALLERY.YML FILE
-# get list of images in the gallery
-with open("./_data/gallery.yml") as file:
-	imgdata = [{"filename": file} for file in yaml.load(file, Loader=yaml.FullLoader)["filenames"]]
+galleries = ["./_data/gallery.yml",
+			 "./_data/warhammerfest23.yml"]
 
-# search the generated site for the hash that is added to the end to reduce
-# recompilation in jekyll_picture_tag
+outputs = ["./assets/js/pictures.json",
+		   "./assets/images/2023-05-04-warhammerfest23/gallery.json"]
 
-os.chdir("./_site/generated/images/")
-for file in imgdata:
-	try:
-		genfp = glob.glob(file["filename"]+ "*", recursive=True)[0]
-		file["hash"] = genfp.split('-')[-1].split('.')[0]
-	except IndexError as e:
-		print(file["filename"] + " not in use... skipping")
+for i,j in zip(galleries, outputs):
+	with open(i) as file:
+		imgdata = [{"filename": file} for file in yaml.load(file, Loader=yaml.FullLoader)["filenames"]]
 
-os.chdir("../../../")
-for file in imgdata:
-	img = Image.open("./assets/images/{}.jpg".format(file["filename"]))
-	file["aspectRatio"] = img.size[0]/img.size[1]
+	# search the generated site for the hash that is added to the end to reduce
+	# recompilation in jekyll_picture_tag
 
-with open("./assets/js/pictures.json", 'w') as outfile:
-	json.dump(imgdata, outfile)
+	os.chdir("./_site/generated/images/")
+	for file in imgdata:
+		try:
+			fp = file["filename"].split('.')[0]
+			searched_fp = glob.glob(fp + '*', recursive=True)
+			fn = fp.split('/')[-1]
+			for i in searched_fp:
+				if i.split('/')[-1].split('-')[0] == fn:
+					genfp = i
+					break
+			file["hash"] = genfp.split('-')[-1].split('.')[0]
+		except IndexError as e:
+			print(file["filename"] + " not in use... skipping")
+		except NameError as e:
+			print(file["filename"] + " not found in list... skipping")
 
-print("Success, data saved in /assets/js/picture.json")
+	os.chdir("../../../")
+	for file in imgdata:
+		img = Image.open("./assets/images/{}".format(file["filename"]))
+
+		# iPhone photos have additional exif data that transposes the image so
+		# need to check that the aspect ratio the right way around
+		if img._getexif().get(274,0) < 5:
+			file["aspectRatio"] = img.size[0]/img.size[1]
+		else:
+			file["aspectRatio"] = img.size[1]/img.size[0]
+		exif = img._getexif()
+
+	with open(j, 'w') as outfile:
+		json.dump(imgdata, outfile)
+
+	print("Success, data saved in " + j)

@@ -52,6 +52,13 @@ h2 {
 	margin: 30px $wide_indent 10px $wide_indent;
 }
 
+h3 {
+	font-family: 'Merriweather', serif;
+	font-size: 1.25em;
+	color: #2a2f36;
+	margin: 30px $wide_indent+5% 10px $wide_indent+5%;
+}
+
 main p, figure, li, form {
 	font-family: 'Mulish', sans-serif;
 	font-size: 1.125em;
@@ -60,7 +67,6 @@ main p, figure, li, form {
 	margin: 10px 20%;
 }
 
-
 p > a, li > a, span {
 	font-family: 'Mulish', sans-serif;
 	color: black;
@@ -68,6 +74,12 @@ p > a, li > a, span {
 
 main h1, .post_data, li{
 	margin: 10px $wide_indent;
+}
+
+// to handle nested lists and stop the fonts getting bigger
+li li{
+	font-size: 1em;
+	margin: 10px 5%
 }
 
 hr {
@@ -152,8 +164,12 @@ button {
 		margin: 10px $indent;
 	}
 
-	h2 {
+	h2, h3 {
 		margin: 30px $indent 10px $indent;
+	}
+
+	h3 {
+		margin: 30px $indent+5% 10px $indent+5%;
 	}
 
 	main p, figure, hr, .pagination, form{
@@ -175,8 +191,13 @@ button {
 }
 
 @media (max-width: $tablet){
-	main h1, main p, figure, h2, li, .post_data, hr, .pagination, form, figcaption{
+	main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption{
 		margin: 10px 5%;
+	}
+
+	li li{
+		font-size: 1em;
+		margin: 10px 0.5%;
 	}
 
 	.fb-comments{
@@ -187,7 +208,7 @@ button {
 		font-size: 2em;
 	}
 
-	h2 {
+	h2, h3 {
 		font-size: 1.25em;
 	}
 
