@@ -9,7 +9,7 @@ galleries = ["./_data/gallery.yml",
 			 "./_data/warhammerfest23.yml"]
 
 outputs = ["./assets/js/pictures.json",
-		   "./assets/images/2023-05-04-warhammerfest23/gallery.json"]
+		   "./assets/images/2023-05-09-warhammerfest23/gallery.json"]
 
 for i,j in zip(galleries, outputs):
 	with open(i) as file:
