@@ -4,10 +4,10 @@ author: ollie
 subheading: My experience at the return of the biggest event in the Warhammer calendar
 title: Warhammer Fest '23
 categories: Review
-head_img: 2023-05-04-warhammerfest23/heresyme.jpg
+head_img: 2023-05-09-warhammerfest23/heresyme.jpg
 ---
 
-{% picture /2023-05-04-warhammerfest23/IMG_8309.JPG%}
+{% picture /2023-05-09-warhammerfest23/IMG_8309.JPG%}
 
 So Warhammer Fest has returned, and for the first time since Games Day 2013, I was finally free to attend and sample everything that GW has to offer. I had a blast of a time over the three days and it was an excellent way to spend my birthday weekend. That being said there is certainly a lot of room for improvement. This is also the first time I have entered Golden Demon since I was eligible for Youngbloods and I’m very happy with my finalist's pin!
 
@@ -39,7 +39,7 @@ There was also a big box of pre-built minis which was really handy. Largely lots
 
 Since there was such a large amount of AoS stuff, I decided to choose the Chaos model as my entry. I preferred the commissar but actually getting Tolgar Split-Eye out and putting it together really made me fall in love with the model and the box photos do not do it justice. The dynamic pose is something that you don’t see much unless a model is heavily converted so I bought an extra later on in the Fest since it gave me some inspiration for a future GD entry. Since there weren’t many kits that were getting the creative juices flowing I figures I would just paint a simple duel with Tolgar charging towards an AoS sorcerer (no idea what the actual kit is called) and just see how much I can get painted in a day – especially since I am notoriously slow.
 
-{% include image.html img="2023-05-04-warhammerfest23/hobby_challenge.jpg" alt="Hobby Challenge results" caption="My Hobby Challenge attempt" %}
+{% include image.html img="2023-05-09-warhammerfest23/hobby_challenge.jpg" alt="Hobby Challenge results" caption="My Hobby Challenge attempt" %}
 
 After building our pieces they were then primed by the Event staff in either white or black. If you asked nicely they may have given it a zenithal prime for you too. It was about a 30 min wait for me which was completely fine since it was a prime opportunity to take a break and go and get some lunch. That being said, later in the day the security at the venue stopped the staff from priming so there became a big backlog while it was confirmed that GW had in fact cleared it with venue staff beforehand. Sadly Chris ended up waiting nearly an hour and a bit for his which was a shame. That being said, since the problem was simply the venue security being unsure it was allowed, I’m sure it wouldn’t have been a problem on the other days, nor should it be again.
 
@@ -47,7 +47,7 @@ Come 6 o’clock everyone had their entries on the table ready for judging and [
 
 I’m really happy with my entry. I got the chance to paint some models I wouldn’t normally pick up and I think I got them to a pretty good tabletop standard in effectively 5 hours of painting. I also had a good chance to try out more contrast paints which I wouldn’t have picked up otherwise. Chris took a slightly different approach with his duel and had the commissar fighting off a hoard of poxwalkers, which I think visually looked really good and was excellently executed, even if he did have trouble getting anything painted in time due to the priming delays.
 
-{% include image.html img="2023-05-04-warhammerfest23/hobby_challenge_Chris.jpg" alt="Chris' Hobby Challenge results" caption="Chris' Hobby Challenge attempt" %}
+{% include image.html img="2023-05-09-warhammerfest23/hobby_challenge_Chris.jpg" alt="Chris' Hobby Challenge results" caption="Chris' Hobby Challenge attempt" %}
 
 One thing I am glad about though is that I did bring some of my own paints and tools with me. I had them in my bag just in case something awful happened to my GD entry and it meant that I wasn’t scrounging around for paints all day. I did rightly have the piss taken out of me for being a try-hard when I pulled out my wet palette though. The paint selection was eclectic at best so having at least a couple of triads in my box with me meant I could actually challenge my speed painting rather than painting with a limited range of paints.
 
@@ -56,8 +56,8 @@ I hadn’t realised how much I missed just sitting down and painting with other 
 As will be a running theme throughout this write-up (I hesitate to call it a review), it is really the people I was with that made this a special event. I’ll admit that I’m not massively clued up on Warhammer content creators outside of the big painters, and people who regularly post tutorials that I pour over every detail of, but I felt really grateful to get to chat with PickleJarHobbies and LetsMakeitOrkie as we constantly made jokes about the excessively large number of pipe sprues.
 
 <div class="row-images">
-{% include row.html files = "2023-05-04-warhammerfest23/IMG_8303.JPG;2023-05-04-warhammerfest23/IMG_8304.JPG" %}
-{% include row.html files = "2023-05-04-warhammerfest23/IMG_8305.JPG;2023-05-04-warhammerfest23/IMG_8306.JPG" %}
+{% include row.html files = "2023-05-09-warhammerfest23/IMG_8303.JPG;2023-05-09-warhammerfest23/IMG_8304.JPG" %}
+{% include row.html files = "2023-05-09-warhammerfest23/IMG_8305.JPG;2023-05-09-warhammerfest23/IMG_8306.JPG" %}
 </div>
 <figure><figcaption>A selection of other entries</figcaption></figure>
 
@@ -75,7 +75,7 @@ Right next to the Squigapult was the Titan Owner’s Club who were playing a ful
 
 Next to the main hall was also a great stand where all the cosplayers were present. So many full-sized space marines, including a Warmaster Horus. I’m happy that GW gave them an exclusive space to show off and support their work. I also took the opportunity to chat with some of teh painters I had followed online and just generally let them know how great they are. Particular shoutout to the 'Eavy Metal legend [Darren Latham](https://www.instagram.com/darrenlatham/) and OSL/Oil paints master [Marco Frisoni](https://www.instagram.com/njm_marcofrisoni/)
 
-{% include row.html files = "2023-05-04-warhammerfest23/necron.JPG;2023-05-04-warhammerfest23/Marco.JPG" style="flex-direction: row;"%}
+{% include row.html files = "2023-05-09-warhammerfest23/necron.JPG;2023-05-09-warhammerfest23/Marco.JPG" style="flex-direction: row;"%}
 
 ### A digression on Tournaments
 
@@ -83,7 +83,7 @@ I also took the time to have a look around the tournament tables. My friend John
 
 A particular shout out to the American announcer who was generally making sure the tournaments went smoothly and also occasionally announcing things for the Fest as a whole such as GD updates. He had the timbre of a slick radio host and it always made me smile whenever there was an update.
 
-{% include image.html img="2023-05-04-warhammerfest23/me_and_John.jpg" caption="John and I taking a well earned break on the final day" %}
+{% include image.html img="2023-05-09-warhammerfest23/me_and_John.jpg" caption="John and I taking a well earned break on the final day" %}
 
 ### Horus Heresy and Old World Reveals
 
@@ -107,7 +107,7 @@ A particular curiosity was that non-finalists (i.e. those without green stickers
 
 Nonetheless, I could always spend hours staring at GD entries, and I was glad I went later in the afternoon as many of the crowds had died down.
 
-{% include image.html img="2023-05-04-warhammerfest23/801.JPG" alt="GD entry" caption="My Entry in the cabinet!" %}
+{% include image.html img="2023-05-09-warhammerfest23/801.JPG" alt="GD entry" caption="My Entry in the cabinet!" %}
 
 ## Day 3 and The Awards
 
@@ -149,4 +149,4 @@ So thanks to everyone for making my 26th Birthday so special. Now finally let's 
 
 ## Golden Demon Entrants
 
-<div id="pig" data-source="/assets/images/2023-05-04-warhammerfest23/gallery.json"></div>
+<div id="pig" data-source="/assets/images/2023-05-09-warhammerfest23/gallery.json"></div>
