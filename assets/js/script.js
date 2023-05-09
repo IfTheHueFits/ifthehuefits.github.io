@@ -2,12 +2,13 @@
 layout: none
 ---
 var imageData; // as image data gets bit this may slow down the page if it hangs around
+var imgageSource
 // NOTE sizes also defined in lightbox.js
 var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
 
-function getGalleryData() {
+function getGalleryData(source) {
 	// return promise of JSON data
-	return $.getJSON("/assets/js/pictures.json")
+	return $.getJSON(source)
 }
 
 function topFunction() {
@@ -70,10 +71,12 @@ function init(){
 
 	// PART 2 trigger image gallery if present
 	if (document.querySelector("#pig")){
+		pig_element = document.querySelector("#pig");
 		var pig;
 		var options = {
 			urlForSize: function(filename, size, hash) {
-					return '/generated/images/' + filename + '-' + size + '-' + hash + '.jpg';
+					fp = filename.split(".")
+					return '/generated/images/' + fp[0] + '-' + size + '-' + hash + '.jpg';
 				},
 
 			sizes: sizes.sort(function(a,b) {return a-b;}),
@@ -82,13 +85,15 @@ function init(){
 		};
 
 		// don't send unecessary request if variable is already loaded
-		if (imageData){
+		if (imageData && pig_element.dataset.source == imageSource){
 			pig = new Pig(imageData, options).enable();
 			pig.enable();
 		}
 		else {
-			getGalleryData().then( function(response){
+
+			getGalleryData(pig_element.dataset.source).then( function(response){
 				imageData = response;
+				imageSource = pig_element.dataset.source;
 				pig = new Pig(imageData, options).enable();
 				pig.enable();
 			});
@@ -128,7 +133,9 @@ init();
 
 //add swup event listeners
 try {
-	const swup = new Swup();
+	const swup = new Swup({
+  plugins: [new SwupScrollPlugin()]
+});
 	swup.on('willReplaceContent', unload);
 	swup.on('contentReplaced', init);
 }

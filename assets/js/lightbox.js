@@ -86,7 +86,7 @@ function lightboxClick(event) {
 		if (document.querySelector("#pig")){
 			var tempArr = []
 			for (j=0; j<pageImgs.length; j++){
-				if(j % 2 != 0){
+				if(!pageImgs[j].classList.contains("pig-thumbnail")){
 					tempArr.push(pageImgs[j])
 				}
 			}

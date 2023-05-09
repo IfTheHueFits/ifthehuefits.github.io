@@ -88,15 +88,13 @@ main{
 }
 
 .main_window img {
-    width: 100%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin: 20px auto;
     display: block;
-}
-
-.main_window img {
-    transition: opacity .3s ease-in-out;
+	max-height: 35vw;
+	transition: opacity .3s ease-in-out;
 }
 
 .main_window img:hover {
@@ -132,6 +130,10 @@ html.is-animating .transition-fade {
     main {
         margin-left: $side_width;
     }
+
+	.main_window img {
+		max-height: 45vw;
+	}
 }
 
 // Tablet View
@@ -227,9 +229,17 @@ html.is-animating .transition-fade {
         margin: 0;
         text-align: left;
     }
+
+	.main_window img {
+		max-height: 70vw;
+	}
 }
 
 @media (max-width: $mobile) {
+
+	.main_window img {
+		max-height: none
+	}
 
     .logo {
         display: none;
