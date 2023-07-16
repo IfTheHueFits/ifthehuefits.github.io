@@ -9,7 +9,7 @@ var flkty_set = false;
 var lightbox_visible = false;
 var comments_on = false;
 // NOTE sizes also defined in script.js
-var sizes = [ 400,  600,  800,  1000, ];
+var sizes = [ 600,  800,  1000, ];
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);

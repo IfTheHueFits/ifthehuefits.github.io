@@ -1,7 +1,7 @@
 var imageData; // as image data gets bit this may slow down the page if it hangs around
 var imgageSource
 // NOTE sizes also defined in lightbox.js
-var sizes = [ 400,  600,  800,  1000, ];
+var sizes = [ 600,  800,  1000, ];
 
 function getGalleryData(source) {
 	// return promise of JSON data
