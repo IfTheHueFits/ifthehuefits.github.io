@@ -8,21 +8,14 @@ media_queries:
 
 presets:
     default:
-        markup: auto
         formats: [original]
-        widths: [400, 600, 800, 1000]
+        widths: [600, 800, 1000]
         fallback_width: 800
         fallback_format: original
         noscript: false
         link_source: false
-        quality: 75
         strip_metadata: true
-        dimension_attributes: false
-        sizes:
-            mobile: calc(100vw-10px)
-            tablet: calc(100vw-25px)
-            standard_screen: calc(70vw-100px)
-            wide: calc(75vw-300px)
+
 
     smaller:
         formats: [original]
@@ -37,7 +30,7 @@ presets:
     gallery:
         markup: img
         formats: [original]
-        widths: [20, 100, 250, 400, 600, 800, 1000]
+        widths: [20, 100, 250, 600, 800, 1000]
         sizes:
             mobile: calc(100vw-10px)
             tablet: calc(100vw-25px)
