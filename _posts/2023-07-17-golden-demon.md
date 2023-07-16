@@ -4,9 +4,9 @@ author: ollie
 subheading: A deep dive into my Small Scale entry
 title: Golden Demon '23 Necron Doom Scythe
 categories: Showcase
-head_img: 2023-07-16-golden-demon/portrait.jpg
+head_img: 2023-07-17-golden-demon/portrait.jpg
 ---
-{% picture /2023-07-16-golden-demon/banner.jpg%}
+{% picture /2023-07-17-golden-demon/banner.jpg%}
 
 So here we are, my first Golden Demon entry in 10 years, and my first in the main competition. A lot has changed in that time – Large Scale has vanished, Small Scale has been added, and even all the trophies have had a re-design.
 
@@ -32,7 +32,7 @@ Stalagmites? Yeah, that makes sense – the tomb world has been there for billio
 
 ## The First Attempt at a Base
 
-{% picture /2023-07-16-golden-demon/rocks.jpg  caption="Two bases I had a go at sculpting milliput rocks on" %}
+{% picture /2023-07-17-golden-demon/rocks.jpg  caption="Two bases I had a go at sculpting milliput rocks on" %}
 
 I played around with a lot of ideas but effectively I needed to cut up and tile the floor in geometric shapes, much like the ones we see on Necron vehicles like the Monolith. First I tried rolling out a big sheet of Milliput and tried to see if I could carve and break that up how I wanted. I struggled to get it quite thin enough, and my carving looked far too irregular. While to a certain extent there would be some irregularities, at the Small Scale it wouldn’t be so apparent and so I decided that wasn’t going to work.
 
@@ -44,7 +44,7 @@ Slight snag… I got them cut 2/3 the size they should have been and we wouldn�
 
 ## Test Schemes
 
-{% include row.html files = "2023-07-16-golden-demon/Test1.jpg;2023-07-16-golden-demon/Test2.jpg" style="flex-direction: row;" %}
+{% include row.html files = "2023-07-17-golden-demon/Test1.jpg;2023-07-17-golden-demon/Test2.jpg" style="flex-direction: row;" %}
 
 Anyway, so the base was on pause for now, but the mini is of course the most important part of your entry, the base is just the frame for it, so I should get that sorted first. I had been inspired by a lot of Votann colour schemes that use a dirty cream off-white with orange and blue/black spot colours and wanted to try and recreate that. I had also seen Richard Grey’s technique for how he paints his Imperial fists and figured that the stippling scheme would help (a) build up the colours gradually so I get a smooth gradient from fairly dark to bright and (b) help me control where the lighting is coming from.
 
@@ -74,7 +74,7 @@ Shade the recesses across the white areas (both light and dark) with pure Stormv
 
 Because I intentionally made sure that the airbrush didn’t cover in a single out-of-the-pot colour I had to iterate between the different mixes for each half to highlight it up, I only used the darkest of each (i.e. 50:50 Celstra and Stormvermin for dark side and Ulthuan for light side)in a couple of places just to smooth out some of the transitions. I highlighted all the edges facing the light source and glazed towards those edges to give a smooth transition. I also put lots of small scratches across the hull in all but the lightest colours on each half so that it adds a cool weathered texture without looking explicitly like fresh battle damage.
 
-## black  cockpit
+## Black Cockpit
 
 Paints used:
 - Abbadon black
@@ -160,7 +160,7 @@ Anyway, the front fins on the armour of that were ideal since they could be moun
 
 I stuck it to a plinth and went for a creamy bone colour which ended up turning out horrendously. Fortunately, I had the other fin that I was using to test schemes on, and realised that red looked much better. I was initially hesitant of using too much colour on the base since I did not want it to draw attention from the model itself, but since the red sort of went with the orange, I felt that this worked okay.
 
-{% picture /2023-07-16-golden-demon/cream_base.JPG caption="Initial test scheme for the base" %}
+{% picture /2023-07-17-golden-demon/cream_base.JPG caption="Initial test scheme for the base" %}
 
 So I stripped the main fin and committed to adding dirt and rocks around it. The rocks were made up of bark and medium slate that I had found in the park. The sizes I found were actually the perfect size to surround the hole base without too much gap filling so it really looks like it bursts out of the ground. The ground is actual dirt, stuck on with PVA glue and then crumbled on top. I made sure to stick the bark and dirt in the oven for an hour to kill anything before sticking it on. I also drilled a hole in the top of the three prongs to later mount the mini.
 
@@ -195,7 +195,7 @@ Paints used:
 - Administratum grey
 - Rhinox Hide
 
-While I liked the red, there wasn’t much visual interest on the fin so I decided to add two black stripes similar to how they are done on Saim-Hann Wave Serpents. I specifically angled these such that they pointed towards where the Doom Scythe would be mounted. I masked off two strips in the red panel and sprayed from Abaddon black  to Eshin grey in a similar manner as I did for the red.
+While I liked the red, there wasn’t much visual interest on the fin so I decided to add two black stripes similar to how they are done on Saim-Hann Wave Serpents. I specifically angled these such that they pointed towards where the Doom Scythe would be mounted. I masked off two strips in the red panel and sprayed from Abaddon black to Eshin grey in a similar manner as I did for the red.
 
 On the back, I did some chunky highlights of the same colours and also glazed them into the bits that curved towards the light. I then edge highlighted with Dawnstone and Administratum grey.
 
@@ -247,12 +247,12 @@ And then… it was go-time.
 
 ## Golden Demon & Feedback
 
-{% include row.html files = "2023-07-16-golden-demon/8.jpg;2023-07-16-golden-demon/9.jpg" style="flex-direction: row;" %}
+{% include row.html files = "2023-07-17-golden-demon/8.jpg;2023-07-17-golden-demon/9.jpg" style="flex-direction: row;" %}
 <div class="row-images">
-{% include row.html files = "2023-07-16-golden-demon/portrait.jpg;2023-07-16-golden-demon/2.jpg" %}
-{% include row.html files = "2023-07-16-golden-demon/3.jpg;2023-07-16-golden-demon/4.jpg" %}
+{% include row.html files = "2023-07-17-golden-demon/portrait.jpg;2023-07-17-golden-demon/2.jpg" %}
+{% include row.html files = "2023-07-17-golden-demon/3.jpg;2023-07-17-golden-demon/4.jpg" %}
 </div>
-{% include row.html files = "2023-07-16-golden-demon/5.jpg;2023-07-16-golden-demon/6.jpg;2023-07-16-golden-demon/7.jpg" style="flex-direction: row;" %}
+{% include row.html files = "2023-07-17-golden-demon/5.jpg;2023-07-17-golden-demon/6.jpg;2023-07-17-golden-demon/7.jpg" style="flex-direction: row;" %}
 
 In the end, I walked away with a Finalist's pin. Of course, there was a bit of disappointment that I didn’t get further, but also as soon as I saw the other entrants it was clear quite how impressive the field was, and so I certainly wasn’t made to lose out to such excellent talent. After I collected my mini on the final day of Warhammer Fest, I just took the chance to ask people for feedback on what they thought.
 
