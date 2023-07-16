@@ -9,7 +9,6 @@ $standard_screen: 1600px;
 @import './reset.scss';
 @import './fonts';
 @import './navigation';
-@import './post_wrap';
 @import './lightbox';
 
 body {
@@ -94,6 +93,8 @@ main{
     margin: 20px auto;
     display: block;
 	max-height: 35vw;
+	width: auto;
+	height: auto;
 	transition: opacity .3s ease-in-out;
 }
 
@@ -250,3 +251,5 @@ html.is-animating .transition-fade {
     }
 
 }
+
+@import './post_wrap';

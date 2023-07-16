@@ -66,4 +66,3 @@ Jekyll::Hooks.register :documents, :post_render do |post|
 	post = formatAside(post)
 	post = formatRows(post)
 end
-
