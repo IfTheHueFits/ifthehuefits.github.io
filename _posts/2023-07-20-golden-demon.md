@@ -4,9 +4,9 @@ author: ollie
 subheading: A deep dive into my Small Scale entry
 title: Golden Demon '23 Necron Doom Scythe
 categories: Showcase
-head_img: 2023-07-17-golden-demon/portrait.jpg
+head_img: 2023-07-20-golden-demon/portrait.jpg
 ---
-{% picture /2023-07-17-golden-demon/banner.jpg%}
+{% picture /2023-07-20-golden-demon/banner.jpg%}
 
 So here we are, my first Golden Demon entry in 10 years, and my first in the main competition. A lot has changed in that time – Large Scale has vanished, Small Scale has been added, and even all the trophies have had a re-design.
 
@@ -32,7 +32,7 @@ Stalagmites? Yeah, that makes sense – the tomb world has been there for billio
 
 ## The First Attempt at a Base
 
-{% picture /2023-07-17-golden-demon/rocks.jpg  caption="Two bases I had a go at sculpting milliput rocks on" %}
+{% picture /2023-07-20-golden-demon/rocks.jpg  caption="Two bases I had a go at sculpting milliput rocks on" %}
 
 I played around with a lot of ideas but effectively I needed to cut up and tile the floor in geometric shapes, much like the ones we see on Necron vehicles like the Monolith. First I tried rolling out a big sheet of Milliput and tried to see if I could carve and break that up how I wanted. I struggled to get it quite thin enough, and my carving looked far too irregular. While to a certain extent there would be some irregularities, at the Small Scale it wouldn’t be so apparent and so I decided that wasn’t going to work.
 
@@ -44,7 +44,7 @@ Slight snag… I got them cut 2/3 the size they should have been and we wouldn�
 
 ## Test Schemes
 
-{% include row.html files = "2023-07-17-golden-demon/Test1.jpg;2023-07-17-golden-demon/Test2.jpg" style="flex-direction: row;" %}
+{% include row.html files = "2023-07-20-golden-demon/Test1.jpg;2023-07-20-golden-demon/Test2.jpg" style="flex-direction: row;" %}
 
 Anyway, so the base was on pause for now, but the mini is of course the most important part of your entry, the base is just the frame for it, so I should get that sorted first. I had been inspired by a lot of Votann colour schemes that use a dirty cream off-white with orange and blue/black spot colours and wanted to try and recreate that. I had also seen Richard Grey’s technique for how he paints his Imperial fists and figured that the stippling scheme would help (a) build up the colours gradually so I get a smooth gradient from fairly dark to bright and (b) help me control where the lighting is coming from.
 
@@ -74,7 +74,7 @@ Shade the recesses across the white areas (both light and dark) with pure Stormv
 
 Because I intentionally made sure that the airbrush didn’t cover in a single out-of-the-pot colour I had to iterate between the different mixes for each half to highlight it up, I only used the darkest of each (i.e. 50:50 Celstra and Stormvermin for dark side and Ulthuan for light side)in a couple of places just to smooth out some of the transitions. I highlighted all the edges facing the light source and glazed towards those edges to give a smooth transition. I also put lots of small scratches across the hull in all but the lightest colours on each half so that it adds a cool weathered texture without looking explicitly like fresh battle damage.
 
-## Black Cockpit
+### Black Cockpit
 
 Paints used:
 - Abbadon black
@@ -88,7 +88,7 @@ Flat black is quite a harsh colour and so I wanted to soften that ever so slight
 
 I then highlighted starting from Dark Reaper and through Thunderhawk Blue, Russ grey and Fenrisian Grey, again largely focusing edges on the lightest side. I also glazed up some of the Thunderhawk blue on the surfaces that were directly perpendicular to the light. On the further side of the cockpit, I only went up to Russ Grey.
 
-## Blue OSL
+### Blue OSL
 
 Paints used:
 - Ahriman Blue
@@ -99,7 +99,7 @@ Despite the fact I hadn’t finished all the details, it was at this point that 
 
 As an aside, when I had originally tried this on my test model I had tried glazing dark blues first. In hindsight, this clearly doesn’t make sense which is why it looks so weird (unfortunately I don’t have many pictures). The reason it doesn’t work, is the weapons are a light source. Regardless of what environmental lighting there is, the weapons shouldn’t make anything darker. Therefore using any colour which has a darker value than that which you are covering will look weird – Bahroth blue has a slightly higher value than Celestra grey and so adds to the lighting which is why it works so well. This is a particular learning point I’m definitely going to take on in future.
 
-## Orang Rings
+### Orang Rings
 
 Paints used:
 - Wild Rider red
@@ -117,7 +117,7 @@ To weather the orange I then added some chips in Ulthuan and Celestra grey where
 
 I was worried since I had already done some OSL I would have to go back over it, but actually the original OSL was subtle enough where the orange was that it looked fine and didn’t disrupt the visuals.
 
-## Metallics
+### Metallics
 
 Paints used:
 - Iron Hands Steel
@@ -126,7 +126,7 @@ Paints used:
 
 Relatively straightforward – Iron Hands Steel base, wash nuln oil, highlight Iron Hands Steel and then a bright silver. Since the metallic details were so small there was only really so much that could be done with this and time was ticking away.
 
-## The Weapons and the pilot glow
+### The Weapons and the pilot glow
 
 Paints used:
 - Ahriman Blue
@@ -160,7 +160,7 @@ Anyway, the front fins on the armour of that were ideal since they could be moun
 
 I stuck it to a plinth and went for a creamy bone colour which ended up turning out horrendously. Fortunately, I had the other fin that I was using to test schemes on, and realised that red looked much better. I was initially hesitant of using too much colour on the base since I did not want it to draw attention from the model itself, but since the red sort of went with the orange, I felt that this worked okay.
 
-{% picture /2023-07-17-golden-demon/cream_base.JPG caption="Initial test scheme for the base" %}
+{% picture /2023-07-20-golden-demon/cream_base.JPG caption="Initial test scheme for the base" %}
 
 So I stripped the main fin and committed to adding dirt and rocks around it. The rocks were made up of bark and medium slate that I had found in the park. The sizes I found were actually the perfect size to surround the hole base without too much gap filling so it really looks like it bursts out of the ground. The ground is actual dirt, stuck on with PVA glue and then crumbled on top. I made sure to stick the bark and dirt in the oven for an hour to kill anything before sticking it on. I also drilled a hole in the top of the three prongs to later mount the mini.
 
@@ -247,22 +247,22 @@ And then… it was go-time.
 
 ## Golden Demon & Feedback
 
-{% include row.html files = "2023-07-17-golden-demon/8.jpg;2023-07-17-golden-demon/9.jpg" style="flex-direction: row;" %}
+{% include row.html files = "2023-07-20-golden-demon/8.jpg;2023-07-20-golden-demon/9.jpg" style="flex-direction: row;" %}
 <div class="row-images">
-{% include row.html files = "2023-07-17-golden-demon/portrait.jpg;2023-07-17-golden-demon/2.jpg" %}
-{% include row.html files = "2023-07-17-golden-demon/3.jpg;2023-07-17-golden-demon/4.jpg" %}
+{% include row.html files = "2023-07-20-golden-demon/portrait.jpg;2023-07-20-golden-demon/2.jpg" %}
+{% include row.html files = "2023-07-20-golden-demon/3.jpg;2023-07-20-golden-demon/4.jpg" %}
 </div>
-{% include row.html files = "2023-07-17-golden-demon/5.jpg;2023-07-17-golden-demon/6.jpg;2023-07-17-golden-demon/7.jpg" style="flex-direction: row;" %}
+{% include row.html files = "2023-07-20-golden-demon/5.jpg;2023-07-20-golden-demon/6.jpg;2023-07-20-golden-demon/7.jpg" style="flex-direction: row;" %}
 
 In the end, I walked away with a Finalist's pin. Of course, there was a bit of disappointment that I didn’t get further, but also as soon as I saw the other entrants it was clear quite how impressive the field was, and so I certainly wasn’t made to lose out to such excellent talent. After I collected my mini on the final day of Warhammer Fest, I just took the chance to ask people for feedback on what they thought.
 
-As I just happened to be walked past the cabinet I bumped into the King of Small Scale – James Taro. I had to tell him how impressed I was that he got an entry together in 4 days and we naturally moved on to the topic of GD entries. Generally, he was very complimentary about the piece which was very lovely of him, and whether or not it was politeness it was quite nice the number of people who had seemed to note it when it was in the cabinets and mentioned how they liked it while I was walking around. Here are the main points James mentioned:
+As I just happened to be walked past the cabinet I bumped into the King of Small Scale – [James Taro](https://www.instagram.com/tarominipainting/). I had to tell him how impressed I was that he got an entry together in 4 days and we naturally moved on to the topic of GD entries. Generally, he was very complimentary about the piece which was very lovely of him, and whether or not it was politeness it was quite nice the number of people who had seemed to note it when it was in the cabinets and mentioned how they liked it while I was walking around. Here are the main points James mentioned:
 
 - More detail on the pilot
 
 I agree with this point a lot. It was something that I needed to try and refine but I didn’t have the time to make mistakes coming towards the end.
 
-- Tidy up the mounting point
+- Tidy up the mounting point (part 1)
 
 As you can see from the images above, I am still using the ball joint in the socket of the doom scythe. James suggested to try and hide this more such that you can’t see the pin. I had originally considered drilling a hole in the left wing and having that in contact with the top prong but I was lazy here. It's definitely true that the entries which immerse themselves in a scene like mine are often positioned very well such that you can’t see how it's attached.
 
@@ -274,9 +274,9 @@ Particularly the most distant edge with the brightest colour to help make them p
 
 James suggested perhaps a small scene at the back like a soldier or body or something. At the very least there were large areas of black on the back of the fin that, while painted, weren’t visually interesting.
 
-Mamikon Katachikyan also took a look, and since I had experience from his painting classes before I was also interested to show him what I had done since. I like to think I also helped to take his mind off his incredible duel that was being judged at the time.
+[Mamikon Khatchikian](https://www.instagram.com/mamikonpaints/) also very kindly took a look, and since I had experience from his painting classes before I was also interested to show him what I had done since. I also liked to think I helped to take his mind off his incredible duel that was being judged at the time!
 
-- Tidy up the mounting point
+- Tidy up the mounting point (part 2)
 
 Specifically, you can see some of the glue where I had painted over it and it would have been straightforward to scrape some of this up and clean that up a bit. I was probably a bit scared that it might look a bit inconsistent if I tried to repaint it but it's definitely true that every detail needs to be immaculate to be in with a chance.
 
@@ -284,11 +284,13 @@ Specifically, you can see some of the glue where I had painted over it and it wo
 
 I had weathered the white, but aside from the dents, there wasn’t really anything on the black of the Doom Scythe. I probably could have come in with at least some of the browns to make it look like it was gathering in the recesses more.
 
-During the Cult of Paint meet up Andy Wardle also very kindly cast his eye over it. The entire Cult of Paint team were generally really lovely and there were quite a few people sharing their pieces with one another. It was a great atmosphere. So Andy mentioned:
+During the Cult of Paint meet up [Andy Wardle](https://www.instagram.com/andywardle_artwork/) also very kindly cast his eye over it. The entire Cult of Paint team were generally really lovely and there were quite a few people sharing their pieces with one another. It was a great atmosphere. So Andy mentioned:
 
 - Push the highlights/shadows more
 
 While you could see that I had put some directional lighting on the Doom Scythe, the darker side could be darker so that it reads more clearly in many different environments, rather than just accentuating the golden angle. Similarly,  he noted that he could see that I had tried to lighten where the black curved up slightly, but I could go further with this. I expressed reservations since I didn’t want it to look too blue, which he agreed with but mentioned how he typically highlights up past where he wants it then knocks the colour back with the base in order to make sure it reads correctly, which is certainly sound advice I will try in the future.
+
+Certainly looking at the test model I realised that I had actually pushed the darker side of the white parts a lot more, and just hadn't committed as much in the final thing. One thing I should probably do in future is take black and white photos of the miniature to see how much contrast there actually is in terms of colour but also light value.
 
 - Lighting on the dirt/rocks
 
