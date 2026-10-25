@@ -43,3 +43,22 @@ presets:
         markup: naked_srcset
         formats: [original]
         widths: [600, 800, 1000]
+
+    # about/holi.jpg is 720px wide. Same banner output as banner_srcset, asking
+    # only for widths the file has.
+    banner_srcset_720:
+        markup: naked_srcset
+        formats: [original]
+        widths: [600, 720]
+        fallback_width: 720
+
+    # 2021-10-31-compendium/soper.jpg and penaut.jpg are 680px wide. Same output
+    # as default, asking only for widths the files have.
+    max_680:
+        formats: [original]
+        widths: [600, 680]
+        fallback_width: 680
+        fallback_format: original
+        noscript: false
+        link_source: false
+        strip_metadata: true
