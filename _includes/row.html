@@ -40,6 +40,7 @@ presets: string of prests to be pass to jekyll picture tag for formatting
 	{% assign alt = alts[forloop.index0] %}
 	{% assign caption = captions[forloop.index0] %}
 	{% assign preset = presets[forloop.index0] %}
-	{% include image.html preset=preset img=img class="col" caption=caption alt=alt %}
+	{% assign flex = img | image_ratio %}
+	{% include image.html preset=preset img=img class="col" caption=caption alt=alt flex=flex %}
 {% endfor %}
 </div>

@@ -40,9 +40,8 @@
 			</div>
 		</header>
 		<main id="swup" class="main_window transition-fade">
-			{% if page.head_img %}
-			<aside id="{{ page.head_img }}"></aside>
-			{% endif %}
+			{% assign banner_img = page.head_img | default: "splash.jpg" %}
+			<aside data-srcset="{% picture banner_srcset {{ banner_img }} %}" data-ratio="{{ banner_img | image_ratio }}"></aside>
 			{{ content }}
 		</main>
 
