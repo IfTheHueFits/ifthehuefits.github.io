@@ -1,5 +1,5 @@
 {% if include.class %}
-<figure class="{{include.class}}">
+<figure class="{{include.class}}"{% if include.flex %} style="flex: {{include.flex}}"{% endif %}>
 {% else %}
 <figure>
 {% endif %}
