@@ -36,3 +36,10 @@ presets:
             tablet: calc(100vw-25px)
             standard_screen: calc(70vw-100px)
             wide: calc(75vw-300px)
+
+    # Sidebar background. Emits a srcset string rather than an img, at the
+    # same widths the sidebar script already chooses from.
+    banner_srcset:
+        markup: naked_srcset
+        formats: [original]
+        widths: [600, 800, 1000]

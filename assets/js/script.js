@@ -38,30 +38,33 @@ function executeIfFileExist(src, callback) {
     xhr.open('HEAD', src)
 }
 
-function gen_background_file(orig_file, ratio, hash, backgrounds){
+function gen_background_file(srcset, ratio, backgrounds){
 	var width = screen.width;
-	var load_width = 1000; //default load resolution
+	var entries = srcset.split(',');
+	var candidates = [];
+	var chosen;
 
 	// correct width if it is in a column
 	if (screen.width > 1024){
 		width = screen.height*ratio;
 	}
 
-	// check the available sizes and see which one is the smallest size for the width
-	for(i=0; i<sizes.length; i++){
-		if (sizes[i] > width){
-			load_width = sizes[i];
+	for(i=0; i<entries.length; i++){
+		var parts = entries[i].trim().split(/\s+/);
+		candidates.push({url: parts[0], width: parseInt(parts[1], 10)});
+	}
+	candidates.sort(function(a,b){return a.width-b.width;});
+
+	// smallest listed width that still covers the space; otherwise the largest
+	chosen = candidates[candidates.length-1].url;
+	for(i=0; i<candidates.length; i++){
+		if (candidates[i].width > width){
+			chosen = candidates[i].url;
 			break;
 		}
 	}
 
-	var new_file = "/generated/images/" + orig_file.split(".")[0] + "-" + load_width + "-" + hash + "." + orig_file.split(".")[1];
-	try{
-		swap_background(new_file, backgrounds);
-	}
-	catch(err){
-		swap_background("/assets/images/" + orig_file, backgrounds);
-	}
+	swap_background(chosen, backgrounds);
 }
 
 function init(){
@@ -101,24 +104,17 @@ function init(){
 	}
 
 	// PART 1 Change background of side pannel
-	// default background image
-	var orig_file = "splash.jpg"
-	var ratio = 0.747;
-	var hash = "df42ed768";
-
 	var backgrounds = document.getElementsByClassName("side_bar_img");
-
-	// if aside element is present containing the background img info
-	if (document.querySelector("aside")){
-		var aside_element = document.querySelector("aside");
-		orig_file = aside_element.id;
-		hash = $(aside_element).data("hash");
-		ratio = $(aside_element).data("ratio");
-	};
+	var aside_element = document.querySelector("aside");
+	var srcset = aside_element.dataset.srcset;
+	var ratio = aside_element.dataset.ratio;
+	var banner_stem = srcset.split(',')[0].trim().split(/\s+/)[0]
+		.replace(/-\d+-[0-9a-f]+\.[^.]+$/, '')
+		.split('/generated/images/')[1];
 
 	// check if background image is actually different and switch if so
-	if (!document.querySelector(".img_on").style.backgroundImage.includes(orig_file.split('.')[0])) {
-		gen_background_file(orig_file, ratio, hash, backgrounds);
+	if (!document.querySelector(".img_on").style.backgroundImage.includes(banner_stem)) {
+		gen_background_file(srcset, ratio, backgrounds);
 	}
 
 }
