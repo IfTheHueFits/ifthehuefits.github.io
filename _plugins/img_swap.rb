@@ -21,29 +21,6 @@ def formatAside(post)
 	return post
 end
 
-def formatRows(post)
-	# caluclates the flex ratio of images in a row to make them all the same height
-	if post.output.include? '<div class="row-images"'
-		# get each col which contains one image
-		row_group = post.output.scan(/(class="col">(.|\n)+?<\/.+?>)/).flatten
-		row_group.each do |row|
-			# regex above captures random tabs also
-			if row.include? 'class="col">'
-				# extract the src of the image to calculate the aspect ratio
-				# NOTE: worried that the .+? which is meant to catch attr pre-src may catch too much
-				src = row.scan(/<img .+? src=['"]([^"']+)["']/).flatten[0]
-				dims = Dimensions.dimensions("./_site" + src)
-
-				# add ratio as style to col under flex"
-				new_row = row.gsub(/class="col">/, \
-									'class="col" style="flex: ' + \
-									(dims[0].to_f/dims[1].to_f).to_s + '">')
-				post.output = post.output.gsub(row, new_row)
-			end
-		end
-	end
-end
-
 # Description: Jekyll plugin to replace Markdown image syntax with {% picture %} tag for crafting responsive images
 # place in /_plugins/
 Jekyll::Hooks.register :posts, :pre_render do |post, payload|
@@ -59,10 +36,8 @@ end
 # documents don't seem to include pages and vice versa, so run snippet on both
 Jekyll::Hooks.register :pages, :post_render do |post|
 	post = formatAside(post)
-	post = formatRows(post)
 end
 
 Jekyll::Hooks.register :documents, :post_render do |post|
 	post = formatAside(post)
-	post = formatRows(post)
 end
