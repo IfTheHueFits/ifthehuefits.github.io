@@ -2,7 +2,8 @@
 layout: post
 author: ollie
 head_img: warhammer/canoptek_spyder_5.jpg
-heading: Is this thing on?
+title: Is this thing on?
+subheading:
 categories: Editorial
 ---
 {% picture warhammer/canoptek_spyder_4.jpg %}
