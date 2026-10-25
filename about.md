@@ -4,6 +4,7 @@ permalink: /about/
 title: About
 subheading: Who's this handsome fella? And what's this all about?
 head_img: about/holi.jpg
+banner_preset: banner_srcset_720
 ---
 # About
 

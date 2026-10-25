@@ -28,6 +28,13 @@ plugins:
 excerpt_separator: <!--more-->
 incremental: false
 
+# Fail the build on a YAML front-matter syntax error, a Liquid syntax error,
+# or a call to a filter that does not exist. Missing variables stay warnings.
+strict_front_matter: true
+liquid:
+  error_mode: strict
+  strict_filters: true
+
 paginate: 10
 paginate_path: "page:num/"
 
@@ -41,4 +48,3 @@ url: https://ifthehuefits.github.io/
 picture:
     source: "assets/images"
     output: "generated/images"
-    suppress_warnings: true
