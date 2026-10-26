@@ -33,5 +33,4 @@ Software libraries are provided by the following licenses:
 - [jQuery](https://jquery.org/license/) by [The OpenJS Foundation](https://openjsf.org/) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
 - [Flickity](https://flickity.metafizzy.co/) by [Metafizzy](https://github.com/metafizzy) is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 - [Jekyll](https://jekyllrb.com/) by [Jekyll](https://github.com/jekyll) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
-- [Progressive Image Grid](https://github.com/schlosser/pig.js/) by [Dan Schlosser](https://github.com/schlosser) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
 - [Jekyll Picture Tag](https://github.com/rbuchberger/jekyll_picture_tag) by [Robert Buchberger](https://github.com/rbuchberger) is licensed under [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)
