@@ -9,7 +9,7 @@ files: list of img file paths relative to assets/images
 <div class="gallery">
 {% for file in include.files %}
 	{% assign ratio = file | image_ratio %}
-	<a class="gallery-item" style="--ratio: {{ ratio }}">
+	<a class="gallery-item" style="--ratio: {{ ratio }}; --thumb: url('{% picture gallery_thumb {{ file }} %}')">
 		{% picture gallery_html {{ file }} --img loading="lazy" decoding="async" %}
 	</a>
 {% endfor %}

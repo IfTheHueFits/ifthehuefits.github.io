@@ -33,11 +33,19 @@ presets:
         markup: img
         formats: [original]
         widths: [250, 600, 1000]
+        fallback_width: 600
         sizes:
             mobile: 60vw
             tablet: 30vw
             standard_screen: 18vw
             wide: 18vw
+
+    # Blurred placeholder behind each gallery thumbnail. Emits the URL of a
+    # single 20px image.
+    gallery_thumb:
+        markup: direct_url
+        formats: [original]
+        fallback_width: 20
 
     # Sidebar background. Emits a srcset string rather than an img, at the
     # same widths the sidebar script already chooses from.
