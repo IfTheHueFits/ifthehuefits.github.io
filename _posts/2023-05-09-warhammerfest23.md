@@ -7,7 +7,7 @@ categories: Review
 head_img: 2023-05-09-warhammerfest23/heresyme.jpg
 ---
 
-{% picture /2023-05-09-warhammerfest23/IMG_8309.JPG%}
+{% picture /2023-05-09-warhammerfest23/IMG_8309.jpg%}
 
 So Warhammer Fest has returned, and for the first time since Games Day 2013, I was finally free to attend and sample everything that GW has to offer. I had a blast of a time over the three days and it was an excellent way to spend my birthday weekend. That being said there is certainly a lot of room for improvement. This is also the first time I have entered Golden Demon since I was eligible for Youngbloods and I’m very happy with my finalist's pin!
 
@@ -56,8 +56,8 @@ I hadn’t realised how much I missed just sitting down and painting with other 
 As will be a running theme throughout this write-up (I hesitate to call it a review), it is really the people I was with that made this a special event. I’ll admit that I’m not massively clued up on Warhammer content creators outside of the big painters, and people who regularly post tutorials that I pour over every detail of, but I felt really grateful to get to chat with PickleJarHobbies and LetsMakeitOrkie as we constantly made jokes about the excessively large number of pipe sprues.
 
 <div class="row-images">
-{% include row.html files = "2023-05-09-warhammerfest23/IMG_8303.JPG;2023-05-09-warhammerfest23/IMG_8304.JPG" %}
-{% include row.html files = "2023-05-09-warhammerfest23/IMG_8305.JPG;2023-05-09-warhammerfest23/IMG_8306.JPG" %}
+{% include row.html files = "2023-05-09-warhammerfest23/IMG_8303.jpg;2023-05-09-warhammerfest23/IMG_8304.jpg" %}
+{% include row.html files = "2023-05-09-warhammerfest23/IMG_8305.jpg;2023-05-09-warhammerfest23/IMG_8306.jpg" %}
 </div>
 <figure><figcaption>A selection of other entries</figcaption></figure>
 
@@ -75,7 +75,7 @@ Right next to the Squigapult was the Titan Owner’s Club who were playing a ful
 
 Next to the main hall was also a great stand where all the cosplayers were present. So many full-sized space marines, including a Warmaster Horus. I’m happy that GW gave them an exclusive space to show off and support their work. I also took the opportunity to chat with some of teh painters I had followed online and just generally let them know how great they are. Particular shoutout to the 'Eavy Metal legend [Darren Latham](https://www.instagram.com/darrenlatham/) and OSL/Oil paints master [Marco Frisoni](https://www.instagram.com/njm_marcofrisoni/)
 
-{% include row.html files = "2023-05-09-warhammerfest23/necron.JPG;2023-05-09-warhammerfest23/Marco.JPG" style="flex-direction: row;"%}
+{% include row.html files = "2023-05-09-warhammerfest23/necron.jpg;2023-05-09-warhammerfest23/Marco.jpg" style="flex-direction: row;"%}
 
 ### A digression on Tournaments
 
@@ -107,7 +107,7 @@ A particular curiosity was that non-finalists (i.e. those without green stickers
 
 Nonetheless, I could always spend hours staring at GD entries, and I was glad I went later in the afternoon as many of the crowds had died down.
 
-{% include image.html img="2023-05-09-warhammerfest23/801.JPG" alt="GD entry" caption="My Entry in the cabinet!" %}
+{% include image.html img="2023-05-09-warhammerfest23/801.jpg" alt="GD entry" caption="My Entry in the cabinet!" %}
 
 ## Day 3 and The Awards
 
