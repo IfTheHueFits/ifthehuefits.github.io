@@ -85,7 +85,7 @@ module PostValidator
 
         # If head_img is present, check that the img file actually exists
         relative = head_img.to_s.sub(%r{\A/+}, '')
-        relative_file = File.join('assets', 'images', relative)
+        relative_file = File.join(post.site.config.dig('picture', 'source') || '', relative)
         full_path = File.join(post.site.source, relative_file)
         return if File.exist?(full_path)
 
