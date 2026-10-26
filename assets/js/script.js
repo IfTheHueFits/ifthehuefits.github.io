@@ -103,6 +103,16 @@ function init(){
 		}
 	}
 
+	// PART 3 fade in gallery images once loaded
+	document.querySelectorAll(".gallery-item img").forEach(function(img){
+		if (img.complete) {
+			img.classList.add("loaded");
+		}
+		else {
+			img.addEventListener("load", function(){ img.classList.add("loaded"); });
+		}
+	});
+
 	// PART 1 Change background of side pannel
 	var backgrounds = document.getElementsByClassName("side_bar_img");
 	var aside_element = document.querySelector("aside");
