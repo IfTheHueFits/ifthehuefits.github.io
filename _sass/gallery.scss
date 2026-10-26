@@ -1,0 +1,53 @@
+// Justified rows: each item starts at --row-height tall and the items in a
+// row grow in proportion to their --ratio, so they share one height.
+.gallery {
+    --row-height: 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+// Takes up the spare space in the last row so its images keep their height
+.gallery::after {
+    content: '';
+    flex-grow: 1000;
+}
+
+.gallery-item {
+    flex: var(--ratio) 1 calc(var(--ratio) * var(--row-height));
+    aspect-ratio: var(--ratio);
+    content-visibility: auto;
+    background-color: #eee;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.gallery-item img.loaded {
+    opacity: 1;
+}
+
+.gallery-item img.loaded:hover {
+    opacity: .5;
+}
+
+@media (max-width: $tablet) {
+    .gallery {
+        --row-height: 20vw;
+    }
+}
+
+@media (max-width: $mobile) {
+    .gallery {
+        --row-height: 40vw;
+    }
+}
