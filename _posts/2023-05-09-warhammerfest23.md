@@ -149,4 +149,4 @@ So thanks to everyone for making my 26th Birthday so special. Now finally let's 
 
 ## Golden Demon Entrants
 
-<div id="pig" data-source="/assets/images/2023-05-09-warhammerfest23/gallery.json"></div>
+{% include gallery.html files=site.data.warhammerfest23.filenames %}

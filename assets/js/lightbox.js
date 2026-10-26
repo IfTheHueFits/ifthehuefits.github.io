@@ -11,8 +11,6 @@ var flkty
 var flkty_set = false;
 var lightbox_visible = false;
 var comments_on = false;
-// NOTE sizes also defined in script.js
-var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
@@ -82,17 +80,6 @@ function lightboxClick(event) {
 
 		flkty_set = true;
 
-		// filter out thumbnails in image gallery
-		if (document.querySelector("#pig")){
-			var tempArr = []
-			for (j=0; j<pageImgs.length; j++){
-				if(!pageImgs[j].classList.contains("pig-thumbnail")){
-					tempArr.push(pageImgs[j])
-				}
-			}
-			pageImgs = tempArr;
-		}
-
 		// find clicked element in list
 		var i;
 		for (j=0; j<pageImgs.length; j++){
@@ -116,26 +103,17 @@ function lightboxClick(event) {
 			newImg.className = "carousel-image";
 
 			// set the data load attributes for flickity from the img div
-			// if pig image/ no srcset just set to largest image
-			if(!newImg.srcset){
-				var fp = newImg.getAttribute('src')
-				fp = fp.replace(/-([0-9]+)-([a-f0-9]+\.)/, '-@-$2');
-				srcset = ''
-				for(k=0; k<sizes.length; k++){
-					srcset += fp.replace(/(@)/, sizes[k]) + ' ' + sizes[k] + 'w, '
-				}
-				newImg.setAttribute("data-flickity-lazyload", fp.replace(/(@)/, 1000) );
-				newImg.setAttribute("data-flickity-lazyload-srcset", srcset );
-			}
-			else{
-				newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
-				newImg.setAttribute("data-flickity-lazyload", newImg.src );
-			}
+			newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
+			newImg.setAttribute("data-flickity-lazyload", newImg.src );
 			// now clear the src attributes in the actual image so they don't automatically load
 			newImg.srcset = '';
 			newImg.src = '';
 			// remove any bespoke styling such as height limits
 			newImg.style = '';
+
+			// sizes describes the image on the page, not in the full-screen
+			// carousel, so let the browser fall back to 100vw
+			newImg.removeAttribute('sizes');
 			newCell.appendChild(newImg);
 			flkty.append(newCell);
 		}

@@ -1,16 +1,6 @@
 ---
 layout: none
 ---
-var imageData; // as image data gets bit this may slow down the page if it hangs around
-var imgageSource
-// NOTE sizes also defined in lightbox.js
-var sizes = [{%  for size in site.data.picture.presets.default.widths %} {{size}}, {%endfor%}];
-
-function getGalleryData(source) {
-	// return promise of JSON data
-	return $.getJSON(source)
-}
-
 function topFunction() {
 	document.body.scrollTop = 0; // For Safari
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -71,39 +61,17 @@ function init(){
 	// scroll to top on page change
 	topFunction();
 
-
-	// PART 2 trigger image gallery if present
-	if (document.querySelector("#pig")){
-		pig_element = document.querySelector("#pig");
-		var pig;
-		var options = {
-			urlForSize: function(filename, size, hash) {
-					fp = filename.split(".")
-					return '/generated/images/' + fp[0] + '-' + size + '-' + hash + '.jpg';
-				},
-
-			sizes: sizes.sort(function(a,b) {return a-b;}),
-
-			scroller: document.getElementsByClassName("main_window")[0]
-		};
-
-		// don't send unecessary request if variable is already loaded
-		if (imageData && pig_element.dataset.source == imageSource){
-			pig = new Pig(imageData, options).enable();
-			pig.enable();
+	// PART 1 if there is a gallery fade in gallery images once loaded
+	document.querySelectorAll(".gallery-item img").forEach(function(img){
+		if (img.complete) {
+			img.classList.add("loaded");
 		}
 		else {
-
-			getGalleryData(pig_element.dataset.source).then( function(response){
-				imageData = response;
-				imageSource = pig_element.dataset.source;
-				pig = new Pig(imageData, options).enable();
-				pig.enable();
-			});
+			img.addEventListener("load", function(){ img.classList.add("loaded"); });
 		}
-	}
+	});
 
-	// PART 1 Change background of side pannel
+	// PART 2 Change background of side pannel
 	var backgrounds = document.getElementsByClassName("side_bar_img");
 	var aside_element = document.querySelector("aside");
 	var srcset = aside_element.dataset.srcset;
