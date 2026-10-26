@@ -12,3 +12,7 @@ group :jekyll_plugins do
 end
 
 gem 'dimensions'
+
+group :test do
+  gem 'html-proofer', '~> 5.0'
+end

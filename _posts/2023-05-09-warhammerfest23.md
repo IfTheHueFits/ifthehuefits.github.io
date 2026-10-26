@@ -21,7 +21,7 @@ This is also a bit of a long one! But hopefully, you should be able to jump to w
 2. [Day 2 and the Great Queue](#day-2-and-the-great-queue)
 	1. [A  Digression on Tournamens](#a-digression-on-tournaments)
 	2. [Horus Heresy and Old World Reveals](#horus-heresy-and-old-world-reveals)
-	3. [Hang out & Paint Live](#hang-out-&-paint-live)
+	3. [Hang out & Paint Live](#hang-out--paint-live)
 	4. [The Golden Demon cabinets](#the-golden-demon-cabinets)
 3. [Day 3 and The Awards](#day-3-and-the-awards)
 4. [Final Thoughts](#final-thoughts)
