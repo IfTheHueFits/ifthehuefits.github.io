@@ -37,6 +37,18 @@ presets:
             standard_screen: calc(70vw-100px)
             wide: calc(75vw-300px)
 
+    # Thumbnails in _includes/gallery.html. Sizes are the width of a 3:2
+    # landscape image at the --row-height of each breakpoint in gallery.scss.
+    gallery_html:
+        markup: img
+        formats: [original]
+        widths: [250, 600, 1000]
+        sizes:
+            mobile: 60vw
+            tablet: 30vw
+            standard_screen: 18vw
+            wide: 18vw
+
     # Sidebar background. Emits a srcset string rather than an img, at the
     # same widths the sidebar script already chooses from.
     banner_srcset:
