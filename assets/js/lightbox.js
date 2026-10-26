@@ -136,6 +136,10 @@ function lightboxClick(event) {
 			newImg.src = '';
 			// remove any bespoke styling such as height limits
 			newImg.style = '';
+
+			// sizes describes the image on the page, not in the full-screen
+			// carousel, so let the browser fall back to 100vw
+			newImg.removeAttribute('sizes');
 			newCell.appendChild(newImg);
 			flkty.append(newCell);
 		}
