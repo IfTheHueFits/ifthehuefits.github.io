@@ -41,7 +41,8 @@
 		</header>
 		<main id="swup" class="main_window transition-fade">
 			{% assign banner_img = page.head_img | default: "splash.jpg" %}
-			<aside data-srcset="{% picture banner_srcset {{ banner_img }} %}" data-ratio="{{ banner_img | image_ratio }}"></aside>
+			{% assign banner_preset = page.banner_preset | default: "banner_srcset" %}
+			<aside data-srcset="{% picture {{ banner_preset }} {{ banner_img }} %}" data-ratio="{{ banner_img | image_ratio }}"></aside>
 			{{ content }}
 		</main>
 
