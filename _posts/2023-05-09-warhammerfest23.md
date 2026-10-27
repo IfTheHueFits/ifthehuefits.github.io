@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 subheading: My experience at the return of the biggest event in the Warhammer calendar
 title: Warhammer Fest '23
 categories: Review

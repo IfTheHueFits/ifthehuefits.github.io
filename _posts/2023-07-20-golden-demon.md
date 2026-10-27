@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 subheading: A deep dive into my Small Scale entry
 title: Golden Demon '23 Necron Doom Scythe
 categories: Showcase

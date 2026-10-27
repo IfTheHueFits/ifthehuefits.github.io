@@ -2,10 +2,7 @@
 	<h1><a href="{{ include.post_data.url }}">{{ include.post_data.title }}</a></h1>
 	<p class="post_data">
 		{{ include.post_data.date | date_to_string }}
-		{% assign author = site.authors | where: 'short_name', include.post_data.author | first %}
-		{% if author %}
-			- <a href="/about/">{{ author.name }}</a>
-		{% endif %}
+		- <a href="/about/">{{ site.author.name }}</a>
 	</p>
 </div>
 

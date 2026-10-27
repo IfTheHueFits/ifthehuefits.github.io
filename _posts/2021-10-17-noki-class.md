@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 subheading: Attending my first ever painting class and getting hands on with NMM.
 title: Non-Metallic Metals Class with Noki Studios
 categories: Review
