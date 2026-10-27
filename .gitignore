@@ -2,4 +2,6 @@
 _site
 Gemfile.lock
 *warhammer/
+assets/images/_originals/
 .jekyll-metadata
+__pycache__/
