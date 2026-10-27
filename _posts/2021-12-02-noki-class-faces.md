@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 subheading: After the success of NMM I'm back painting with Noki again.
 title: Painting faces with Noki Studios
 categories: Review

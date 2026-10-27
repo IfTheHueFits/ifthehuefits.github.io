@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 subheading: A deep dive into this trove of Warhammer inspiration.
 title: Compendium&#58 Volume 1
 categories: Review

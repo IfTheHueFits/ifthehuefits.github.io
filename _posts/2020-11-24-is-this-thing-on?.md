@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 head_img: warhammer/canoptek_spyder_5.jpg
 title: Is this thing on?
 subheading:
