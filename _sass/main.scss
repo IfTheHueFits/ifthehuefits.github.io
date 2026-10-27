@@ -1,15 +1,9 @@
-$side_width : 30vw;
-$wide_side_width : 25vw;
-$content_margin : 100px;
-$mobile_content_margin: 20px;
-$mobile: 500px;
-$tablet: 1024px;
-$standard_screen: 1600px;
-
-@import './reset.scss';
-@import './fonts';
-@import './navigation';
-@import './lightbox';
+@use 'sass:meta';
+@use './variables' as *;
+@use './reset.scss';
+@use './fonts';
+@use './navigation';
+@use './lightbox';
 
 body {
     margin: 0;
@@ -241,5 +235,5 @@ html.is-animating .transition-fade {
 
 }
 
-@import './post_wrap';
-@import './gallery';
+@include meta.load-css('./post_wrap');
+@include meta.load-css('./gallery');
