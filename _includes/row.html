@@ -4,7 +4,8 @@ the appropriate css
 
 Inputs
 ------
-files: string of img file paths delimited by ;
+files: string of img file paths delimited by ;, relative to picture.source
+	in _config.yml (or a markdown-style path under that folder)
 
 style: string containing any css style to be applied to the whole row
 
@@ -20,7 +21,7 @@ presets: string of prests to be pass to jekyll picture tag for formatting
 {% else %}
 <div class="row-images" style="flex-direction: row; margin:0;">
 {% endif %}
-{% assign files = include.files | split: ';'%}
+{% assign files = include.files | split: ';' | image_path: page.path %}
 {% if include.caption %}
 {% assign captions = include.caption | split: ';' %}
 {% else %}
