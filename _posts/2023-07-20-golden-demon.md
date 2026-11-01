@@ -4,7 +4,7 @@ title: Golden Demon '23 Necron Doom Scythe
 categories: Showcase
 head_img: 2023-07-20-golden-demon/portrait.jpg
 ---
-{% picture /2023-07-20-golden-demon/banner.jpg%}
+![Doom Scythe](../assets/images/_2kpx/2023-07-20-golden-demon/banner.jpg)
 
 So here we are, my first Golden Demon entry in 10 years, and my first in the main competition. A lot has changed in that time – Large Scale has vanished, Small Scale has been added, and even all the trophies have had a re-design.
 
@@ -30,7 +30,7 @@ Stalagmites? Yeah, that makes sense – the tomb world has been there for billio
 
 ## The First Attempt at a Base
 
-{% picture /2023-07-20-golden-demon/rocks.jpg caption="Two bases I had a go at sculpting milliput rocks on" --alt Two bases I had a go at sculpting milliput rocks on %}
+![Two bases I had a go at sculpting milliput rocks on](../assets/images/_2kpx/2023-07-20-golden-demon/rocks.jpg "Two bases I had a go at sculpting milliput rocks on")
 
 I played around with a lot of ideas but effectively I needed to cut up and tile the floor in geometric shapes, much like the ones we see on Necron vehicles like the Monolith. First I tried rolling out a big sheet of Milliput and tried to see if I could carve and break that up how I wanted. I struggled to get it quite thin enough, and my carving looked far too irregular. While to a certain extent there would be some irregularities, at the Small Scale it wouldn’t be so apparent and so I decided that wasn’t going to work.
 
@@ -158,7 +158,7 @@ Anyway, the front fins on the armour of that were ideal since they could be moun
 
 I stuck it to a plinth and went for a creamy bone colour which ended up turning out horrendously. Fortunately, I had the other fin that I was using to test schemes on, and realised that red looked much better. I was initially hesitant of using too much colour on the base since I did not want it to draw attention from the model itself, but since the red sort of went with the orange, I felt that this worked okay.
 
-{% picture /2023-07-20-golden-demon/cream_base.jpg caption="Initial test scheme for the base" --alt Initial test scheme for the base %}
+![Initial test scheme of the base](../assets/images/_2kpx/2023-07-20-golden-demon/cream_base.jpg "Initial test scheme for the base")
 
 So I stripped the main fin and committed to adding dirt and rocks around it. The rocks were made up of bark and medium slate that I had found in the park. The sizes I found were actually the perfect size to surround the hole base without too much gap filling so it really looks like it bursts out of the ground. The ground is actual dirt, stuck on with PVA glue and then crumbled on top. I made sure to stick the bark and dirt in the oven for an hour to kill anything before sticking it on. I also drilled a hole in the top of the three prongs to later mount the mini.
 

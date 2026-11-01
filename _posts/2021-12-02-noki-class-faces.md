@@ -5,7 +5,7 @@ categories: Review
 head_img: 2021-12-02-noki-class-faces/face_portrait.jpg
 ---
 
-{% picture "2021-12-02-noki-class-faces/face_landscape.jpg" --alt Miniature face %}
+![Miniature Face](../assets/images/_2kpx/2021-12-02-noki-class-faces/face_landscape.jpg)
 
 So after how much I enjoyed [my last class](/review/2021/10/17/noki-class.html) I could hardly say no when I saw Mamikon announce his face painting one. From last time I already knew that whatever preconceived notions I had of what I was capable of and how I thought the best way to go about faces would be blown out of the water - and I'm so glad I was right.
 
