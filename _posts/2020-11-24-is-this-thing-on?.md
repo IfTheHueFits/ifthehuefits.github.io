@@ -1,10 +1,10 @@
 ---
 head_img: warhammer/canoptek_spyder_5.jpg
-title: Is this thing on?
+title: Is This Thing On?
 subheading:
 categories: Editorial
 ---
-{% picture warhammer/canoptek_spyder_4.jpg %}
+![Canoptek Spyder](../assets/images/_2kpx/warhammer/canoptek_spyder_4.jpg)
 
 Well hey there, thanks for dropping in, and welcome to the inaugural post on If the Hue Fits! I'm Ollie the blog's creator and I hope this site can act as a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold no illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at [Tale of Painters](https://taleofpainters.blogspot.com/).
 

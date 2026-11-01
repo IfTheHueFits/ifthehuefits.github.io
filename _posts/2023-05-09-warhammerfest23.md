@@ -5,7 +5,7 @@ categories: Review
 head_img: 2023-05-09-warhammerfest23/heresyme.jpg
 ---
 
-{% picture /2023-05-09-warhammerfest23/IMG_8309.jpg%}
+![Chris and I](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8309.jpg)
 
 So Warhammer Fest has returned, and for the first time since Games Day 2013, I was finally free to attend and sample everything that GW has to offer. I had a blast of a time over the three days and it was an excellent way to spend my birthday weekend. That being said there is certainly a lot of room for improvement. This is also the first time I have entered Golden Demon since I was eligible for Youngbloods and I’m very happy with my finalist's pin!
 
@@ -17,10 +17,10 @@ This is also a bit of a long one! But hopefully, you should be able to jump to w
 
 1. [Day 1 and the Hobby Challenge](#day-1-and-the-hobby-challenge)
 2. [Day 2 and the Great Queue](#day-2-and-the-great-queue)
-	1. [A  Digression on Tournamens](#a-digression-on-tournaments)
-	2. [Horus Heresy and Old World Reveals](#horus-heresy-and-old-world-reveals)
-	3. [Hang out & Paint Live](#hang-out--paint-live)
-	4. [The Golden Demon cabinets](#the-golden-demon-cabinets)
+	2.1. [A  Digression on Tournamens](#a-digression-on-tournaments)
+	2.2. [Horus Heresy and Old World Reveals](#horus-heresy-and-old-world-reveals)
+	2.3. [Hang out & Paint Live](#hang-out--paint-live)
+	2.4. [The Golden Demon cabinets](#the-golden-demon-cabinets)
 3. [Day 3 and The Awards](#day-3-and-the-awards)
 4. [Final Thoughts](#final-thoughts)
 5. [Golden Demon Entrants](#golden-demon-entrants)

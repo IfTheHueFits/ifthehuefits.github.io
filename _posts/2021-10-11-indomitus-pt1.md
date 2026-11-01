@@ -5,7 +5,7 @@ categories: Showcase
 head_img: 2021-10-11-indomitus-pt1/Emerald3.jpg
 ---
 
-{% picture 2021-10-11-indomitus-pt1/group_black.jpg %}
+![3 Sons of Medusa variants](../assets/images/_2kpx/2021-10-11-indomitus-pt1/group_black.jpg)
 
 TLDR: I finally have my Space Marine chapter decided, I just need help with the greens...
 

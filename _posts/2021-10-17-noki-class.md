@@ -5,7 +5,7 @@ categories: Review
 head_img: 2021-10-17-noki-class/longsword.jpg
 ---
 
-{% include image.html img="2021-10-17-noki-class/both_l.jpg" alt="Non-metallic metal swords" %}
+![Non-metallic metal swords](../assets/images/_2kpx/2021-10-17-noki-class/both_l.jpg)
 
 I like to think (and I certainly hope you would agree) that I'm a fairly good painter, or at least I certainly know my way around a paintbrush. However, one of my main problems with improving my skills is that it's rare that tutorials and videos that I am watching apply directly to what it is I am trying to do - be it different colours, models or just knowing when to use it. This means that if something ends up not quite how I was expecting, it can make it hard to specifically diagnose whether it's my technique, the colours I'm using or how I'm actually applying the new skill. For years I've wanted to go to painting classes to try and alleviate this issue and also have the chance to talk directly to people that I *know* can do what I'm trying to achieve. Unfortunately, due to logistics, cost or more recently a global pandemic I've never had a chance - until now.
 
@@ -23,7 +23,7 @@ I'll admit, *initially* I was a bit disappointed when I turned up and found out 
 
 So, class underway, we begin with a brief chat about the techniques involved and started with a fairly straightforward NMM sword. Mamikon had also prepped a really good sequence of swords which showed full step by step so we knew at least what to aim for or expect at the end of each stage. It was great to get one on one feedback at each of the stages and this was tailored to the different levels of each student. It was particularly helpful to have the confidence that blemishes and mistakes are fine, and in fact, later stages will naturally mask them or they can be turned more into features that make the sword look more battle-worn.
 
-{% include image.html img="2021-10-17-noki-class/examples.jpg" alt="Non-metallic metal swords step-by-step" caption="We used this example set to see how each stage builds on the previous" %}
+![Non-metallic metal step-by-step](../assets/images/_2kpx/2021-10-17-noki-class/examples.jpg "We used this example set to see how each stage builds on the previous")
 
 With the foundation of the 'standard' NMM sword ready, we then started adding glazes and what I can best describe as a lens-flare effect - it felt insane to be using red, green and yellow on what was meant to be a silver sword, but honestly, I think the results speak for themselves! With everyone getting two swords each to play with, there was plenty of room for experimentation, and it also meant everyone could go at their own pace and try out multiple styles or just focus on getting one piece looking really great.
 
@@ -35,7 +35,7 @@ After a quick 45-minute lunch break (which for me was closer to an hour after fi
 
 All in all, I had a really excellent time, and I am so happy with how my sword turned out - Mamikon is an excellent teacher and very patient in answering all my questions. At £80 for six hours, I think this session really was a steal. Everyone else in the class was also really lovely and incredibly supportive of one another. It's been a long time since I have painted with other people around, and it was great just to have a chat about what sort of projects people are working on, how they find certain tools and paints and just where they are from. Particular shout out to Zak from [Faith and Damnation studios](https://www.instagram.com/fnd_studios_/) and David at [Diddy Miniatures](https://www.instagram.com/diddy_miniatures/) for the excellent company and letting me borrow some of their paints, and a very cool vortex mixer.
 
-{% include image.html img="2021-10-17-noki-class/groupshot.jpg" alt="Everyone's final piece from the class" caption="Everyone's final pieces" %}
+![Everyone's final piece from the class](../assets/images/_2kpx/2021-10-17-noki-class/groupshot.jpg "Everyone's final pieces")
 
 Perhaps my only minor critique (and I do mean minor) would be that it would have been nice if we had a full arm with the sword on which to play around with so that we could try NMM on more shapes and surfaces. However, I very much appreciate that sourcing enough bits for us to paint is likely a pain and, since we pretty much went to time on just the sword and hand, I don't even know if we would have had time to do more. Overall there was also a really good balance struck to allow the wide range of skill levels to get the most out of the session. I certainly learnt so much more than I was expecting and I'm looking forward to trying this out on characters and other special models in the future to build my confidence further.
 
@@ -43,4 +43,4 @@ I believe there are several more classes planned on basing and faces with Mamiko
 
 Thanks for such a great day!
 
-{% include image.html img="2021-10-17-noki-class/final_result.jpg" alt="Non-metallic metal swords" %}
+![Non-metallic metal swords](../assets/images/_2kpx/2021-10-17-noki-class/final_result.jpg)
