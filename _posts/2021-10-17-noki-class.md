@@ -29,7 +29,8 @@ With the foundation of the 'standard' NMM sword ready, we then started adding gl
 
 After a quick 45-minute lunch break (which for me was closer to an hour after finding out a nearby store had Imperium magazine \#5 in stock with the exclusive captain) we were back and then on to trying gold. This was the part that I was really interested in as we were painting the hand and other features on the sword which had more complex surfaces that interacted with the lights in different ways. Having now done the main blade of the sword I felt much better equipped tackling the other bits of the part (parts of the bit?) that I don't think I would have been as confident in had we just jumped into complex surfaces. Being able to ask not just what should be done but *why* really helped improve the depth of my understanding and a lot of explanation was done in the context of some incredible display models that were brought along so we could see, for example, how and why you might shift around the reflections on a hand in different scenarios.
 
-{% include row.html files = "2021-10-17-noki-class/glaive.jpg;2021-10-17-noki-class/longsword.jpg" style=""%}
+| ![glaive](../assets/images/_2kpx/2021-10-17-noki-class/glaive.jpg) | ![longsword](../assets/images/_2kpx/2021-10-17-noki-class/longsword.jpg) |
+| - | - |
 
 ## Conclusion
 

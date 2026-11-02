@@ -53,10 +53,8 @@ I hadn’t realised how much I missed just sitting down and painting with other 
 
 As will be a running theme throughout this write-up (I hesitate to call it a review), it is really the people I was with that made this a special event. I’ll admit that I’m not massively clued up on Warhammer content creators outside of the big painters, and people who regularly post tutorials that I pour over every detail of, but I felt really grateful to get to chat with PickleJarHobbies and LetsMakeitOrkie as we constantly made jokes about the excessively large number of pipe sprues.
 
-<div class="row-images">
-{% include row.html files = "2023-05-09-warhammerfest23/IMG_8303.jpg;2023-05-09-warhammerfest23/IMG_8304.jpg" %}
-{% include row.html files = "2023-05-09-warhammerfest23/IMG_8305.jpg;2023-05-09-warhammerfest23/IMG_8306.jpg" %}
-</div>
+| ![IMG_8303](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8303.jpg) | ![IMG_8304](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8304.jpg) | ![IMG_8305](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8305.jpg) | ![IMG_8306](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8306.jpg) |
+| - | - | - | - |
 <figure><figcaption>A selection of other entries</figcaption></figure>
 
 So day 1 was a blast. I really felt like I was part of a community that day, and genuinely felt like I had made friends with people that I would love to see at conventions and meet-ups at a later date. To top it all off, my GD entry had already been judged and I had at least a finalists pin! I had also timed the day perfectly because the main complaint throughout the festival, but especially on the Saturday, was the queues. Even the queue to just buy things from the shop was nearly an hour long and it seems like I had avoided the worst of it by keeping myself busy on day 1. Nonetheless, for the rest of the weekend I had nothing else booked and so on Day 2 it was time to move on to the convention itself.
@@ -73,7 +71,8 @@ Right next to the Squigapult was the Titan Owner’s Club who were playing a ful
 
 Next to the main hall was also a great stand where all the cosplayers were present. So many full-sized space marines, including a Warmaster Horus. I’m happy that GW gave them an exclusive space to show off and support their work. I also took the opportunity to chat with some of teh painters I had followed online and just generally let them know how great they are. Particular shoutout to the 'Eavy Metal legend [Darren Latham](https://www.instagram.com/darrenlatham/) and OSL/Oil paints master [Marco Frisoni](https://www.instagram.com/njm_marcofrisoni/)
 
-{% include row.html files = "2023-05-09-warhammerfest23/necron.jpg;2023-05-09-warhammerfest23/Marco.jpg" style="flex-direction: row;"%}
+| ![necron](../assets/images/_2kpx/2023-05-09-warhammerfest23/necron.jpg) | ![Marco](../assets/images/_2kpx/2023-05-09-warhammerfest23/Marco.jpg) |
+| - | - |
 
 ### A digression on Tournaments
 

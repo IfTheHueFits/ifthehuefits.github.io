@@ -42,7 +42,8 @@ Slight snag… I got them cut 2/3 the size they should have been and we wouldn�
 
 ## Test Schemes
 
-{% include row.html files = "2023-07-20-golden-demon/Test1.jpg;2023-07-20-golden-demon/Test2.jpg" style="flex-direction: row;" %}
+| ![Test1](../assets/images/_2kpx/2023-07-20-golden-demon/Test1.jpg) | ![Test2](../assets/images/_2kpx/2023-07-20-golden-demon/Test2.jpg) |
+| - | - |
 
 Anyway, so the base was on pause for now, but the mini is of course the most important part of your entry, the base is just the frame for it, so I should get that sorted first. I had been inspired by a lot of Votann colour schemes that use a dirty cream off-white with orange and blue/black spot colours and wanted to try and recreate that. I had also seen Richard Grey’s technique for how he paints his Imperial fists and figured that the stippling scheme would help (a) build up the colours gradually so I get a smooth gradient from fairly dark to bright and (b) help me control where the lighting is coming from.
 
@@ -245,12 +246,14 @@ And then… it was go-time.
 
 ## Golden Demon & Feedback
 
-{% include row.html files = "2023-07-20-golden-demon/8.jpg;2023-07-20-golden-demon/9.jpg" style="flex-direction: row;" %}
-<div class="row-images">
-{% include row.html files = "2023-07-20-golden-demon/portrait.jpg;2023-07-20-golden-demon/2.jpg" %}
-{% include row.html files = "2023-07-20-golden-demon/3.jpg;2023-07-20-golden-demon/4.jpg" %}
-</div>
-{% include row.html files = "2023-07-20-golden-demon/5.jpg;2023-07-20-golden-demon/6.jpg;2023-07-20-golden-demon/7.jpg" style="flex-direction: row;" %}
+| ![8](../assets/images/_2kpx/2023-07-20-golden-demon/8.jpg) | ![9](../assets/images/_2kpx/2023-07-20-golden-demon/9.jpg) |
+| - | - |
+
+| ![portrait](../assets/images/_2kpx/2023-07-20-golden-demon/portrait.jpg) | ![2](../assets/images/_2kpx/2023-07-20-golden-demon/2.jpg) | ![3](../assets/images/_2kpx/2023-07-20-golden-demon/3.jpg) | ![4](../assets/images/_2kpx/2023-07-20-golden-demon/4.jpg) |
+| - | - | - | - |
+
+| ![5](../assets/images/_2kpx/2023-07-20-golden-demon/5.jpg) | ![6](../assets/images/_2kpx/2023-07-20-golden-demon/6.jpg) | ![7](../assets/images/_2kpx/2023-07-20-golden-demon/7.jpg) |
+| - | - | - |
 
 In the end, I walked away with a Finalist's pin. Of course, there was a bit of disappointment that I didn’t get further, but also as soon as I saw the other entrants it was clear quite how impressive the field was, and so I certainly wasn’t made to lose out to such excellent talent. After I collected my mini on the final day of Warhammer Fest, I just took the chance to ask people for feedback on what they thought.
 

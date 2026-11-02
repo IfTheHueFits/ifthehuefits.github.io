@@ -18,7 +18,8 @@ For those of you that don't follow The Miniatures Compendium on [their instagram
 
 Going all the way back to 1988, it is super interesting to see how painting styles have evolved and improved as the hobby has grown and its quite a nice trip down memory lane seeing winners that I was able to see back when I went to GamesDay. Each entry is presented over several pages, with brand new high res photography to really capture every detail and every angle of the model that you don't normally see on websites like [Demon Winner](http://demonwinner.free.fr/) or [Golden Demon](https://golden-demon.com/). The incredible resolution and detail in the images also works to make the entries feel so much more attainable - these images are the closest I am going to get to actually holding them in my hands, to the point where you can start to see the brush strokes and how the overall finish is constructed.
 
-{% include row.html files="2021-10-31-compendium/soper.jpg;2021-10-31-compendium/penaut.jpg" presets="max_680;max_680" alt="David Soper's Eldar Warrior;Maxime Penaud's Dankhold Troggoth"  caption="David Soper's 1988 Eldar Warrior;Maxime Penaud's 2019 Dankhold Troggoth" style="flex-direction: row;"%}
+| ![David Soper's Eldar Warrior](../assets/images/_2kpx/2021-10-31-compendium/soper.jpg "David Soper's 1988 Eldar Warrior"){: preset="max_680"} | ![Maxime Penaud's Dankhold Troggoth](../assets/images/_2kpx/2021-10-31-compendium/penaut.jpg "Maxime Penaud's 2019 Dankhold Troggoth"){: preset="max_680"} |
+| - | - |
 
 Many of the miniatures also have an excellent commentary from the artist themselves about the process and story behind the models. Since so many of the entries are often heavily converted its hard to know where us mere mortals could even start by creating such incredible pieces, but understanding the thought process, often alongside an image of the unpainted model further helps to show how skilled a sculptor these people are, and what materials were used. A particular favourite of mine is seeing [Iago Pineda's](https://www.instagram.com/iagop_works/) 2003 Youngbloods entry followed by his 2004 Slayer Sword winning entry (At the age of 15!) and the process behind how his styles improved and changed over the intervening year.
 
@@ -30,10 +31,8 @@ Going all the way up to the most recent Golden Demon competitions in 2019 (hopef
 
 Seeing all the high-res pictures makes me want to re-do the images for of my last Golden Demon entry - the 2013 Youngbloods which I did actually get a finalists pin for. However, I think the model is in one of my cases back in Lincolnshire, so perhaps a task for another time.
 
-<div class="row-images">
-{% include row.html files = "warhammer/nurgle_lord_2.jpg;warhammer/nurgle_lord_4.jpg" %}
-{% include row.html files = "warhammer/nurgle_lord_3.jpg;warhammer/nurgle_lord_1.jpg" %}
-</div>
+| ![nurgle_lord_2](../assets/images/_2kpx/warhammer/nurgle_lord_2.jpg) | ![nurgle_lord_4](../assets/images/_2kpx/warhammer/nurgle_lord_4.jpg) | ![nurgle_lord_3](../assets/images/_2kpx/warhammer/nurgle_lord_3.jpg) | ![nurgle_lord_1](../assets/images/_2kpx/warhammer/nurgle_lord_1.jpg) |
+| - | - | - | - |
 <figure><figcaption>My 2013 Youngbloods entry</figcaption></figure>
 
 
