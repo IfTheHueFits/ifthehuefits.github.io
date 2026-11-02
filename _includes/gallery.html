@@ -11,8 +11,9 @@ files: list of img file paths relative to picture.source in _config.yml
 <div class="gallery">
 {% for file in files %}
     {% assign ratio = file | image_ratio %}
+    {% assign alt = file | split: '/' | last | split: '.' | first %}
     <a class="gallery-item" style="--ratio: {{ ratio }}; --thumb: url('{% picture gallery_thumb {{ file }} %}')">
-        {% picture gallery_html {{ file }} --img loading="lazy" decoding="async" %}
+        {% picture gallery_html {{ file }} --alt {{ alt }} --img loading="lazy" decoding="async" %}
     </a>
 {% endfor %}
 </div>
