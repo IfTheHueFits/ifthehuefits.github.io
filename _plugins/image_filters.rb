@@ -51,11 +51,14 @@ module Jekyll
         # Width divided by height for a file under picture.source.
         # Dimensions.dimensions already exchanges the two sides when a JPEG's
         # EXIF orientation is 90 or 270 degrees.
-        def image_ratio(path)
-            site = @context.registers[:site]
+        def self.ratio(path, site)
             source = site.config.dig('picture', 'source') || ''
             width, height = Dimensions.dimensions(File.join(site.source, source, path))
             width.to_f / height
+        end
+
+        def image_ratio(path)
+            ImageFilters.ratio(path, @context.registers[:site])
         end
     end
 end

@@ -2,10 +2,11 @@
 # include for crafting responsive images, and to turn image-only Markdown
 # tables into row-images wrappers beforehand.
 
-# ![alt](../assets/images/_2kpx/folder/file.jpg "caption") becomes a
-# {% include image.html %} with optional caption. The image path should be
-# relative to the markdown file, or a site path under picture.source.
-MARKDOWN_IMAGE = /!\[([^\]]*)\]\(\s*([^\s)]+)(?:\s+"((?:[^"\\]|\\.)*)")?\s*\)/
+# ![alt](../assets/images/_2kpx/folder/file.jpg "caption"){: preset="max_680"}
+# becomes {% include image.html %} with optional caption and preset. The image
+# path should be relative to the markdown file, or a site path under
+# picture.source. The optional Kramdown-style IAL is stripped after parsing.
+MARKDOWN_IMAGE = /!\[([^\]]*)\]\(\s*([^\s)]+)(?:\s+"((?:[^"\\]|\\.)*)")?\s*\)(?:\{:\s*([^}]+)\})?/
 
 # One image, optional title/caption, optional {: ...} IAL (kept for later parsing).
 IMAGE_TABLE_CELL = /\A\s*!\[([^\]]*)\]\(\s*([^\s)]+)(?:\s+"((?:[^"\\]|\\.)*)")?\s*\)(?:\{:[^}]+\})?\s*\z/
@@ -19,11 +20,22 @@ def rewrite_markdown_images(doc)
     return unless doc.site.config['markdown_ext'].include?(docExt)
 
     doc.content = doc.content.gsub(MARKDOWN_IMAGE) do
-        alt, file, caption = Regexp.last_match.captures
+        alt, file, caption, ial = Regexp.last_match.captures
         tag = "{% include image.html img=\"#{Jekyll::ImageFilters.resolve_path(file, doc.path, doc.site)}\" alt=\"#{alt.gsub('"', '&quot;')}\""
         tag += " caption=\"#{caption.gsub('\\"', '&quot;')}\"" if caption
+        preset = ial_attribute(ial, 'preset')
+        tag += " preset=\"#{preset.gsub('"', '&quot;')}\"" if preset
         "#{tag} %}"
     end
+end
+
+# Reads key="value" or key='value' from a Kramdown IAL body (inside {: ... }).
+def ial_attribute(ial_body, key)
+    return nil if ial_body.nil? || ial_body.empty?
+
+    match = ial_body.match(/#{Regexp.escape(key)}\s*=\s*"([^"]*)"/) ||
+            ial_body.match(/#{Regexp.escape(key)}\s*=\s*'([^']*)'/)
+    match && match[1]
 end
 
 # Rewrites Markdown tables whose cells are only images into .row-images
