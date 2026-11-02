@@ -119,7 +119,7 @@ button {
 	resize: none;
 }
 
-.row-images {
+.row-images, .row-images-group {
     display: flex;
     flex-direction: row;
 	margin: 0 calc(10% - 5px); // subtracting padding of column
@@ -128,12 +128,19 @@ button {
 	justify-content: center;
 }
 
-.col img {
+// Nested pairs share the group width; margins live on the group only.
+.row-images-group > .row-images {
+	margin: 0;
+	flex: 1;
+	min-width: 0;
+}
+
+.col img, .row-images figure img {
 	margin: 0 auto;
 	max-height: auto
 }
 
-.col{
+.col, .row-images figure{
 	padding: 25px 5px;
 	margin: 0;
 }
@@ -187,9 +194,13 @@ button {
 		margin: 30px 10%;
 	}
 
-	.row-images{
+	.row-images, .row-images-group {
 		margin-left: calc(5% - 5px);
 		margin-right: calc(5% - 5px);
+	}
+
+	.row-images-group > .row-images {
+		margin: 0;
 	}
 }
 
@@ -221,11 +232,16 @@ button {
 }
 
 @media (max-width: $mobile){
-	.row-images {
+	.row-images, .row-images-group {
 		flex-direction: column;
 	}
 
-	.col{
+	// Keep each pair side-by-side so a 4-wide group becomes two-wide.
+	.row-images-group > .row-images {
+		flex-direction: row;
+	}
+
+	.col, .row-images figure{
 		padding: 5px 2px
 	}
 }
