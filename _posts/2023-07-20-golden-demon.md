@@ -3,6 +3,17 @@ subheading: A deep dive into my Small Scale entry
 title: Golden Demon '23 Necron Doom Scythe
 categories: Showcase
 head_img: 2023-07-20-golden-demon/portrait.jpg
+gallery:
+  - 2023-07-20-golden-demon/banner.jpg
+  - 2023-07-20-golden-demon/portrait.jpg
+  - 2023-07-20-golden-demon/2.jpg
+  - 2023-07-20-golden-demon/3.jpg
+  - 2023-07-20-golden-demon/4.jpg
+  - 2023-07-20-golden-demon/5.jpg
+  - 2023-07-20-golden-demon/6.jpg
+  - 2023-07-20-golden-demon/7.jpg
+  - 2023-07-20-golden-demon/8.jpg
+  - 2023-07-20-golden-demon/9.jpg
 ---
 ![Doom Scythe](../assets/images/_2kpx/2023-07-20-golden-demon/banner.jpg)
 
