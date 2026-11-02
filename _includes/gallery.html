@@ -5,12 +5,15 @@ Each image is sized to its aspect ratio and fades in once loaded.
 Inputs
 ------
 files: list of img file paths relative to picture.source in _config.yml
+    (or a markdown-style path under that folder)
 {% endcomment %}
+{% assign files = include.files | image_path: page.path %}
 <div class="gallery">
-{% for file in include.files %}
-	{% assign ratio = file | image_ratio %}
-	<a class="gallery-item" style="--ratio: {{ ratio }}; --thumb: url('{% picture gallery_thumb {{ file }} %}')">
-		{% picture gallery_html {{ file }} --img loading="lazy" decoding="async" %}
-	</a>
+{% for file in files %}
+    {% assign ratio = file | image_ratio %}
+    {% assign alt = file | split: '/' | last | split: '.' | first %}
+    <a class="gallery-item" style="--ratio: {{ ratio }}; --thumb: url('{% picture gallery_thumb {{ file }} %}')">
+        {% picture gallery_html {{ file }} --alt {{ alt }} --img loading="lazy" decoding="async" %}
+    </a>
 {% endfor %}
 </div>

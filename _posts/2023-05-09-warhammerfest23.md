@@ -1,13 +1,184 @@
 ---
-layout: post
-author: ollie
 subheading: My experience at the return of the biggest event in the Warhammer calendar
 title: Warhammer Fest '23
 categories: Review
 head_img: 2023-05-09-warhammerfest23/heresyme.jpg
+post_gallery:
+  - 2023-05-09-warhammerfest23/1001.jpg
+  - 2023-05-09-warhammerfest23/1002.jpg
+  - 2023-05-09-warhammerfest23/1003.jpg
+  - 2023-05-09-warhammerfest23/1004.jpg
+  - 2023-05-09-warhammerfest23/1005.jpg
+  - 2023-05-09-warhammerfest23/1006.jpg
+  - 2023-05-09-warhammerfest23/1007.jpg
+  - 2023-05-09-warhammerfest23/1008.jpg
+  - 2023-05-09-warhammerfest23/1009.jpg
+  - 2023-05-09-warhammerfest23/1010.jpg
+  - 2023-05-09-warhammerfest23/1011.jpg
+  - 2023-05-09-warhammerfest23/1012.jpg
+  - 2023-05-09-warhammerfest23/1013.jpg
+  - 2023-05-09-warhammerfest23/1014.jpg
+  - 2023-05-09-warhammerfest23/1015.jpg
+  - 2023-05-09-warhammerfest23/1016.jpg
+  - 2023-05-09-warhammerfest23/1017.jpg
+  - 2023-05-09-warhammerfest23/1018.jpg
+  - 2023-05-09-warhammerfest23/1019.jpg
+  - 2023-05-09-warhammerfest23/1020.jpg
+  - 2023-05-09-warhammerfest23/1021.jpg
+  - 2023-05-09-warhammerfest23/1022.jpg
+  - 2023-05-09-warhammerfest23/1023.jpg
+  - 2023-05-09-warhammerfest23/1024.jpg
+  - 2023-05-09-warhammerfest23/1025.jpg
+  - 2023-05-09-warhammerfest23/1026.jpg
+  - 2023-05-09-warhammerfest23/1100.jpg
+  - 2023-05-09-warhammerfest23/1101.jpg
+  - 2023-05-09-warhammerfest23/101.jpg
+  - 2023-05-09-warhammerfest23/102.jpg
+  - 2023-05-09-warhammerfest23/103.jpg
+  - 2023-05-09-warhammerfest23/104.jpg
+  - 2023-05-09-warhammerfest23/105.jpg
+  - 2023-05-09-warhammerfest23/106.jpg
+  - 2023-05-09-warhammerfest23/107.jpg
+  - 2023-05-09-warhammerfest23/108.jpg
+  - 2023-05-09-warhammerfest23/109.jpg
+  - 2023-05-09-warhammerfest23/110.jpg
+  - 2023-05-09-warhammerfest23/111.jpg
+  - 2023-05-09-warhammerfest23/112.jpg
+  - 2023-05-09-warhammerfest23/113.jpg
+  - 2023-05-09-warhammerfest23/114.jpg
+  - 2023-05-09-warhammerfest23/115.jpg
+  - 2023-05-09-warhammerfest23/116.jpg
+  - 2023-05-09-warhammerfest23/117.jpg
+  - 2023-05-09-warhammerfest23/118.jpg
+  - 2023-05-09-warhammerfest23/119.jpg
+  - 2023-05-09-warhammerfest23/120.jpg
+  - 2023-05-09-warhammerfest23/121.jpg
+  - 2023-05-09-warhammerfest23/122.jpg
+  - 2023-05-09-warhammerfest23/123.jpg
+  - 2023-05-09-warhammerfest23/124.jpg
+  - 2023-05-09-warhammerfest23/125.jpg
+  - 2023-05-09-warhammerfest23/126.jpg
+  - 2023-05-09-warhammerfest23/127.jpg
+  - 2023-05-09-warhammerfest23/128.jpg
+  - 2023-05-09-warhammerfest23/201.jpg
+  - 2023-05-09-warhammerfest23/202.jpg
+  - 2023-05-09-warhammerfest23/203.jpg
+  - 2023-05-09-warhammerfest23/204.jpg
+  - 2023-05-09-warhammerfest23/205.jpg
+  - 2023-05-09-warhammerfest23/206.jpg
+  - 2023-05-09-warhammerfest23/207.jpg
+  - 2023-05-09-warhammerfest23/208.jpg
+  - 2023-05-09-warhammerfest23/209.jpg
+  - 2023-05-09-warhammerfest23/210.jpg
+  - 2023-05-09-warhammerfest23/211.jpg
+  - 2023-05-09-warhammerfest23/212.jpg
+  - 2023-05-09-warhammerfest23/213.jpg
+  - 2023-05-09-warhammerfest23/214.jpg
+  - 2023-05-09-warhammerfest23/215.jpg
+  - 2023-05-09-warhammerfest23/216.jpg
+  - 2023-05-09-warhammerfest23/217.jpg
+  - 2023-05-09-warhammerfest23/218.jpg
+  - 2023-05-09-warhammerfest23/219.jpg
+  - 2023-05-09-warhammerfest23/220.jpg
+  - 2023-05-09-warhammerfest23/221.jpg
+  - 2023-05-09-warhammerfest23/222.jpg
+  - 2023-05-09-warhammerfest23/301.jpg
+  - 2023-05-09-warhammerfest23/302.jpg
+  - 2023-05-09-warhammerfest23/303.jpg
+  - 2023-05-09-warhammerfest23/304.jpg
+  - 2023-05-09-warhammerfest23/305.jpg
+  - 2023-05-09-warhammerfest23/306.jpg
+  - 2023-05-09-warhammerfest23/307.jpg
+  - 2023-05-09-warhammerfest23/308.jpg
+  - 2023-05-09-warhammerfest23/309.jpg
+  - 2023-05-09-warhammerfest23/310.jpg
+  - 2023-05-09-warhammerfest23/311.jpg
+  - 2023-05-09-warhammerfest23/312.jpg
+  - 2023-05-09-warhammerfest23/313.jpg
+  - 2023-05-09-warhammerfest23/314.jpg
+  - 2023-05-09-warhammerfest23/315.jpg
+  - 2023-05-09-warhammerfest23/316.jpg
+  - 2023-05-09-warhammerfest23/317.jpg
+  - 2023-05-09-warhammerfest23/318.jpg
+  - 2023-05-09-warhammerfest23/319.jpg
+  - 2023-05-09-warhammerfest23/320.jpg
+  - 2023-05-09-warhammerfest23/321.jpg
+  - 2023-05-09-warhammerfest23/322.jpg
+  - 2023-05-09-warhammerfest23/401.jpg
+  - 2023-05-09-warhammerfest23/402.jpg
+  - 2023-05-09-warhammerfest23/403.jpg
+  - 2023-05-09-warhammerfest23/404.jpg
+  - 2023-05-09-warhammerfest23/501.jpg
+  - 2023-05-09-warhammerfest23/502.jpg
+  - 2023-05-09-warhammerfest23/503.jpg
+  - 2023-05-09-warhammerfest23/504.jpg
+  - 2023-05-09-warhammerfest23/505.jpg
+  - 2023-05-09-warhammerfest23/506.jpg
+  - 2023-05-09-warhammerfest23/507.jpg
+  - 2023-05-09-warhammerfest23/508.jpg
+  - 2023-05-09-warhammerfest23/509.jpg
+  - 2023-05-09-warhammerfest23/510.jpg
+  - 2023-05-09-warhammerfest23/511.jpg
+  - 2023-05-09-warhammerfest23/512.jpg
+  - 2023-05-09-warhammerfest23/513.jpg
+  - 2023-05-09-warhammerfest23/514.jpg
+  - 2023-05-09-warhammerfest23/515.jpg
+  - 2023-05-09-warhammerfest23/516.jpg
+  - 2023-05-09-warhammerfest23/517.jpg
+  - 2023-05-09-warhammerfest23/518.jpg
+  - 2023-05-09-warhammerfest23/519.jpg
+  - 2023-05-09-warhammerfest23/520.jpg
+  - 2023-05-09-warhammerfest23/521.jpg
+  - 2023-05-09-warhammerfest23/522.jpg
+  - 2023-05-09-warhammerfest23/523.jpg
+  - 2023-05-09-warhammerfest23/524.jpg
+  - 2023-05-09-warhammerfest23/525.jpg
+  - 2023-05-09-warhammerfest23/601.jpg
+  - 2023-05-09-warhammerfest23/602.jpg
+  - 2023-05-09-warhammerfest23/603.jpg
+  - 2023-05-09-warhammerfest23/604.jpg
+  - 2023-05-09-warhammerfest23/605.jpg
+  - 2023-05-09-warhammerfest23/606.jpg
+  - 2023-05-09-warhammerfest23/607.jpg
+  - 2023-05-09-warhammerfest23/608.jpg
+  - 2023-05-09-warhammerfest23/609.jpg
+  - 2023-05-09-warhammerfest23/610.jpg
+  - 2023-05-09-warhammerfest23/701.jpg
+  - 2023-05-09-warhammerfest23/702.jpg
+  - 2023-05-09-warhammerfest23/703.jpg
+  - 2023-05-09-warhammerfest23/704.jpg
+  - 2023-05-09-warhammerfest23/705.jpg
+  - 2023-05-09-warhammerfest23/706.jpg
+  - 2023-05-09-warhammerfest23/707.jpg
+  - 2023-05-09-warhammerfest23/708.jpg
+  - 2023-05-09-warhammerfest23/709.jpg
+  - 2023-05-09-warhammerfest23/801.jpg
+  - 2023-05-09-warhammerfest23/802.jpg
+  - 2023-05-09-warhammerfest23/803.jpg
+  - 2023-05-09-warhammerfest23/804.jpg
+  - 2023-05-09-warhammerfest23/805.jpg
+  - 2023-05-09-warhammerfest23/806.jpg
+  - 2023-05-09-warhammerfest23/807.jpg
+  - 2023-05-09-warhammerfest23/901.jpg
+  - 2023-05-09-warhammerfest23/902.jpg
+  - 2023-05-09-warhammerfest23/903.jpg
+  - 2023-05-09-warhammerfest23/904.jpg
+  - 2023-05-09-warhammerfest23/905.jpg
+  - 2023-05-09-warhammerfest23/906.jpg
+  - 2023-05-09-warhammerfest23/907.jpg
+  - 2023-05-09-warhammerfest23/908.jpg
+  - 2023-05-09-warhammerfest23/909.jpg
+  - 2023-05-09-warhammerfest23/910.jpg
+  - 2023-05-09-warhammerfest23/911.jpg
+  - 2023-05-09-warhammerfest23/912.jpg
+  - 2023-05-09-warhammerfest23/913.jpg
+  - 2023-05-09-warhammerfest23/914.jpg
+  - 2023-05-09-warhammerfest23/915.jpg
+  - 2023-05-09-warhammerfest23/916.jpg
+  - 2023-05-09-warhammerfest23/917.jpg
 ---
 
-{% picture /2023-05-09-warhammerfest23/IMG_8309.jpg%}
+![Chris and I](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8309.jpg)
 
 So Warhammer Fest has returned, and for the first time since Games Day 2013, I was finally free to attend and sample everything that GW has to offer. I had a blast of a time over the three days and it was an excellent way to spend my birthday weekend. That being said there is certainly a lot of room for improvement. This is also the first time I have entered Golden Demon since I was eligible for Youngbloods and I’m very happy with my finalist's pin!
 
@@ -19,10 +190,10 @@ This is also a bit of a long one! But hopefully, you should be able to jump to w
 
 1. [Day 1 and the Hobby Challenge](#day-1-and-the-hobby-challenge)
 2. [Day 2 and the Great Queue](#day-2-and-the-great-queue)
-	1. [A  Digression on Tournamens](#a-digression-on-tournaments)
-	2. [Horus Heresy and Old World Reveals](#horus-heresy-and-old-world-reveals)
-	3. [Hang out & Paint Live](#hang-out--paint-live)
-	4. [The Golden Demon cabinets](#the-golden-demon-cabinets)
+	2.1. [A  Digression on Tournamens](#a-digression-on-tournaments)
+	2.2. [Horus Heresy and Old World Reveals](#horus-heresy-and-old-world-reveals)
+	2.3. [Hang out & Paint Live](#hang-out--paint-live)
+	2.4. [The Golden Demon cabinets](#the-golden-demon-cabinets)
 3. [Day 3 and The Awards](#day-3-and-the-awards)
 4. [Final Thoughts](#final-thoughts)
 5. [Golden Demon Entrants](#golden-demon-entrants)
@@ -39,7 +210,7 @@ There was also a big box of pre-built minis which was really handy. Largely lots
 
 Since there was such a large amount of AoS stuff, I decided to choose the Chaos model as my entry. I preferred the commissar but actually getting Tolgar Split-Eye out and putting it together really made me fall in love with the model and the box photos do not do it justice. The dynamic pose is something that you don’t see much unless a model is heavily converted so I bought an extra later on in the Fest since it gave me some inspiration for a future GD entry. Since there weren’t many kits that were getting the creative juices flowing I figures I would just paint a simple duel with Tolgar charging towards an AoS sorcerer (no idea what the actual kit is called) and just see how much I can get painted in a day – especially since I am notoriously slow.
 
-{% include image.html img="2023-05-09-warhammerfest23/hobby_challenge.jpg" alt="Hobby Challenge results" caption="My Hobby Challenge attempt" %}
+![Hobby Challenge results](../assets/images/_2kpx/2023-05-09-warhammerfest23/hobby_challenge.jpg "My Hobby Challenge attempt")
 
 After building our pieces they were then primed by the Event staff in either white or black. If you asked nicely they may have given it a zenithal prime for you too. It was about a 30 min wait for me which was completely fine since it was a prime opportunity to take a break and go and get some lunch. That being said, later in the day the security at the venue stopped the staff from priming so there became a big backlog while it was confirmed that GW had in fact cleared it with venue staff beforehand. Sadly Chris ended up waiting nearly an hour and a bit for his which was a shame. That being said, since the problem was simply the venue security being unsure it was allowed, I’m sure it wouldn’t have been a problem on the other days, nor should it be again.
 
@@ -47,7 +218,7 @@ Come 6 o’clock everyone had their entries on the table ready for judging and [
 
 I’m really happy with my entry. I got the chance to paint some models I wouldn’t normally pick up and I think I got them to a pretty good tabletop standard in effectively 5 hours of painting. I also had a good chance to try out more contrast paints which I wouldn’t have picked up otherwise. Chris took a slightly different approach with his duel and had the commissar fighting off a hoard of poxwalkers, which I think visually looked really good and was excellently executed, even if he did have trouble getting anything painted in time due to the priming delays.
 
-{% include image.html img="2023-05-09-warhammerfest23/hobby_challenge_Chris.jpg" alt="Chris' Hobby Challenge results" caption="Chris' Hobby Challenge attempt" %}
+![Chris' Hobby Challenge results](../assets/images/_2kpx/2023-05-09-warhammerfest23/hobby_challenge_Chris.jpg "Chris' Hobby Challenge attempt")
 
 One thing I am glad about though is that I did bring some of my own paints and tools with me. I had them in my bag just in case something awful happened to my GD entry and it meant that I wasn’t scrounging around for paints all day. I did rightly have the piss taken out of me for being a try-hard when I pulled out my wet palette though. The paint selection was eclectic at best so having at least a couple of triads in my box with me meant I could actually challenge my speed painting rather than painting with a limited range of paints.
 
@@ -55,10 +226,8 @@ I hadn’t realised how much I missed just sitting down and painting with other 
 
 As will be a running theme throughout this write-up (I hesitate to call it a review), it is really the people I was with that made this a special event. I’ll admit that I’m not massively clued up on Warhammer content creators outside of the big painters, and people who regularly post tutorials that I pour over every detail of, but I felt really grateful to get to chat with PickleJarHobbies and LetsMakeitOrkie as we constantly made jokes about the excessively large number of pipe sprues.
 
-<div class="row-images">
-{% include row.html files = "2023-05-09-warhammerfest23/IMG_8303.jpg;2023-05-09-warhammerfest23/IMG_8304.jpg" %}
-{% include row.html files = "2023-05-09-warhammerfest23/IMG_8305.jpg;2023-05-09-warhammerfest23/IMG_8306.jpg" %}
-</div>
+| ![IMG_8303](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8303.jpg) | ![IMG_8304](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8304.jpg) | ![IMG_8305](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8305.jpg) | ![IMG_8306](../assets/images/_2kpx/2023-05-09-warhammerfest23/IMG_8306.jpg) |
+| - | - | - | - |
 <figure><figcaption>A selection of other entries</figcaption></figure>
 
 So day 1 was a blast. I really felt like I was part of a community that day, and genuinely felt like I had made friends with people that I would love to see at conventions and meet-ups at a later date. To top it all off, my GD entry had already been judged and I had at least a finalists pin! I had also timed the day perfectly because the main complaint throughout the festival, but especially on the Saturday, was the queues. Even the queue to just buy things from the shop was nearly an hour long and it seems like I had avoided the worst of it by keeping myself busy on day 1. Nonetheless, for the rest of the weekend I had nothing else booked and so on Day 2 it was time to move on to the convention itself.
@@ -75,7 +244,8 @@ Right next to the Squigapult was the Titan Owner’s Club who were playing a ful
 
 Next to the main hall was also a great stand where all the cosplayers were present. So many full-sized space marines, including a Warmaster Horus. I’m happy that GW gave them an exclusive space to show off and support their work. I also took the opportunity to chat with some of teh painters I had followed online and just generally let them know how great they are. Particular shoutout to the 'Eavy Metal legend [Darren Latham](https://www.instagram.com/darrenlatham/) and OSL/Oil paints master [Marco Frisoni](https://www.instagram.com/njm_marcofrisoni/)
 
-{% include row.html files = "2023-05-09-warhammerfest23/necron.jpg;2023-05-09-warhammerfest23/Marco.jpg" style="flex-direction: row;"%}
+| ![necron](../assets/images/_2kpx/2023-05-09-warhammerfest23/necron.jpg) | ![Marco](../assets/images/_2kpx/2023-05-09-warhammerfest23/Marco.jpg) |
+| - | - |
 
 ### A digression on Tournaments
 
@@ -83,7 +253,7 @@ I also took the time to have a look around the tournament tables. My friend John
 
 A particular shout out to the American announcer who was generally making sure the tournaments went smoothly and also occasionally announcing things for the Fest as a whole such as GD updates. He had the timbre of a slick radio host and it always made me smile whenever there was an update.
 
-{% include image.html img="2023-05-09-warhammerfest23/me_and_John.jpg" caption="John and I taking a well earned break on the final day" %}
+![John and I](../assets/images/_2kpx/2023-05-09-warhammerfest23/me_and_John.jpg "John and I taking a well earned break on the final day")
 
 ### Horus Heresy and Old World Reveals
 
@@ -107,7 +277,7 @@ A particular curiosity was that non-finalists (i.e. those without green stickers
 
 Nonetheless, I could always spend hours staring at GD entries, and I was glad I went later in the afternoon as many of the crowds had died down.
 
-{% include image.html img="2023-05-09-warhammerfest23/801.jpg" alt="GD entry" caption="My Entry in the cabinet!" %}
+![GD entry](../assets/images/_2kpx/2023-05-09-warhammerfest23/801.jpg "My Entry in the cabinet!")
 
 ## Day 3 and The Awards
 
@@ -149,4 +319,4 @@ So thanks to everyone for making my 26th Birthday so special. Now finally let's 
 
 ## Golden Demon Entrants
 
-{% include gallery.html files=site.data.warhammerfest23.filenames %}
+{% include gallery.html files=page.post_gallery %}

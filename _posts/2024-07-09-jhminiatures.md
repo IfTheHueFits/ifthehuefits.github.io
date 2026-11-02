@@ -1,6 +1,4 @@
 ---
-layout: post
-author: ollie
 subheading: This is the way (to get better at painting)
 title: NMM & OSl class with JHMiniatures
 categories: Review

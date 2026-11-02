@@ -9,7 +9,6 @@ Jekyll::Hooks.register :site, :post_write do |site|
         site.dest,
         disable_external: true,
         enforce_https: false,
-        allow_missing_href: true,
-        ignore_missing_alt: true
+        allow_missing_href: true
     ).run
 end
