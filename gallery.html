@@ -4,4 +4,11 @@ permalink: /gallery/
 title: Gallery
 subheading: Selection of images from projects and models I have painted. Click the image for full-size.
 ---
-{% include gallery.html files=site.data.gallery.filenames %}
+{% assign files = '' | split: '' %}
+{% for post in site.posts %}
+	{% if post.gallery %}
+		{% assign resolved = post.gallery | image_path: post.path %}
+		{% assign files = files | concat: resolved %}
+	{% endif %}
+{% endfor %}
+{% include gallery.html files=files %}

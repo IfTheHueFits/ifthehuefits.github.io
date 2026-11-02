@@ -1,8 +1,51 @@
 ---
-head_img: warhammer/canoptek_spyder_5.jpg
 title: Is This Thing On?
 subheading:
 categories: Editorial
+head_img: warhammer/canoptek_spyder_5.jpg
+gallery:
+  - warhammer/annihilation_barge_1.jpg
+  - warhammer/annihilation_barge_2.jpg
+  - warhammer/annihilation_barge_3.jpg
+  - warhammer/annihilation_barge_4.jpg
+  - warhammer/annihilation_barge_5.jpg
+  - warhammer/annihilation_barge_6.jpg
+  - warhammer/annihilation_barge_7.jpg
+  - warhammer/canoptek_spyder_1.jpg
+  - warhammer/canoptek_spyder_2.jpg
+  - warhammer/canoptek_spyder_3.jpg
+  - warhammer/canoptek_spyder_4.jpg
+  - warhammer/canoptek_spyder_5.jpg
+  - warhammer/doom_scythe_1.jpg
+  - warhammer/doom_scythe_2.jpg
+  - warhammer/doom_scythe_3.jpg
+  - warhammer/doom_scythe_4.jpg
+  - warhammer/doom_scythe_5.jpg
+  - warhammer/doom_scythe_6.jpg
+  - warhammer/doom_scythe_7.jpg
+  - warhammer/doom_scythe_8.jpg
+  - warhammer/doom_scythe_9.jpg
+  - warhammer/doom_scythe_10.jpg
+  - warhammer/nurgle_lord_1.jpg
+  - warhammer/nurgle_lord_2.jpg
+  - warhammer/nurgle_lord_3.jpg
+  - warhammer/nurgle_lord_4.jpg
+  - warhammer/sigmarine.jpg
+  - warhammer/tomb_blades_1.jpg
+  - warhammer/tomb_blades_2.jpg
+  - warhammer/tomb_blades_3.jpg
+  - warhammer/tomb_blades_4.jpg
+  - warhammer/tomb_blades_5.jpg
+  - warhammer/tomb_blades_6.jpg
+  - warhammer/triarch_stalker_1.jpg
+  - warhammer/triarch_stalker_2.jpg
+  - warhammer/triarch_stalker_3.jpg
+  - warhammer/triarch_stalker_4.jpg
+  - warhammer/triarch_stalker_5.jpg
+  - warhammer/warsmith_1.jpg
+  - warhammer/warsmith_2.jpg
+  - warhammer/warsmith_3.jpg
+  - warhammer/warsmith_4.jpg
 ---
 ![Canoptek Spyder](../assets/images/_2kpx/warhammer/canoptek_spyder_4.jpg)
 

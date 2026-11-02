@@ -81,17 +81,28 @@ module PostValidator
 
         # Check header image
         head_img = post.data['head_img']
-        return if blank?(head_img) # no head_img is a valid option
+        unless blank?(head_img) # no head_img is a valid option
+            check_image_exists(post, head_img, 'head_img')
+        end
 
-        # If head_img is present, check that the img file actually exists
-        relative = Jekyll::ImageFilters.resolve_path(head_img, post.path, post.site).to_s.sub(%r{\A/+}, '')
+        Array(post.data['gallery']).each do |img|
+            next if blank?(img)
+
+            check_image_exists(post, img, 'gallery')
+        end
+    end
+
+    # Resolve a path the same way image_path / picture tags do, then abort if
+    # the file is missing under picture.source.
+    def self.check_image_exists(post, img, field)
+        relative = Jekyll::ImageFilters.resolve_path(img, post.path, post.site).to_s.sub(%r{\A/+}, '')
         relative_file = File.join(post.site.config.dig('picture', 'source') || '', relative)
         full_path = File.join(post.site.source, relative_file)
         return if File.exist?(full_path)
 
         Jekyll.logger.abort_with(
             'Post check:',
-            "#{post.relative_path} head_img '#{head_img}' was not found at #{relative_file}"
+            "#{post.relative_path} #{field} '#{img}' was not found at #{relative_file}"
         )
     end
 end

@@ -3,6 +3,19 @@ subheading: Well over a year after I started I have finally settled on a scheme 
 title: The Road to Indomitus Part 1&#58 The Sons of Medusa
 categories: Showcase
 head_img: 2021-10-11-indomitus-pt1/Emerald3.jpg
+gallery:
+  - 2021-10-11-indomitus-pt1/group_black.jpg
+  - 2021-10-11-indomitus-pt1/Emerald5.jpg
+  - 2021-10-11-indomitus-pt1/Emerald2.jpg
+  - 2021-10-11-indomitus-pt1/Emerald1.jpg
+  - 2021-10-11-indomitus-pt1/Emerald6.jpg
+  - 2021-10-11-indomitus-pt1/Jade1.jpg
+  - 2021-10-11-indomitus-pt1/Jade3.jpg
+  - 2021-10-11-indomitus-pt1/Jade4.jpg
+  - 2021-10-11-indomitus-pt1/Park2.jpg
+  - 2021-10-11-indomitus-pt1/Park4.jpg
+  - 2021-10-11-indomitus-pt1/Park5.jpg
+  - 2021-10-11-indomitus-pt1/Park6.jpg
 ---
 
 ![3 Sons of Medusa variants](../assets/images/_2kpx/2021-10-11-indomitus-pt1/group_black.jpg)
