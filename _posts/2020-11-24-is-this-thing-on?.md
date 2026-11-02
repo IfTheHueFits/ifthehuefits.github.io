@@ -1,12 +1,53 @@
 ---
-layout: post
-author: ollie
-head_img: warhammer/canoptek_spyder_5.jpg
-title: Is this thing on?
+title: Is This Thing On?
 subheading:
 categories: Editorial
+head_img: warhammer/canoptek_spyder_5.jpg
+gallery:
+  - warhammer/annihilation_barge_1.jpg
+  - warhammer/annihilation_barge_2.jpg
+  - warhammer/annihilation_barge_3.jpg
+  - warhammer/annihilation_barge_4.jpg
+  - warhammer/annihilation_barge_5.jpg
+  - warhammer/annihilation_barge_6.jpg
+  - warhammer/annihilation_barge_7.jpg
+  - warhammer/canoptek_spyder_1.jpg
+  - warhammer/canoptek_spyder_2.jpg
+  - warhammer/canoptek_spyder_3.jpg
+  - warhammer/canoptek_spyder_4.jpg
+  - warhammer/canoptek_spyder_5.jpg
+  - warhammer/doom_scythe_1.jpg
+  - warhammer/doom_scythe_2.jpg
+  - warhammer/doom_scythe_3.jpg
+  - warhammer/doom_scythe_4.jpg
+  - warhammer/doom_scythe_5.jpg
+  - warhammer/doom_scythe_6.jpg
+  - warhammer/doom_scythe_7.jpg
+  - warhammer/doom_scythe_8.jpg
+  - warhammer/doom_scythe_9.jpg
+  - warhammer/doom_scythe_10.jpg
+  - warhammer/nurgle_lord_1.jpg
+  - warhammer/nurgle_lord_2.jpg
+  - warhammer/nurgle_lord_3.jpg
+  - warhammer/nurgle_lord_4.jpg
+  - warhammer/sigmarine.jpg
+  - warhammer/tomb_blades_1.jpg
+  - warhammer/tomb_blades_2.jpg
+  - warhammer/tomb_blades_3.jpg
+  - warhammer/tomb_blades_4.jpg
+  - warhammer/tomb_blades_5.jpg
+  - warhammer/tomb_blades_6.jpg
+  - warhammer/triarch_stalker_1.jpg
+  - warhammer/triarch_stalker_2.jpg
+  - warhammer/triarch_stalker_3.jpg
+  - warhammer/triarch_stalker_4.jpg
+  - warhammer/triarch_stalker_5.jpg
+  - warhammer/warsmith_1.jpg
+  - warhammer/warsmith_2.jpg
+  - warhammer/warsmith_3.jpg
+  - warhammer/warsmith_4.jpg
 ---
-{% picture warhammer/canoptek_spyder_4.jpg %}
+![Canoptek Spyder](../assets/images/_2kpx/warhammer/canoptek_spyder_4.jpg)
 
 Well hey there, thanks for dropping in, and welcome to the inaugural post on If the Hue Fits! I'm Ollie the blog's creator and I hope this site can act as a repository not only for my own ideas and projects but hopefully as inspiration and guidance for yours. I hold no illusions of being a professional painter, but I like to think I can get together a decent enough model that it might be worth sharing with other people and talk about how I did it - in a similar vibe to the great people at [Tale of Painters](https://taleofpainters.blogspot.com/).
 
@@ -35,4 +76,5 @@ There is also a smattering of Tau that will appear every now and then, which I h
 
 So things may be a bit quiet for now just while I work the kinks out of this website, as I very much taught myself web-dev so I could make this. Currently, with Indomitus, I am making my first foray into the Adeptus Astartes so I may be needing some help with some test themes coming up, I'm also hopefully starting work on some busts by [Reuben Lowde](https://www.instagram.com/reubenlowde/) which you should definitely check out also. In the meantime, enjoy the cheeky smattering of Necrons currently scattered across here and the gallery.
 
-{% include row.html files = "warhammer/tomb_blades_6.jpg;warhammer/triarch_stalker_3.jpg" style="flex-direction: row;"%}
+| ![tomb_blades_6](../assets/images/_2kpx/warhammer/tomb_blades_6.jpg) | ![triarch_stalker_3](../assets/images/_2kpx/warhammer/triarch_stalker_3.jpg) |
+| - | - |

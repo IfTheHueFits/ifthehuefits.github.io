@@ -1,13 +1,24 @@
 ---
-layout: post
-author: ollie
 subheading: Well over a year after I started I have finally settled on a scheme for my space marines.
 title: The Road to Indomitus Part 1&#58 The Sons of Medusa
 categories: Showcase
 head_img: 2021-10-11-indomitus-pt1/Emerald3.jpg
+gallery:
+  - 2021-10-11-indomitus-pt1/group_black.jpg
+  - 2021-10-11-indomitus-pt1/Emerald5.jpg
+  - 2021-10-11-indomitus-pt1/Emerald2.jpg
+  - 2021-10-11-indomitus-pt1/Emerald1.jpg
+  - 2021-10-11-indomitus-pt1/Emerald6.jpg
+  - 2021-10-11-indomitus-pt1/Jade1.jpg
+  - 2021-10-11-indomitus-pt1/Jade3.jpg
+  - 2021-10-11-indomitus-pt1/Jade4.jpg
+  - 2021-10-11-indomitus-pt1/Park2.jpg
+  - 2021-10-11-indomitus-pt1/Park4.jpg
+  - 2021-10-11-indomitus-pt1/Park5.jpg
+  - 2021-10-11-indomitus-pt1/Park6.jpg
 ---
 
-{% picture 2021-10-11-indomitus-pt1/group_black.jpg %}
+![3 Sons of Medusa variants](../assets/images/_2kpx/2021-10-11-indomitus-pt1/group_black.jpg)
 
 TLDR: I finally have my Space Marine chapter decided, I just need help with the greens...
 
@@ -26,19 +37,16 @@ So I bit the bullet, and rather than stripping and repainting the same 5 space m
 There are some still minor details that I want to sort with the colours, in particular the colour of the chest Aquila, and I might play around with the tone of the heads a bit more. Finally, there are the transfers to add as well, along with the black knee caps, but I don't think that will massively affect anyone's preference so I've left it for now.
 
 ## Emerald
-<div class="row-images">
-{% include row.html files = "2021-10-11-indomitus-pt1/Emerald5.jpg;2021-10-11-indomitus-pt1/Emerald1.jpg;2021-10-11-indomitus-pt1/Emerald3.jpg" %}
-</div>
+| ![Emerald5](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Emerald5.jpg) | ![Emerald1](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Emerald1.jpg) | ![Emerald3](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Emerald3.jpg) |
+| - | - | - |
 
 ## Jade
-<div class="row-images">
-{% include row.html files = "2021-10-11-indomitus-pt1/Jade1.jpg;2021-10-11-indomitus-pt1/Jade3.jpg;2021-10-11-indomitus-pt1/Jade4.jpg"%}
-</div>
+| ![Jade1](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Jade1.jpg) | ![Jade3](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Jade3.jpg) | ![Jade4](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Jade4.jpg) |
+| - | - | - |
 
 ## Park Green Flat
-<div class="row-images">
-{% include row.html files = "2021-10-11-indomitus-pt1/Park1.jpg;2021-10-11-indomitus-pt1/Park5.jpg;2021-10-11-indomitus-pt1/Park4.jpg"%}
-</div>
+| ![Park1](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Park1.jpg) | ![Park5](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Park5.jpg) | ![Park4](../assets/images/_2kpx/2021-10-11-indomitus-pt1/Park4.jpg) |
+| - | - | - |
 
 I've also been trying to refine my miniature photography a bit too to try and improve the quality of the images. Annoyingly I haven't been able to hit the sweet spot with the colour correction so my physical favourite (by a slim margin) is not the same as my favourite picked straight from the images.
 

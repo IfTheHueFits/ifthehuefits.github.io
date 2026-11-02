@@ -1,9 +1,6 @@
-{% if include.class %}
-<figure class="{{include.class}}"{% if include.flex %} style="flex: {{include.flex}}"{% endif %}>
-{% else %}
-<figure>
-{% endif %}
-	{% picture {{include.preset}} {{include.img}} --alt {{include.alt}} --img style="{{include.style}}"%}
+{% assign img = include.img | image_path: page.path %}
+<figure{% if include.class %} class="{{include.class}}"{% endif %} style="flex: {{ img | image_ratio }}">
+	{% picture {{include.preset}} {{img}} --alt {{include.alt}} --img style="{{include.style}}"%}
 	{% if include.caption %}
 	<figcaption>{{include.caption}}</figcaption>
 	{% endif %}

@@ -1,13 +1,4 @@
-collections:
-  authors:
-    output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "authors"
   - scope:
       path: ""
       type: "posts"
@@ -44,6 +35,18 @@ sass:
 include: [".nojekyll"]
 
 url: https://ifthehuefits.github.io/
+
+# Read by jekyll-seo-tag and jekyll-feed
+title: If the Hue Fits
+description: An assortment of miniature showcases, thoughts, tutorials and inspiration.
+author:
+  name: Ollie Jones
+social:
+  name: If the Hue Fits
+  links:
+    - https://www.facebook.com/ifthehuefitsblog
+    - https://www.instagram.com/ifthehuefits.blog/
+    - https://twitter.com/ifthehuefits
 
 picture:
     source: "assets/images/_2kpx"

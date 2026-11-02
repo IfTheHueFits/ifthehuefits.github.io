@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 $indent: 15%;
 $wide_indent: 25%;
 
@@ -117,7 +119,7 @@ button {
 	resize: none;
 }
 
-.row-images {
+.row-images, .row-images-group {
     display: flex;
     flex-direction: row;
 	margin: 0 calc(10% - 5px); // subtracting padding of column
@@ -126,12 +128,19 @@ button {
 	justify-content: center;
 }
 
-.col img {
+// Nested pairs share the group width; margins live on the group only.
+.row-images-group > .row-images {
+	margin: 0;
+	flex: 1;
+	min-width: 0;
+}
+
+.col img, .row-images figure img {
 	margin: 0 auto;
 	max-height: auto
 }
 
-.col{
+.col, .row-images figure{
 	padding: 25px 5px;
 	margin: 0;
 }
@@ -185,9 +194,13 @@ button {
 		margin: 30px 10%;
 	}
 
-	.row-images{
+	.row-images, .row-images-group {
 		margin-left: calc(5% - 5px);
 		margin-right: calc(5% - 5px);
+	}
+
+	.row-images-group > .row-images {
+		margin: 0;
 	}
 }
 
@@ -219,11 +232,14 @@ button {
 }
 
 @media (max-width: $mobile){
-	.row-images {
+	// Only groups stack: a 4-wide group becomes two rows of two.
+	// Standalone .row-images keep flex-direction: row (same as the old
+	// row.html inline style).
+	.row-images-group {
 		flex-direction: column;
 	}
 
-	.col{
+	.col, .row-images figure{
 		padding: 5px 2px
 	}
 }
