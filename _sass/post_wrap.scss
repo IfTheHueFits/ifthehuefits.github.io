@@ -232,13 +232,11 @@ button {
 }
 
 @media (max-width: $mobile){
-	.row-images, .row-images-group {
+	// Only groups stack: a 4-wide group becomes two rows of two.
+	// Standalone .row-images keep flex-direction: row (same as the old
+	// row.html inline style).
+	.row-images-group {
 		flex-direction: column;
-	}
-
-	// Keep each pair side-by-side so a 4-wide group becomes two-wide.
-	.row-images-group > .row-images {
-		flex-direction: row;
 	}
 
 	.col, .row-images figure{
