@@ -3,8 +3,8 @@
 # tables into row-images wrappers beforehand.
 
 # ![alt](../assets/images/_2kpx/folder/file.jpg "caption"){: preset="max_680"}
-# becomes {% include image.html %} with optional caption and preset. The image
-# path should be relative to the markdown file, or a site path under
+# becomes {% include image.html %} with optional caption, preset, and style.
+# The image path should be relative to the markdown file, or a site path under
 # picture.source. The optional Kramdown-style IAL is stripped after parsing.
 MARKDOWN_IMAGE = /!\[([^\]]*)\]\(\s*([^\s)]+)(?:\s+"((?:[^"\\]|\\.)*)")?\s*\)(?:\{:\s*([^}]+)\})?/
 
@@ -25,6 +25,8 @@ def rewrite_markdown_images(doc)
         tag += " caption=\"#{caption.gsub('\\"', '&quot;')}\"" if caption
         preset = ial_attribute(ial, 'preset')
         tag += " preset=\"#{preset.gsub('"', '&quot;')}\"" if preset
+        style = ial_attribute(ial, 'style')
+        tag += " style=\"#{style.gsub('"', '&quot;')}\"" if style
         "#{tag} %}"
     end
 end

@@ -13,7 +13,7 @@ I like to think (and I certainly hope you would agree) that I'm a fairly good pa
 
 I've been following Mamkion of [Noki Painting Studio](https://www.instagram.com/nokipaintingstudio/) for a while, so I was really happy to see when he was advertising several different classes over the next few months and jumped at the chance to do his non-metallic metal (NMM) one. Communication beforehand was great, and it was made very clear what materials and tools we would need along with an advised paints list, so with my bags packed, brushes in hand, I jumped on the tube and made my way to [Bad Moon Cafe](https://www.badmooncafe.co.uk/), our venue for the six-hour session.
 
-{% include image.html img="2021-10-17-noki-class/showcase.jpg" alt="miniature showcase" caption="Some of the incredible display minis Mamikon brought along" %}
+![miniature showcase](../assets/images/_2kpx/2021-10-17-noki-class/showcase.jpg "Some of the incredible display minis Mamikon brought along")
 
 ## Getting Started
 
