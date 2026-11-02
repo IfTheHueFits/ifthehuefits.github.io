@@ -6,13 +6,9 @@
 #
 # --allow-missing-href: each post ends with <a class="button" id="comments">
 # and no href. assets/js/lightbox.js opens GraphComment from that id.
-#
-# --ignore-missing-alt: picture tags and row images were written without alt
-# text.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 htmlproofer _site \
 	--disable-external \
 	--no-enforce-https \
-	--allow-missing-href \
-	--ignore-missing-alt
+	--allow-missing-href
