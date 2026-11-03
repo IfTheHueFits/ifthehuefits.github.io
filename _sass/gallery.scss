@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use 'variables' as var;
 
 // Justified rows: each item starts at --row-height tall and the items in a
 // row grow in proportion to their --ratio, so they share one height.
@@ -55,13 +55,13 @@
     opacity: .5;
 }
 
-@media (max-width: $tablet) {
+@media (max-width: var.$tablet) {
     .gallery {
         --row-height: 20vw;
     }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: var.$mobile) {
     .gallery {
         --row-height: 40vw;
     }

@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use 'variables' as var;
 
 nav {
 	display: flex;
@@ -10,16 +10,16 @@ nav {
 	bottom: 0;
 	margin: 5px auto;
 	text-align: center;
-    font-family: 'Mulish', sans-serif;
+    font-family: var.$font-body;
     font-size: 1.125em;
     text-decoration: none;
-    color: lightgrey;
-    transition: 500ms;
+    color: var.$sidebar-muted;
+    transition: var.$transition;
 }
 
 .nav_button:hover{
     color: white;
-    transition: 500ms;
+    transition: var.$transition;
 }
 
 .socials {
@@ -37,13 +37,13 @@ nav {
 .socials svg {
     width: 40px;
     margin: 5px 5px;
-    fill: lightgrey;
-    transition: 500ms;
+    fill: var.$sidebar-muted;
+    transition: var.$transition;
 }
 
 svg:hover {
     fill: white;
-    transition: 500ms;
+    transition: var.$transition;
 }
 
 .mobile {
@@ -52,7 +52,7 @@ svg:hover {
     margin: 5px 5px;
 }
 
-@media (max-width: $tablet) {
+@media (max-width: var.$tablet) {
     nav {
         display: none;
     }
