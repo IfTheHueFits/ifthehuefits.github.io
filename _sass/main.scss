@@ -25,7 +25,6 @@ body {
 
 .logo svg:hover > path{
     fill: var.$sidebar-muted;
-    transition: var.$transition;
 }
 
 header, .side_bar, .side_bar_img{
@@ -40,7 +39,6 @@ header, .side_bar, .side_bar_img{
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition-delay: opacity 1s;
     transition: opacity 1s ease-in-out, width var.$transition;
 }
 
@@ -202,7 +200,6 @@ html.is-animating .transition-fade {
         .mobile svg:hover {
             fill: var.$sidebar-muted;
             height: 40px;
-            transition: var.$transition;
         }
 
     .side_heading {
