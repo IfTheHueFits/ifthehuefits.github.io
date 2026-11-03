@@ -1,219 +1,219 @@
 @use 'variables' as var;
 
 .heading {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 h1 a {
-	text-decoration: none;
-	transition: var.$transition;
-	color: var.$text-colour;
+    text-decoration: none;
+    transition: var.$transition;
+    color: var.$text-colour;
 
-	&:hover {
-		color: var.$post-meta;
-	}
+    &:hover {
+        color: var.$post-meta;
+    }
 }
 
 .post_data {
-	color: var.$post-meta;
+    color: var.$post-meta;
 
-	> a {
-		color: var.$post-meta;
-		transition: var.$transition;
+    > a {
+        color: var.$post-meta;
+        transition: var.$transition;
 
-		&:hover {
-			color: var.$sidebar-muted;
-		}
-	}
+        &:hover {
+            color: var.$sidebar-muted;
+        }
+    }
 }
 
 figcaption {
-	color: var.$post-meta;
-	font-style: italic;
-	font-size: 0.7em;
-	text-align: center;
-	margin: 10px 0;
+    color: var.$post-meta;
+    font-style: italic;
+    font-size: 0.7em;
+    text-align: center;
+    margin: 10px 0;
 }
 
 main h1 {
-	font-family: var.$font-heading;
-	font-size: 2.5em;
-	color: var.$text-colour;
+    font-family: var.$font-heading;
+    font-size: 2.5em;
+    color: var.$text-colour;
 }
 
 h2 {
-	font-family: var.$font-heading;
-	font-size: 1.5em;
-	color: var.$text-colour;
-	margin: 30px var.$wide-indent 10px var.$wide-indent;
+    font-family: var.$font-heading;
+    font-size: 1.5em;
+    color: var.$text-colour;
+    margin: 30px var.$wide-indent 10px var.$wide-indent;
 }
 
 h3 {
-	font-family: var.$font-heading;
-	font-size: 1.25em;
-	color: var.$text-colour;
-	margin: 30px var.$wide-indent + 5% 10px var.$wide-indent + 5%;
+    font-family: var.$font-heading;
+    font-size: 1.25em;
+    color: var.$text-colour;
+    margin: 30px var.$wide-indent + 5% 10px var.$wide-indent + 5%;
 }
 
 main p, figure, li, form {
-	font-family: var.$font-body;
-	font-size: 1.125em;
-	line-height: 1.4;
-	color: var.$text-colour;
-	margin: 10px 20%;
+    font-family: var.$font-body;
+    font-size: 1.125em;
+    line-height: 1.4;
+    color: var.$text-colour;
+    margin: 10px 20%;
 }
 
 p > a, li > a, span {
-	font-family: var.$font-body;
-	color: black;
+    font-family: var.$font-body;
+    color: black;
 }
 
 main h1, .post_data, li {
-	margin: 10px var.$wide-indent;
+    margin: 10px var.$wide-indent;
 }
 
 // to handle nested lists and stop the fonts getting bigger
 li li {
-	font-size: 1em;
-	margin: 10px 5%;
+    font-size: 1em;
+    margin: 10px 5%;
 }
 
 hr {
-	border: 1px solid var.$hr-colour;
-	width: auto;
+    border: 1px solid var.$hr-colour;
+    width: auto;
 }
 
 hr, .pagination {
-	margin: 30px 20%;
+    margin: 30px 20%;
 }
 
 form, label {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 button {
-	width: 100px;
-	margin-left: auto;
-	margin-right: auto;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .message {
-	height: 300px;
-	resize: none;
+    height: 300px;
+    resize: none;
 }
 
 .row-images, .row-images-group {
-	display: flex;
-	flex-direction: row;
-	margin: 0 calc(10% - 5px); // subtracting padding of column
-	overflow: hidden;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 calc(10% - 5px); // subtracting padding of column
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
 
-	@media (max-width: var.$standard-screen) {
-		margin-left: calc(5% - 5px);
-		margin-right: calc(5% - 5px);
-	}
+    @media (max-width: var.$standard-screen) {
+        margin-left: calc(5% - 5px);
+        margin-right: calc(5% - 5px);
+    }
 }
 
 // Nested pairs share the group width; margins live on the group only.
 .row-images-group {
-	> .row-images {
-		margin: 0;
-		flex: 1;
-		min-width: 0;
-	}
+    > .row-images {
+        margin: 0;
+        flex: 1;
+        min-width: 0;
+    }
 
-	// Only groups stack: a 4-wide group becomes two rows of two.
-	// Standalone .row-images keep flex-direction: row (same as the old
-	// row.html inline style).
-	@media (max-width: var.$mobile) {
-		flex-direction: column;
-	}
+    // Only groups stack: a 4-wide group becomes two rows of two.
+    // Standalone .row-images keep flex-direction: row (same as the old
+    // row.html inline style).
+    @media (max-width: var.$mobile) {
+        flex-direction: column;
+    }
 }
 
 .row-images figure {
-	padding: 25px 5px;
-	margin: 0;
+    padding: 25px 5px;
+    margin: 0;
 
-	img {
-		margin: 0 auto;
-	}
+    img {
+        margin: 0 auto;
+    }
 
-	@media (max-width: var.$mobile) {
-		padding: 5px 2px;
-	}
+    @media (max-width: var.$mobile) {
+        padding: 5px 2px;
+    }
 }
 
 .button {
-	background-color: #4CAF50;
-	border: none;
-	color: white;
-	padding: 10px 30px;
-	text-align: center;
-	text-decoration: none;
-	margin: 10px auto 0 auto;
-	cursor: pointer;
-	border-radius: 4px;
-	transition: var.$transition;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var.$transition;
 
-	&:hover {
-		opacity: 0.7;
-	}
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 #off.button {
-	opacity: 0;
-	cursor: default;
-	transition: var.$transition;
+    opacity: 0;
+    cursor: default;
+    transition: var.$transition;
 }
 
 @media (max-width: var.$standard-screen) {
-	main h1, .post_data, li, figcaption {
-		margin: 10px var.$indent;
-	}
+    main h1, .post_data, li, figcaption {
+        margin: 10px var.$indent;
+    }
 
-	h2, h3 {
-		margin: 30px var.$indent 10px var.$indent;
-	}
+    h2, h3 {
+        margin: 30px var.$indent 10px var.$indent;
+    }
 
-	h3 {
-		margin: 30px var.$indent + 5% 10px var.$indent + 5%;
-	}
+    h3 {
+        margin: 30px var.$indent + 5% 10px var.$indent + 5%;
+    }
 
-	main p, figure, hr, .pagination, form {
-		margin: 10px 10%;
-	}
+    main p, figure, hr, .pagination, form {
+        margin: 10px 10%;
+    }
 
-	hr, .pagination {
-		margin: 30px 10%;
-	}
+    hr, .pagination {
+        margin: 30px 10%;
+    }
 }
 
 @media (max-width: var.$tablet) {
-	main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption {
-		margin: 10px 5%;
-	}
+    main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption {
+        margin: 10px 5%;
+    }
 
-	li li {
-		font-size: 1em;
-		margin: 10px 0.5%;
-	}
+    li li {
+        font-size: 1em;
+        margin: 10px 0.5%;
+    }
 
-	main h1 {
-		font-size: 2em;
-	}
+    main h1 {
+        font-size: 2em;
+    }
 
-	h2, h3 {
-		font-size: 1.25em;
-	}
+    h2, h3 {
+        font-size: 1.25em;
+    }
 
-	main p, li, form {
-		font-size: 1em;
-	}
+    main p, li, form {
+        font-size: 1em;
+    }
 }
