@@ -20,12 +20,30 @@ figcaption {
     font-size: 0.7em;
     text-align: center;
     margin: 10px 0;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 10px var.$indent;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+    }
 }
 
 main h1 {
     font-family: var.$font-heading;
     font-size: 2.5em;
     color: var.$text-colour;
+    margin: 10px var.$wide-indent;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 10px var.$indent;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+        font-size: 2em;
+    }
 }
 
 h2 {
@@ -33,6 +51,15 @@ h2 {
     font-size: 1.5em;
     color: var.$text-colour;
     margin: 30px var.$wide-indent 10px var.$wide-indent;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 30px var.$indent 10px var.$indent;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+        font-size: 1.25em;
+    }
 }
 
 h3 {
@@ -40,14 +67,37 @@ h3 {
     font-size: 1.25em;
     color: var.$text-colour;
     margin: 30px var.$wide-indent + 5% 10px var.$wide-indent + 5%;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 30px var.$indent + 5% 10px var.$indent + 5%;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+        font-size: 1.25em;
+    }
 }
 
-main p, figure, li, form {
+main p, figure, form {
     font-family: var.$font-body;
     font-size: 1.125em;
     line-height: 1.4;
     color: var.$text-colour;
     margin: 10px 20%;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 10px 10%;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+    }
+}
+
+main p, form {
+    @media (max-width: var.$tablet) {
+        font-size: 1em;
+    }
 }
 
 p > a, li > a, span {
@@ -55,23 +105,58 @@ p > a, li > a, span {
     color: black;
 }
 
-main h1, .post_data, li {
+li {
+    font-family: var.$font-body;
+    font-size: 1.125em;
+    line-height: 1.4;
+    color: var.$text-colour;
     margin: 10px var.$wide-indent;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 10px var.$indent;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+        font-size: 1em;
+    }
 }
 
 // to handle nested lists and stop the fonts getting bigger
 li li {
     font-size: 1em;
     margin: 10px 5%;
+
+    @media (max-width: var.$tablet) {
+        font-size: 1em;
+        margin: 10px 0.5%;
+    }
 }
 
 hr {
     border: 1px solid var.$hr-colour;
     width: auto;
+    margin: 30px 20%;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 30px 10%;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+    }
 }
 
-hr, .pagination {
+.pagination {
     margin: 30px 20%;
+
+    @media (max-width: var.$standard-screen) {
+        margin: 30px 10%;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
+    }
 }
 
 // -----------------------------------------------------------------------------
@@ -84,6 +169,7 @@ hr, .pagination {
 
 .post_data {
     color: var.$post-meta;
+    margin: 10px var.$wide-indent;
 
     > a {
         color: var.$post-meta;
@@ -92,6 +178,14 @@ hr, .pagination {
         &:hover {
             color: var.$sidebar-muted;
         }
+    }
+
+    @media (max-width: var.$standard-screen) {
+        margin: 10px var.$indent;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 10px 5%;
     }
 }
 
@@ -173,54 +267,5 @@ label {
 
     @media (max-width: var.$mobile) {
         max-height: none;
-    }
-}
-
-// -----------------------------------------------------------------------------
-// Measure
-// -----------------------------------------------------------------------------
-
-@media (max-width: var.$standard-screen) {
-    main h1, .post_data, li, figcaption {
-        margin: 10px var.$indent;
-    }
-
-    h2, h3 {
-        margin: 30px var.$indent 10px var.$indent;
-    }
-
-    h3 {
-        margin: 30px var.$indent + 5% 10px var.$indent + 5%;
-    }
-
-    main p, figure, hr, .pagination, form {
-        margin: 10px 10%;
-    }
-
-    hr, .pagination {
-        margin: 30px 10%;
-    }
-}
-
-@media (max-width: var.$tablet) {
-    main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption {
-        margin: 10px 5%;
-    }
-
-    li li {
-        font-size: 1em;
-        margin: 10px 0.5%;
-    }
-
-    main h1 {
-        font-size: 2em;
-    }
-
-    h2, h3 {
-        font-size: 1.25em;
-    }
-
-    main p, li, form {
-        font-size: 1em;
     }
 }
