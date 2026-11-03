@@ -18,10 +18,10 @@ nav {
     &:hover {
         color: white;
     }
-}
 
-.nav_button:hover {
-    color: white;
+    .current {
+        color: white;
+    }
 }
 
 .socials {
