@@ -1,0 +1,224 @@
+@use 'variables' as var;
+
+// -----------------------------------------------------------------------------
+// Page
+// -----------------------------------------------------------------------------
+
+body {
+    margin: 0;
+    padding-bottom: 25vh;
+}
+
+main {
+    margin-left: var.$wide-side-width;
+    padding: 10px 0;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+// For object leaving
+.transition-fade {
+    opacity: 1;
+    transition: var.$transition;
+}
+
+// For object entering, start invisible
+html.is-animating .transition-fade {
+    opacity: 0;
+    transition: var.$transition;
+}
+
+// -----------------------------------------------------------------------------
+// Sidebar
+// -----------------------------------------------------------------------------
+
+header, .side_bar, .side_bar_img {
+    height: 100%;
+    width: var.$wide-side-width;
+    position: fixed;
+    box-sizing: border-box;
+}
+
+.side_bar {
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    transition: var.$transition;
+
+    h1 {
+        font-family: var.$font-heading;
+        font-size: 2em;
+        color: white;
+        margin: 0;
+        text-align: center;
+    }
+
+    p {
+        color: var.$sidebar-muted;
+        text-align: center;
+        font-family: var.$font-body;
+        font-size: 1.125em;
+        line-height: 1.4;
+    }
+}
+
+.side_bar_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, width var.$transition;
+}
+
+.img_on {
+    opacity: 1;
+}
+
+.logo {
+    max-width: 200px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15%;
+
+    svg path {
+        fill: white;
+        transition: var.$transition;
+    }
+
+    svg:hover > path {
+        fill: var.$sidebar-muted;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Burger
+// -----------------------------------------------------------------------------
+
+.mobile {
+    display: none;
+    width: 40px;
+    margin: 5px 5px;
+}
+
+// -----------------------------------------------------------------------------
+// Shell breakpoints
+// -----------------------------------------------------------------------------
+
+@media (max-width: var.$standard-screen) {
+    .side_bar, .side_bar_img {
+        width: var.$side-width;
+    }
+
+    main {
+        margin-left: var.$side-width;
+    }
+}
+
+// Tablet View
+@media (max-width: var.$tablet) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+    }
+
+    .side_bar {
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        justify-content: left;
+        padding: 10px 40px;
+        align-items: center;
+
+        h1 {
+            text-align: left;
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
+
+        nav {
+            display: none;
+        }
+    }
+
+    .side_bar_img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .side_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .side_heading {
+        width: 100%;
+    }
+
+    .logo {
+        height: 100%;
+        width: auto;
+        // height: 100%
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 0;
+
+        svg {
+            height: 100px;
+        }
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .mobile {
+        display: block;
+
+        svg {
+            fill: white;
+            height: 40px;
+            transition: var.$transition;
+
+            &:hover {
+                fill: var.$sidebar-muted;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: var.$mobile) {
+    .logo {
+        display: none;
+    }
+
+    .side_bar {
+        padding: 5px 20px;
+    }
+}

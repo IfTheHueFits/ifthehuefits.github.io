@@ -1,5 +1,9 @@
 @use 'variables' as var;
 
+// -----------------------------------------------------------------------------
+// Gallery
+// -----------------------------------------------------------------------------
+
 // Justified rows: each item starts at --row-height tall and the items in a
 // row grow in proportion to their --ratio, so they share one height.
 .gallery {
