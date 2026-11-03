@@ -1,0 +1,48 @@
+@use 'variables' as var;
+
+// -----------------------------------------------------------------------------
+// Rows
+// -----------------------------------------------------------------------------
+
+.row-images, .row-images-group {
+    display: flex;
+    flex-direction: row;
+    margin: 0 calc(10% - 5px); // subtracting padding of column
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: var.$standard-screen) {
+        margin-left: calc(5% - 5px);
+        margin-right: calc(5% - 5px);
+    }
+}
+
+// Nested pairs share the group width; margins live on the group only.
+.row-images-group {
+    > .row-images {
+        margin: 0;
+        flex: 1;
+        min-width: 0;
+    }
+
+    // Only groups stack: a 4-wide group becomes two rows of two.
+    // Standalone .row-images keep flex-direction: row (same as the old
+    // row.html inline style).
+    @media (max-width: var.$mobile) {
+        flex-direction: column;
+    }
+}
+
+.row-images figure {
+    padding: 25px 5px;
+    margin: 0;
+
+    img {
+        margin: 0 auto;
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: 5px 2px;
+    }
+}
