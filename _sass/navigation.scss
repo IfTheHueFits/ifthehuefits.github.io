@@ -1,23 +1,23 @@
 @use 'variables' as var;
 
 nav {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav_button {
-	bottom: 0;
-	margin: 5px auto;
-	text-align: center;
-	font-family: var.$font-body;
-	font-size: 1.125em;
-	text-decoration: none;
-	color: var.$sidebar-muted;
-	transition: var.$transition;
+    bottom: 0;
+    margin: 5px auto;
+    text-align: center;
+    font-family: var.$font-body;
+    font-size: 1.125em;
+    text-decoration: none;
+    color: var.$sidebar-muted;
+    transition: var.$transition;
 
-	&:hover {
-		color: white;
-	}
+    &:hover {
+        color: white;
+    }
 }
 
 .nav_button:hover {
@@ -25,20 +25,20 @@ nav {
 }
 
 .socials {
-	display: flex;
-	flex-direction: row;
-	width: 150px;
-	margin-left: auto;
-	margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
 
-	svg {
-		width: 40px;
-		margin: 5px 5px;
-		fill: var.$sidebar-muted;
-		transition: var.$transition;
-	}
+    svg {
+        width: 40px;
+        margin: 5px 5px;
+        fill: var.$sidebar-muted;
+        transition: var.$transition;
+    }
 }
 
 svg:hover {
-	fill: white;
+    fill: white;
 }
