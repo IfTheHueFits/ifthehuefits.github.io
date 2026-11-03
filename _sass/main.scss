@@ -10,31 +10,31 @@ body {
     padding-bottom: 25vh;
 }
 
-.logo{
+.logo {
     max-width: 200px;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15%;
+
+    svg path {
+        fill: white;
+        transition: var.$transition;
+    }
+
+    svg:hover > path {
+        fill: var.$sidebar-muted;
+    }
 }
 
-.logo svg path {
-    fill: white;
-    transition: var.$transition;
-}
-
-.logo svg:hover > path{
-    fill: var.$sidebar-muted;
-}
-
-header, .side_bar, .side_bar_img{
+header, .side_bar, .side_bar_img {
     height: 100%;
     width: var.$wide-side-width;
     position: fixed;
     box-sizing: border-box;
 }
 
-.side_bar_img{
+.side_bar_img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -46,29 +46,29 @@ header, .side_bar, .side_bar_img{
     opacity: 1;
 }
 
-.side_bar{
+.side_bar {
     background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
     display: flex;
     flex-direction:  column;
     justify-content: space-between;
     padding: 40px;
     transition: var.$transition;
-}
 
-.side_bar h1{
-    font-family: var.$font-heading;
-    font-size: 2em;
-    color: white;
-    margin: 0;
-    text-align: center;
-}
+    h1 {
+        font-family: var.$font-heading;
+        font-size: 2em;
+        color: white;
+        margin: 0;
+        text-align: center;
+    }
 
-.side_bar p{
-    color: var.$sidebar-muted;
-    text-align: center;
-    font-family: var.$font-body;
-    font-size: 1.125em;
-    line-height: 1.4;
+    p {
+        color: var.$sidebar-muted;
+        text-align: center;
+        font-family: var.$font-body;
+        font-size: 1.125em;
+        line-height: 1.4;
+    }
 }
 
 main{
@@ -82,57 +82,70 @@ main{
     max-width: 100%;
     margin: 20px auto;
     display: block;
-	max-height: 35vw;
-	width: auto;
-	height: auto;
-	transition: opacity .3s ease-in-out;
-}
+    max-height: 35vw;
+    width: auto;
+    height: auto;
+    transition: opacity .3s ease-in-out;
 
-.main_window img:hover {
-    opacity: .75;
+    &:hover {
+        opacity: .75;
+    }
+
+    @media (max-width: var.$standard-screen) {
+        max-height: 45vw;
+    }
+
+    @media (max-width: var.$tablet) {
+        max-height: 70vw;
+    }
+
+    @media (max-width: var.$mobile) {
+        max-height: none;
+    }
 }
 
 // For object leaving
 .transition-fade {
-  opacity: 1;
-  transition: var.$transition;
+    opacity: 1;
+    transition: var.$transition;
 }
 
 // For object entering, start invisible
 html.is-animating .transition-fade {
-  opacity: 0;
-  transition: var.$transition
+    opacity: 0;
+    transition: var.$transition;
+}
+
+.mobile {
+    display: none;
+    width: 40px;
+    margin: 5px 5px;
 }
 
 @media (max-width: var.$standard-screen) {
     .side_bar, .side_bar_img {
-        width : var.$side-width
+        width: var.$side-width;
     }
 
     main {
         margin-left: var.$side-width;
     }
-
-	.main_window img {
-		max-height: 45vw;
-	}
 }
 
 // Tablet View
 @media (max-width: var.$tablet) {
-
-    .logo{
+    .logo {
         height: 100%;
         width: auto;
         // height: 100%
         margin-right: 10px;
         margin-top: auto;
         margin-bottom: auto;
-        padding-left:0;
-    }
+        padding-left: 0;
 
-    .logo svg {
-        height: 100px;
+        svg {
+            height: 100px;
+        }
     }
 
     .side_content {
@@ -156,17 +169,26 @@ html.is-animating .transition-fade {
         width: 100%;
     }
 
-    .side_bar{
+    .side_bar {
         position: relative;
         flex-direction: row;
         width: 100%;
         justify-content: left;
         padding: 10px 40px;
         align-items: center;
-    }
 
-    .side_bar h1{
-        text-align: left;
+        h1 {
+            text-align: left;
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
+
+        nav {
+            display: none;
+        }
     }
 
     main {
@@ -186,42 +208,27 @@ html.is-animating .transition-fade {
         align-items: center;
     }
 
-
-    .mobile{
+    .mobile {
         display: block;
-    }
 
-    	.mobile svg {
-    		fill: white;
-    		height: 40px;
-            transition: var.$transition;
-    	}
-
-        .mobile svg:hover {
-            fill: var.$sidebar-muted;
+        svg {
+            fill: white;
             height: 40px;
+            transition: var.$transition;
+
+            &:hover {
+                fill: var.$sidebar-muted;
+                height: 40px;
+            }
         }
+    }
 
     .side_heading {
         width: 100%;
     }
-
-    .side_bar p{
-        margin: 0;
-        text-align: left;
-    }
-
-	.main_window img {
-		max-height: 70vw;
-	}
 }
 
 @media (max-width: var.$mobile) {
-
-	.main_window img {
-		max-height: none
-	}
-
     .logo {
         display: none;
     }
@@ -229,7 +236,6 @@ html.is-animating .transition-fade {
     .side_bar {
         padding: 5px 20px;
     }
-
 }
 
 @include meta.load-css('./post_wrap');
