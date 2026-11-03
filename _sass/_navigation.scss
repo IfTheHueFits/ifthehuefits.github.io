@@ -9,7 +9,7 @@ nav {
     flex-direction: column;
 }
 
-.nav_button {
+.nav-button {
     bottom: 0;
     margin: 5px auto;
     text-align: center;
@@ -40,9 +40,9 @@ nav {
         margin: 5px 5px;
         fill: var.$sidebar-muted;
         transition: var.$transition;
-    }
-}
 
-svg:hover {
-    fill: white;
+        &:hover {
+            fill: white;
+        }
+    }
 }

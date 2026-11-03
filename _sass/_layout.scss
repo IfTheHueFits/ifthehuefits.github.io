@@ -58,7 +58,7 @@ header {
     }
 }
 
-.side_bar {
+.side-bar {
     height: 100%;
     width: var.$wide-side-width;
     position: fixed;
@@ -119,7 +119,7 @@ header {
     }
 }
 
-.side_bar_img {
+.side-bar-img {
     height: 100%;
     width: var.$wide-side-width;
     position: fixed;
@@ -144,7 +144,7 @@ header {
     }
 }
 
-.img_on {
+.img-on {
     opacity: 1;
 }
 
@@ -183,7 +183,7 @@ header {
     }
 }
 
-.side_content {
+.side-content {
     @media (max-width: var.$tablet) {
         display: flex;
         flex-direction: row;
@@ -192,7 +192,7 @@ header {
     }
 }
 
-.side_heading {
+.side-heading {
     @media (max-width: var.$tablet) {
         width: 100%;
     }

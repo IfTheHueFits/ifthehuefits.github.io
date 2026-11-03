@@ -8,12 +8,12 @@ function topFunction() {
 
 function swap_background(file, backgrounds) {
 	for (i=0; i<2; i++){
-		if (backgrounds[i].className.includes("img_on")){
-			backgrounds[i].className = backgrounds[i].className.replace(" img_on", "")
+		if (backgrounds[i].className.includes("img-on")){
+			backgrounds[i].className = backgrounds[i].className.replace(" img-on", "")
 		}
 		else {
 			backgrounds[i].style.backgroundImage = 'url("' + file + '")';
-			backgrounds[i].className += " img_on";
+			backgrounds[i].className += " img-on";
 		}
 	}
 }
@@ -72,7 +72,7 @@ function init(){
 	});
 
 	// PART 2 Change background of side pannel
-	var backgrounds = document.getElementsByClassName("side_bar_img");
+	var backgrounds = document.getElementsByClassName("side-bar-img");
 	var aside_element = document.querySelector("aside");
 	var srcset = aside_element.dataset.srcset;
 	var ratio = aside_element.dataset.ratio;
@@ -81,7 +81,7 @@ function init(){
 		.split('/generated/images/')[1];
 
 	// check if background image is actually different and switch if so
-	if (!document.querySelector(".img_on").style.backgroundImage.includes(banner_stem)) {
+	if (!document.querySelector(".img-on").style.backgroundImage.includes(banner_stem)) {
 		gen_background_file(srcset, ratio, backgrounds);
 	}
 
@@ -98,7 +98,7 @@ init();
 //add swup event listeners
 try {
 	const swup = new Swup({
-		containers: ['.side_heading', '.main_window'],
+		containers: ['.side-heading', '.main-window'],
 		plugins: [new SwupScrollPlugin()]
 	});
 	swup.on('willReplaceContent', unload);
