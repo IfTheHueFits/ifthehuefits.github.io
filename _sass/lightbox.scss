@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 #lightbox-overlay {
     opacity: 0;
     display: flex;
@@ -83,11 +85,11 @@
 }
 
 .close svg path{
-    fill: lightgrey;
-    transition: 500ms;
+    fill: var.$sidebar-muted;
+    transition: var.$transition;
 }
 
 .close svg:hover path{
     fill: white;
-    transition: 500ms;
+    transition: var.$transition;
 }

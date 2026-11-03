@@ -1,7 +1,4 @@
-@use './variables' as *;
-
-$indent: 15%;
-$wide_indent: 25%;
+@use 'variables' as var;
 
 .heading{
 	margin-bottom: 20px;
@@ -9,31 +6,31 @@ $wide_indent: 25%;
 
 h1 a {
 	text-decoration: none;
-	transition: 500ms;
-	color: #2a2f36;
+	transition: var.$transition;
+	color: var.$text-colour;
 }
 
 h1 a:hover{
-	color: grey;
-	transition: 500ms;
+	color: var.$post-meta;
+	transition: var.$transition;
 }
 
 .post_data {
-	color: grey;
+	color: var.$post-meta;
 }
 
 .post_data  > a{
-	color: grey;
-	transition: 500ms;
+	color: var.$post-meta;
+	transition: var.$transition;
 }
 
 .post_data  > a:hover{
-	color: lightgrey;
-	transition: 500ms;
+	color: var.$sidebar-muted;
+	transition: var.$transition;
 }
 
 figcaption {
-	color: grey;
+	color: var.$post-meta;
 	font-style: italic;
 	font-size: 0.7em;
 	text-align: center;
@@ -42,40 +39,40 @@ figcaption {
 
 
 main h1{
-	font-family: 'Merriweather', serif;
+	font-family: var.$font-heading;
 	font-size: 2.5em;
-	color: #2a2f36;
+	color: var.$text-colour;
 }
 
 h2 {
-	font-family: 'Merriweather', serif;
+	font-family: var.$font-heading;
 	font-size: 1.5em;
-	color: #2a2f36;
-	margin: 30px $wide_indent 10px $wide_indent;
+	color: var.$text-colour;
+	margin: 30px var.$wide-indent 10px var.$wide-indent;
 }
 
 h3 {
-	font-family: 'Merriweather', serif;
+	font-family: var.$font-heading;
 	font-size: 1.25em;
-	color: #2a2f36;
-	margin: 30px $wide_indent+5% 10px $wide_indent+5%;
+	color: var.$text-colour;
+	margin: 30px var.$wide-indent + 5% 10px var.$wide-indent + 5%;
 }
 
 main p, figure, li, form {
-	font-family: 'Mulish', sans-serif;
+	font-family: var.$font-body;
 	font-size: 1.125em;
 	line-height: 1.4;
-	color: #2a2f36;
+	color: var.$text-colour;
 	margin: 10px 20%;
 }
 
 p > a, li > a, span {
-	font-family: 'Mulish', sans-serif;
+	font-family: var.$font-body;
 	color: black;
 }
 
 main h1, .post_data, li{
-	margin: 10px $wide_indent;
+	margin: 10px var.$wide-indent;
 }
 
 // to handle nested lists and stop the fonts getting bigger
@@ -85,7 +82,7 @@ li li{
 }
 
 hr {
-    border: 1px solid darkgrey;
+    border: 1px solid var.$hr-colour;
     width: auto;
 }
 
@@ -155,31 +152,31 @@ button {
 	margin: 10px auto 0 auto;
 	cursor: pointer;
 	border-radius: 4px;
-	transition: 500ms
+	transition: var.$transition
 }
 
 .button:hover {
-	transition: 500ms;
+	transition: var.$transition;
 	opacity: 0.7;
 }
 
 #off.button {
 	opacity: 0;
 	cursor: default;
-	transition: 500ms;
+	transition: var.$transition;
 }
 
-@media (max-width: $standard_screen) {
+@media (max-width: var.$standard-screen) {
 	main h1, .post_data, li, figcaption{
-		margin: 10px $indent;
+		margin: 10px var.$indent;
 	}
 
 	h2, h3 {
-		margin: 30px $indent 10px $indent;
+		margin: 30px var.$indent 10px var.$indent;
 	}
 
 	h3 {
-		margin: 30px $indent+5% 10px $indent+5%;
+		margin: 30px var.$indent + 5% 10px var.$indent + 5%;
 	}
 
 	main p, figure, hr, .pagination, form{
@@ -204,7 +201,7 @@ button {
 	}
 }
 
-@media (max-width: $tablet){
+@media (max-width: var.$tablet){
 	main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption{
 		margin: 10px 5%;
 	}
@@ -231,7 +228,7 @@ button {
 	}
 }
 
-@media (max-width: $mobile){
+@media (max-width: var.$mobile){
 	// Only groups stack: a 4-wide group becomes two rows of two.
 	// Standalone .row-images keep flex-direction: row (same as the old
 	// row.html inline style).
