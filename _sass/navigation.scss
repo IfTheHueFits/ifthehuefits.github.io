@@ -5,53 +5,40 @@ nav {
 	flex-direction: column;
 }
 
-
 .nav_button {
 	bottom: 0;
 	margin: 5px auto;
 	text-align: center;
-    font-family: var.$font-body;
-    font-size: 1.125em;
-    text-decoration: none;
-    color: var.$sidebar-muted;
-    transition: var.$transition;
+	font-family: var.$font-body;
+	font-size: 1.125em;
+	text-decoration: none;
+	color: var.$sidebar-muted;
+	transition: var.$transition;
+
+	&:hover {
+		color: white;
+	}
 }
 
-.nav_button:hover{
+.nav_button:hover {
     color: white;
 }
 
 .socials {
-    display: flex;
-    flex-direction: row;
-    width: 150px;
+	display: flex;
+	flex-direction: row;
+	width: 150px;
 	margin-left: auto;
 	margin-right: auto;
-}
 
-.nav_button .current {
-  color: white;
-}
-
-.socials svg {
-    width: 40px;
-    margin: 5px 5px;
-    fill: var.$sidebar-muted;
-    transition: var.$transition;
+	svg {
+		width: 40px;
+		margin: 5px 5px;
+		fill: var.$sidebar-muted;
+		transition: var.$transition;
+	}
 }
 
 svg:hover {
-    fill: white;
-}
-
-.mobile {
-    display: none;
-    width: 40px;
-    margin: 5px 5px;
-}
-
-@media (max-width: var.$tablet) {
-    nav {
-        display: none;
-    }
+	fill: white;
 }

@@ -10,6 +10,14 @@
     gap: 8px;
     width: 80%;
     margin: 10px auto;
+
+    @media (max-width: var.$tablet) {
+        --row-height: 20vw;
+    }
+
+    @media (max-width: var.$mobile) {
+        --row-height: 40vw;
+    }
 }
 
 // Takes up the spare space in the last row so its images keep their height
@@ -25,44 +33,32 @@
     background-color: #eee;
     position: relative;
     overflow: hidden;
-}
 
-// Blurred 20px copy shown until the full image fades in over it, and through
-// it on hover
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--thumb) center / cover;
-    filter: blur(30px);
-}
-
-.gallery-item img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-height: none;
-    margin: 0;
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-}
-
-.gallery-item img.loaded {
-    opacity: 1;
-}
-
-.gallery-item img.loaded:hover {
-    opacity: .5;
-}
-
-@media (max-width: var.$tablet) {
-    .gallery {
-        --row-height: 20vw;
+    // Blurred 20px copy shown until the full image fades in over it, and through
+    // it on hover
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--thumb) center / cover;
+        filter: blur(30px);
     }
-}
 
-@media (max-width: var.$mobile) {
-    .gallery {
-        --row-height: 40vw;
+    img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+
+        &.loaded {
+            opacity: 1;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
     }
 }

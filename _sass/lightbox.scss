@@ -14,39 +14,36 @@
     overflow: hidden;
     justify-content: center;
     // align-items: center;
-}
 
-    #lightbox-overlay.visible {
+    &.visible {
         opacity: 1;
         pointer-events: auto;
     }
 
-#lightbox-overlay .mobile {
-    display: none;
+    nav {
+        display: none;
+        margin-top: 20px;
+    }
 }
 
-#lightbox-overlay nav {
-    display: none;
-    margin-top: 20px;
-}
-
-#lightbox-carousel{
+#lightbox-carousel {
     width: 100%;
     height: 90%;
     text-align: center;
     display: none;
 }
-.carousel-image{
+
+.carousel-image {
     max-height: 100%;
     max-width: 100%;
     transition: opacity 0.4s;
     opacity: 0;
-}
 
-    .carousel-image.flickity-lazyloaded,
-    .carousel-image.flickity-lazyerror {
-      opacity: 1;
+    &.flickity-lazyloaded,
+    &.flickity-lazyerror {
+        opacity: 1;
     }
+}
 
 .gallery-cell {
     display: flex;
@@ -61,7 +58,7 @@
     background-position: center;
 }
 
-.flickity-viewport{
+.flickity-viewport {
     top: 50%;
     transform: translateY(-50%);
     justify-content: center;
@@ -73,22 +70,22 @@
     position: relative;
 }
 
-.close{
+.close {
     position: absolute;
-    top:2vh;
-    right:2vw;
-}
+    top: 2vh;
+    right: 2vw;
 
-.close svg{
-    height: 50px;
-    cursor: pointer;
-}
+    svg {
+        height: 50px;
+        cursor: pointer;
 
-.close svg path{
-    fill: var.$sidebar-muted;
-    transition: var.$transition;
-}
+        path {
+            fill: var.$sidebar-muted;
+            transition: var.$transition;
+        }
 
-.close svg:hover path{
-    fill: white;
+        &:hover path {
+            fill: white;
+        }
+    }
 }

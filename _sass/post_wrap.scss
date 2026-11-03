@@ -1,6 +1,6 @@
 @use 'variables' as var;
 
-.heading{
+.heading {
 	margin-bottom: 20px;
 }
 
@@ -8,23 +8,23 @@ h1 a {
 	text-decoration: none;
 	transition: var.$transition;
 	color: var.$text-colour;
-}
 
-h1 a:hover{
-	color: var.$post-meta;
+	&:hover {
+		color: var.$post-meta;
+	}
 }
 
 .post_data {
 	color: var.$post-meta;
-}
 
-.post_data  > a{
-	color: var.$post-meta;
-	transition: var.$transition;
-}
+	> a {
+		color: var.$post-meta;
+		transition: var.$transition;
 
-.post_data  > a:hover{
-	color: var.$sidebar-muted;
+		&:hover {
+			color: var.$sidebar-muted;
+		}
+	}
 }
 
 figcaption {
@@ -32,11 +32,10 @@ figcaption {
 	font-style: italic;
 	font-size: 0.7em;
 	text-align: center;
-	margin: 10px 0
+	margin: 10px 0;
 }
 
-
-main h1{
+main h1 {
 	font-family: var.$font-heading;
 	font-size: 2.5em;
 	color: var.$text-colour;
@@ -69,32 +68,32 @@ p > a, li > a, span {
 	color: black;
 }
 
-main h1, .post_data, li{
+main h1, .post_data, li {
 	margin: 10px var.$wide-indent;
 }
 
 // to handle nested lists and stop the fonts getting bigger
-li li{
+li li {
 	font-size: 1em;
-	margin: 10px 5%
+	margin: 10px 5%;
 }
 
 hr {
-    border: 1px solid var.$hr-colour;
-    width: auto;
+	border: 1px solid var.$hr-colour;
+	width: auto;
 }
 
 hr, .pagination {
 	margin: 30px 20%;
 }
 
-form, label{
+form, label {
 	display: flex;
 	flex-direction: column;
 }
 
 label {
-	margin-bottom: 20px
+	margin-bottom: 20px;
 }
 
 button {
@@ -109,28 +108,46 @@ button {
 }
 
 .row-images, .row-images-group {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 	margin: 0 calc(10% - 5px); // subtracting padding of column
-    overflow: hidden;
+	overflow: hidden;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: var.$standard-screen) {
+		margin-left: calc(5% - 5px);
+		margin-right: calc(5% - 5px);
+	}
 }
 
 // Nested pairs share the group width; margins live on the group only.
-.row-images-group > .row-images {
-	margin: 0;
-	flex: 1;
-	min-width: 0;
+.row-images-group {
+	> .row-images {
+		margin: 0;
+		flex: 1;
+		min-width: 0;
+	}
+
+	// Only groups stack: a 4-wide group becomes two rows of two.
+	// Standalone .row-images keep flex-direction: row (same as the old
+	// row.html inline style).
+	@media (max-width: var.$mobile) {
+		flex-direction: column;
+	}
 }
 
-.row-images figure img {
-	margin: 0 auto;
-}
-
-.row-images figure{
+.row-images figure {
 	padding: 25px 5px;
 	margin: 0;
+
+	img {
+		margin: 0 auto;
+	}
+
+	@media (max-width: var.$mobile) {
+		padding: 5px 2px;
+	}
 }
 
 .button {
@@ -143,11 +160,11 @@ button {
 	margin: 10px auto 0 auto;
 	cursor: pointer;
 	border-radius: 4px;
-	transition: var.$transition
-}
+	transition: var.$transition;
 
-.button:hover {
-	opacity: 0.7;
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 #off.button {
@@ -157,7 +174,7 @@ button {
 }
 
 @media (max-width: var.$standard-screen) {
-	main h1, .post_data, li, figcaption{
+	main h1, .post_data, li, figcaption {
 		margin: 10px var.$indent;
 	}
 
@@ -169,30 +186,21 @@ button {
 		margin: 30px var.$indent + 5% 10px var.$indent + 5%;
 	}
 
-	main p, figure, hr, .pagination, form{
+	main p, figure, hr, .pagination, form {
 		margin: 10px 10%;
 	}
 
 	hr, .pagination {
 		margin: 30px 10%;
 	}
-
-	.row-images, .row-images-group {
-		margin-left: calc(5% - 5px);
-		margin-right: calc(5% - 5px);
-	}
-
-	.row-images-group > .row-images {
-		margin: 0;
-	}
 }
 
-@media (max-width: var.$tablet){
-	main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption{
+@media (max-width: var.$tablet) {
+	main h1, main p, figure, h2, h3, li, .post_data, hr, .pagination, form, figcaption {
 		margin: 10px 5%;
 	}
 
-	li li{
+	li li {
 		font-size: 1em;
 		margin: 10px 0.5%;
 	}
@@ -207,18 +215,5 @@ button {
 
 	main p, li, form {
 		font-size: 1em;
-	}
-}
-
-@media (max-width: var.$mobile){
-	// Only groups stack: a 4-wide group becomes two rows of two.
-	// Standalone .row-images keep flex-direction: row (same as the old
-	// row.html inline style).
-	.row-images-group {
-		flex-direction: column;
-	}
-
-	.row-images figure{
-		padding: 5px 2px
 	}
 }
