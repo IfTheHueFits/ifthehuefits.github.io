@@ -7,6 +7,11 @@
 body {
     margin: 0;
     padding-bottom: 25vh;
+
+    @media (max-width: var.$tablet) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 main {
@@ -14,6 +19,15 @@ main {
     padding: 10px 0;
     max-width: 100vw;
     overflow: hidden;
+
+    @media (max-width: var.$standard-screen) {
+        margin-left: var.$side-width;
+    }
+
+    @media (max-width: var.$tablet) {
+        margin: 0;
+        padding: 10px 0;
+    }
 }
 
 // For object leaving
@@ -32,14 +46,23 @@ html.is-animating .transition-fade {
 // Sidebar
 // -----------------------------------------------------------------------------
 
-header, .side_bar, .side_bar_img {
+header {
     height: 100%;
     width: var.$wide-side-width;
     position: fixed;
     box-sizing: border-box;
+
+    @media (max-width: var.$tablet) {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .side_bar {
+    height: 100%;
+    width: var.$wide-side-width;
+    position: fixed;
+    box-sizing: border-box;
     background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
     display: flex;
     flex-direction: column;
@@ -53,6 +76,10 @@ header, .side_bar, .side_bar_img {
         color: white;
         margin: 0;
         text-align: center;
+
+        @media (max-width: var.$tablet) {
+            text-align: left;
+        }
     }
 
     p {
@@ -61,15 +88,60 @@ header, .side_bar, .side_bar_img {
         font-family: var.$font-body;
         font-size: 1.125em;
         line-height: 1.4;
+
+        @media (max-width: var.$tablet) {
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    nav {
+        @media (max-width: var.$tablet) {
+            display: none;
+        }
+    }
+
+    @media (max-width: var.$standard-screen) {
+        width: var.$side-width;
+    }
+
+    @media (max-width: var.$tablet) {
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        justify-content: left;
+        padding: 10px 40px;
+        align-items: center;
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: 5px 20px;
     }
 }
 
 .side_bar_img {
+    height: 100%;
+    width: var.$wide-side-width;
+    position: fixed;
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out, width var.$transition;
+
+    @media (max-width: var.$standard-screen) {
+        width: var.$side-width;
+    }
+
+    @media (max-width: var.$tablet) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
 }
 
 .img_on {
@@ -91,87 +163,8 @@ header, .side_bar, .side_bar_img {
     svg:hover > path {
         fill: var.$sidebar-muted;
     }
-}
 
-// -----------------------------------------------------------------------------
-// Burger
-// -----------------------------------------------------------------------------
-
-.mobile {
-    display: none;
-    width: 40px;
-    margin: 5px 5px;
-}
-
-// -----------------------------------------------------------------------------
-// Shell breakpoints
-// -----------------------------------------------------------------------------
-
-@media (max-width: var.$standard-screen) {
-    .side_bar, .side_bar_img {
-        width: var.$side-width;
-    }
-
-    main {
-        margin-left: var.$side-width;
-    }
-}
-
-// Tablet View
-@media (max-width: var.$tablet) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    header {
-        position: relative;
-        width: 100%;
-    }
-
-    .side_bar {
-        position: relative;
-        flex-direction: row;
-        width: 100%;
-        justify-content: left;
-        padding: 10px 40px;
-        align-items: center;
-
-        h1 {
-            text-align: left;
-        }
-
-        p {
-            margin: 0;
-            text-align: left;
-        }
-
-        nav {
-            display: none;
-        }
-    }
-
-    .side_bar_img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-
-    .side_content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .side_heading {
-        width: 100%;
-    }
-
-    .logo {
+    @media (max-width: var.$tablet) {
         height: 100%;
         width: auto;
         // height: 100%
@@ -185,19 +178,45 @@ header, .side_bar, .side_bar_img {
         }
     }
 
-    .banner {
+    @media (max-width: var.$mobile) {
+        display: none;
+    }
+}
+
+.side_content {
+    @media (max-width: var.$tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.side_heading {
+    @media (max-width: var.$tablet) {
+        width: 100%;
+    }
+}
+
+.banner {
+    @media (max-width: var.$tablet) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+}
 
-    main {
-        margin: 0;
-        padding: 10px 0;
-    }
+// -----------------------------------------------------------------------------
+// Burger
+// -----------------------------------------------------------------------------
 
-    .mobile {
+.mobile {
+    display: none;
+    width: 40px;
+    margin: 5px 5px;
+
+    @media (max-width: var.$tablet) {
         display: block;
 
         svg {
@@ -210,15 +229,5 @@ header, .side_bar, .side_bar_img {
                 height: 40px;
             }
         }
-    }
-}
-
-@media (max-width: var.$mobile) {
-    .logo {
-        display: none;
-    }
-
-    .side_bar {
-        padding: 5px 20px;
     }
 }
