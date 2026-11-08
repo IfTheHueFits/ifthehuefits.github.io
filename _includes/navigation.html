@@ -1,7 +1,7 @@
 <!-- Generates all the navigation and social media buttons in the side bar -->
 <nav>
 	{% for item in site.data.navigation %}
-	<a href="{{ item.link }}" class="nav-button{% if page.url == item.link %} current{% endif %}">
+	<a href="{{ item.link }}" class="nav-button">
 		{{ item.name }}
 	</a>
 	{% endfor %}
