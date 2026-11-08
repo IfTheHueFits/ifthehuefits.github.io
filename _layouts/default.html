@@ -1,26 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
 		<link rel="stylesheet" href="/assets/css/styles.css">
-		<div class="meta_seo" id="swup">
-			{% feed_meta %}
-			{% seo %}
-		</div>
+		{% feed_meta %}
+		{% seo %}
 	</head>
 	<body>
 		<header>
-			<div class="side_bar_img img_on" style="background-image: none"> </div>
-			<div class="side_bar_img"> </div>
-			<div class="side_bar">
+			<div class="side-bar-img img-on" style="background-image: none"> </div>
+			<div class="side-bar-img"> </div>
+			<div class="side-bar">
 				<a href="/" class="logo">
 					{% include icons/logo.svg %}
 				</a>
-				<div class="side_content">
-					<div id="swup" class="transition-fade side_heading">
+				<div class="side-content">
+					<div class="transition-fade side-heading">
 						<div class="banner">
 							<h1>
 								{{page.title}}
@@ -39,7 +36,7 @@
 				</div>
 			</div>
 		</header>
-		<main id="swup" class="main_window transition-fade">
+		<main class="main-window transition-fade">
 			{% assign banner_img = page.head_img | image_path: page.path | default: "splash.jpg" %}
 			{% assign banner_preset = page.banner_preset | default: "banner_srcset" %}
 			<aside data-srcset="{% picture {{ banner_preset }} {{ banner_img }} %}" data-ratio="{{ banner_img | image_ratio }}"></aside>
@@ -48,11 +45,11 @@
 
 	{% include lightbox.html%}
 
-	<script src="https://unpkg.com/swup@3.1.1"></script>
-	<script src="https://unpkg.com/@swup/scroll-plugin@2"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="/assets/js/flickity.pkgd.js"></script>
-	<script src="/assets/js/lightbox.js"></script>
-	<script src="/assets/js/script.js"></script>
+	<script defer src="https://unpkg.com/swup@3.1.1"></script>
+	<script defer src="https://unpkg.com/@swup/scroll-plugin@2"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script defer src="/assets/js/flickity.pkgd.js"></script>
+	<script defer src="/assets/js/lightbox.js"></script>
+	<script defer src="/assets/js/script.js"></script>
 	</body>
 </html>
