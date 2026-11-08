@@ -16,17 +16,20 @@ body {
 
 main {
     margin-left: var.$wide-side-width;
-    padding: 10px 0;
+    padding-block: 10px;
+    padding-inline: calc(0.2 * (100% - var.$wide-side-width));
     max-width: 100vw;
     overflow: hidden;
 
     @media (max-width: var.$standard-screen) {
         margin-left: var.$side-width;
+        padding-inline: calc(0.1 * (100% - var.$side-width));
     }
 
     @media (max-width: var.$tablet) {
         margin: 0;
-        padding: 10px 0;
+        padding-block: 10px;
+        padding-inline: 5%;
     }
 }
 
