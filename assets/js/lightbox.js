@@ -16,16 +16,18 @@ document.addEventListener('click', lightboxClick);
 
 // Define a function that filters the unwanted click events on the document
 function lightboxClick(event) {
-	const elem = event.target,
-		lightboxCar = document.getElementById('lightbox-carousel'),
-		lightbox = document.getElementById("lightbox-overlay"),
-		closeBtn = document.querySelector('.close')
+	const target = event.target;
+	const lightboxCar = document.getElementById('lightbox-carousel');
+	const lightbox = document.getElementById("lightbox-overlay");
+	const closeBtn = document.querySelector('.close');
+	const commentsLink = target.closest('#comments');
+	const img = target.closest('main img');
+	const mobileBtn = target.closest('#mobile');
 
-	// If we click any of these 2 elements, close the lightbox
-	if (elem.id == 'comments') {
+	if (commentsLink) {
 		const commentbox = document.querySelector('.comments');
 		commentbox.id="graphcomment";
-		elem.id='off';
+		commentsLink.id='off';
 
 
 		// comment box parameters that need to be set based on the website
@@ -52,7 +54,7 @@ function lightboxClick(event) {
 
 	}
 	else if (lightbox_visible){
-		if (elem.id == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elem.closest('#close')) {
+		if (target === lightbox || target.closest('#close') || target.closest('#lightbox-overlay nav')) {
 			event.preventDefault();
 
 			lightbox.classList.remove('visible');
@@ -67,7 +69,7 @@ function lightboxClick(event) {
 			lightbox_visible = false;
 		}
 	}
-	else if ((elem.tagName == "IMG") && !(lightbox.classList.contains('visible'))) {
+	else if (img) {
 		const pageImgs = document.querySelector("main").getElementsByTagName("img");
 		lightboxCar.style.display = "initial";
 		flkty = new Flickity( '#lightbox-carousel', {
@@ -81,7 +83,7 @@ function lightboxClick(event) {
 		// find clicked element in list
 		let i;
 		for (let j=0; j<pageImgs.length; j++){
-			if (pageImgs[j] == elem){
+			if (pageImgs[j] == img){
 				i = j;
 				break;
 			}
@@ -124,7 +126,7 @@ function lightboxClick(event) {
 		lightbox_visible = true;
 	}
 
-	else if (elem.closest('#mobile')) {
+	else if (mobileBtn) {
 		lightbox.classList.add('visible');
 		lightbox.style.alignItems = "initial";
 		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
