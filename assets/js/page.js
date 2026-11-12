@@ -1,6 +1,8 @@
----
-layout: none
----
+/*
+Manages events and functions for the main page.
+*/
+
+// Swap the background image of the side panel.
 function swap_background(file, backgrounds) {
 	for (let i=0; i<2; i++){
 		if (backgrounds[i].className.includes("img-on")){
@@ -13,6 +15,7 @@ function swap_background(file, backgrounds) {
 	}
 }
 
+// Determines which specific background image to use based on the screen width.
 function gen_background_file(srcset, ratio, backgrounds){
 	let width = screen.width;
 	const entries = srcset.split(',');
