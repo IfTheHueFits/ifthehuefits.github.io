@@ -7,31 +7,29 @@ layout: none
  */
 
 // configure carousel.
-var flkty
-var flkty_set = false;
-var lightbox_visible = false;
-var comments_on = false;
+let flkty
+let flkty_set = false;
+let lightbox_visible = false;
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
 
 // Define a function that filters the unwanted click events on the document
 function lightboxClick(event) {
-	var elem = event.target,
+	const elem = event.target,
 		lightboxCar = document.getElementById('lightbox-carousel'),
 		lightbox = document.getElementById("lightbox-overlay"),
 		closeBtn = document.querySelector('.close')
 
 	// If we click any of these 2 elements, close the lightbox
 	if (elem.id == 'comments') {
-		commentbox = document.querySelector('.comments');
+		const commentbox = document.querySelector('.comments');
 		commentbox.id="graphcomment";
 		elem.id='off';
-		// comments_on = true;
 
 
 		// comment box parameters that need to be set based on the website
-		var __semio__params = {
+		const __semio__params = {
 			graphcommentId: "If-the-Hue-Fits", // do not change, used to match with commentbox
 
 			behaviour: {
@@ -47,7 +45,7 @@ function lightboxClick(event) {
 
 
 		(function() {
-			var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+			const gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
 			gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
 		})();
@@ -70,7 +68,7 @@ function lightboxClick(event) {
 		}
 	}
 	else if ((elem.tagName == "IMG") && !(lightbox.classList.contains('visible'))) {
-		pageImgs = document.querySelector("main").getElementsByTagName("img");
+		const pageImgs = document.querySelector("main").getElementsByTagName("img");
 		lightboxCar.style.display = "initial";
 		flkty = new Flickity( '#lightbox-carousel', {
 			cellAlign: 'center',
@@ -81,8 +79,8 @@ function lightboxClick(event) {
 		flkty_set = true;
 
 		// find clicked element in list
-		var i;
-		for (j=0; j<pageImgs.length; j++){
+		let i;
+		for (let j=0; j<pageImgs.length; j++){
 			if (pageImgs[j] == elem){
 				i = j;
 				break;
@@ -94,12 +92,12 @@ function lightboxClick(event) {
 		/* NOTE in jekyll serve, the lazyload appears that it might be causing
 		some timeout or bad requests, if this causes a problem on the server
 		a manual lazy load needs to be implemented*/
-		for (j=0; j<pageImgs.length; j++){
-			var newCell = document.createElement("div");
+		for (let j=0; j<pageImgs.length; j++){
+			const newCell = document.createElement("div");
 			newCell.className = "gallery-cell";
 
 			// clone img from the main page
-			var newImg = pageImgs[j].cloneNode(true);
+			const newImg = pageImgs[j].cloneNode(true);
 			newImg.className = "carousel-image";
 
 			// set the data load attributes for flickity from the img div
