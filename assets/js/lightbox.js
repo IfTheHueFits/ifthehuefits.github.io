@@ -54,7 +54,7 @@ function lightboxClick(event) {
 
 	}
 	else if (lightbox_visible){
-		if (elem.id == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elem.id == "close") {
+		if (elem.id == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elem.closest('#close')) {
 			event.preventDefault();
 
 			lightbox.classList.remove('visible');
@@ -126,7 +126,7 @@ function lightboxClick(event) {
 		lightbox_visible = true;
 	}
 
-	else if (elem.id == "mobile") {
+	else if (elem.closest('#mobile')) {
 		lightbox.classList.add('visible');
 		lightbox.style.alignItems = "initial";
 		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";

@@ -15,18 +15,27 @@ body {
 }
 
 main {
+    --heading-pad: #{var.$heading-pad};
+    --row-pad: #{var.$row-pad};
     margin-left: var.$wide-side-width;
-    padding: 10px 0;
+    padding-block: 10px;
+    padding-inline: calc(0.2 * (100% - var.$wide-side-width));
     max-width: 100vw;
     overflow: hidden;
 
     @media (max-width: var.$standard-screen) {
+        --heading-pad: #{var.$heading-pad-standard};
+        --row-pad: #{var.$row-pad-standard};
         margin-left: var.$side-width;
+        padding-inline: calc(0.1 * (100% - var.$side-width));
     }
 
     @media (max-width: var.$tablet) {
+        --heading-pad: #{var.$heading-pad-tablet};
+        --row-pad: #{var.$row-pad-tablet};
         margin: 0;
-        padding: 10px 0;
+        padding-block: 10px;
+        padding-inline: 5%;
     }
 }
 
@@ -215,6 +224,17 @@ header {
     display: none;
     width: 40px;
     margin: 5px 5px;
+
+    button {
+        appearance: none;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        line-height: 0;
+        cursor: pointer;
+    }
 
     @media (max-width: var.$tablet) {
         display: block;
