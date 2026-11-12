@@ -7,20 +7,10 @@
 .row-images, .row-images-group {
     display: flex;
     flex-direction: row;
-    margin: 0 calc(#{var.$row-pad} - 5px);
+    margin: 0 calc(var(--row-pad) - 5px);
     overflow: hidden;
     align-items: center;
     justify-content: center;
-
-    @media (max-width: var.$standard-screen) {
-        margin-left: calc(#{var.$row-pad-standard} - 5px);
-        margin-right: calc(#{var.$row-pad-standard} - 5px);
-    }
-
-    @media (max-width: var.$tablet) {
-        margin-left: calc(#{var.$row-pad-tablet} - 5px);
-        margin-right: calc(#{var.$row-pad-tablet} - 5px);
-    }
 }
 
 // Nested pairs share the group width; margins live on the group only.

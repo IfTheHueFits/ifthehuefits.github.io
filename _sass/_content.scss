@@ -26,14 +26,9 @@ main h1 {
     font-family: var.$font-heading;
     font-size: 2.5em;
     color: var.$text-colour;
-    margin: 10px var.$heading-pad;
-
-    @media (max-width: var.$standard-screen) {
-        margin: 10px var.$heading-pad-standard;
-    }
+    margin: 10px var(--heading-pad);
 
     @media (max-width: var.$tablet) {
-        margin: 10px var.$heading-pad-tablet;
         font-size: 2em;
     }
 }
@@ -42,14 +37,10 @@ h2 {
     font-family: var.$font-heading;
     font-size: 1.5em;
     color: var.$text-colour;
-    margin: 30px var.$heading-pad 10px;
-
-    @media (max-width: var.$standard-screen) {
-        margin: 30px var.$heading-pad-standard 10px;
-    }
+    margin: 30px var(--heading-pad) 10px;
 
     @media (max-width: var.$tablet) {
-        margin: 10px var.$heading-pad-tablet;
+        margin: 10px var(--heading-pad);
         font-size: 1.25em;
     }
 }
@@ -58,14 +49,10 @@ h3 {
     font-family: var.$font-heading;
     font-size: 1.25em;
     color: var.$text-colour;
-    margin: 30px var.$heading-pad 10px;
-
-    @media (max-width: var.$standard-screen) {
-        margin: 30px var.$heading-pad-standard 10px;
-    }
+    margin: 30px var(--heading-pad) 10px;
 
     @media (max-width: var.$tablet) {
-        margin: 10px var.$heading-pad-tablet;
+        margin: 10px var(--heading-pad);
         font-size: 1.25em;
     }
 }
@@ -140,7 +127,7 @@ hr {
 
 .post-data {
     color: var.$post-meta;
-    margin: 10px var.$heading-pad;
+    margin: 10px var(--heading-pad);
 
     > a {
         color: var.$post-meta;
@@ -149,14 +136,6 @@ hr {
         &:hover {
             color: var.$sidebar-muted;
         }
-    }
-
-    @media (max-width: var.$standard-screen) {
-        margin: 10px var.$heading-pad-standard;
-    }
-
-    @media (max-width: var.$tablet) {
-        margin: 10px var.$heading-pad-tablet;
     }
 }
 

@@ -12,17 +12,10 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 8px;
-    margin: 10px var.$row-pad;
-
-    @media (max-width: var.$standard-screen) {
-        margin-left: var.$row-pad-standard;
-        margin-right: var.$row-pad-standard;
-    }
+    margin: 10px var(--row-pad);
 
     @media (max-width: var.$tablet) {
         --row-height: 20vw;
-        margin-left: var.$row-pad-tablet;
-        margin-right: var.$row-pad-tablet;
     }
 
     @media (max-width: var.$mobile) {
