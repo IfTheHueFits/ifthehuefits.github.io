@@ -1,11 +1,21 @@
+// media query sizes
 $mobile: 500px;
 $tablet: 1024px;
 $standard-screen: 1600px;
 
+// sidebar widths
 $side-width: 30vw;
 $wide-side-width: 25vw;
-$indent: 15%;
-$wide-indent: 25%;
+
+// Additional indent of headings / post-data. Assigned to --heading-pad on main.
+$heading-pad: 8.33%;
+$heading-pad-standard: 6.25%;
+$heading-pad-tablet: 0;
+
+// Reversed indent of row-images / gallery. Assigned to --row-pad on main.
+$row-pad: -16.67%;
+$row-pad-standard: -6.25%;
+$row-pad-tablet: 0;
 
 $text-colour: #2a2f36;
 $post-meta: grey;

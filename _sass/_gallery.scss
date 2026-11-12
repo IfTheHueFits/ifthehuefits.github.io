@@ -12,8 +12,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 8px;
-    width: 80%;
-    margin: 10px auto;
+    margin: 10px var(--row-pad);
 
     @media (max-width: var.$tablet) {
         --row-height: 20vw;
