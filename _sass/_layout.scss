@@ -15,6 +15,8 @@ body {
 }
 
 main {
+    --heading-pad: #{var.$heading-pad};
+    --row-pad: #{var.$row-pad};
     margin-left: var.$wide-side-width;
     padding-block: 10px;
     padding-inline: calc(0.2 * (100% - var.$wide-side-width));
@@ -22,11 +24,15 @@ main {
     overflow: hidden;
 
     @media (max-width: var.$standard-screen) {
+        --heading-pad: #{var.$heading-pad-standard};
+        --row-pad: #{var.$row-pad-standard};
         margin-left: var.$side-width;
         padding-inline: calc(0.1 * (100% - var.$side-width));
     }
 
     @media (max-width: var.$tablet) {
+        --heading-pad: #{var.$heading-pad-tablet};
+        --row-pad: #{var.$row-pad-tablet};
         margin: 0;
         padding-block: 10px;
         padding-inline: 5%;
