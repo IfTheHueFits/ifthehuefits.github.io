@@ -31,7 +31,6 @@ Social media and navigation icons are provided by the following licenses:
 - [Close](https://www.iconfinder.com/icons/5402366/close_cross_delete_remove_cancel_ui_icon) icon by [amoghdesign](https://www.iconfinder.com/amoghdesign) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 
 Software libraries are provided by the following licenses:
-- [jQuery](https://jquery.org/license/) by [The OpenJS Foundation](https://openjsf.org/) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
 - [Flickity](https://flickity.metafizzy.co/) by [Metafizzy](https://github.com/metafizzy) is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 - [Jekyll](https://jekyllrb.com/) by [Jekyll](https://github.com/jekyll) is licensed under the [MIT license](https://tldrlegal.com/license/mit-license)
 - [Jekyll Picture Tag](https://github.com/rbuchberger/jekyll_picture_tag) by [Robert Buchberger](https://github.com/rbuchberger) is licensed under [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)
