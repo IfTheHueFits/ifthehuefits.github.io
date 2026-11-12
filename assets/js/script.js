@@ -1,11 +1,6 @@
 ---
 layout: none
 ---
-function topFunction() {
-	document.body.scrollTop = 0; // For Safari
-	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
 function swap_background(file, backgrounds) {
 	for (i=0; i<2; i++){
 		if (backgrounds[i].className.includes("img-on")){
@@ -16,16 +11,6 @@ function swap_background(file, backgrounds) {
 			backgrounds[i].className += " img-on";
 		}
 	}
-}
-
-function executeIfFileExist(src, callback) {
-    var xhr = new XMLHttpRequest()
-    xhr.onreadystatechange = function() {
-        if (this.readyState === this.DONE) {
-            callback()
-        }
-    }
-    xhr.open('HEAD', src)
 }
 
 function gen_background_file(srcset, ratio, backgrounds){
@@ -58,9 +43,6 @@ function gen_background_file(srcset, ratio, backgrounds){
 }
 
 function init(){
-	// scroll to top on page change
-	topFunction();
-
 	// PART 1 if there is a gallery fade in gallery images once loaded
 	document.querySelectorAll(".gallery-item img").forEach(function(img){
 		if (img.complete) {
