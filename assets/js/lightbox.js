@@ -1,15 +1,22 @@
----
-layout: none
----
 /*
- * - Add an event listener for document click
- * - Define a function that filters the unwanted click events on the document
+ * Manages the lightbox carousel and overlay.
  */
 
 // configure carousel.
 let flkty;
 let flkty_set = false;
 let lightbox_visible = false;
+
+function openOverlay(lightbox, closeBtn, { alignItems, showNav }) {
+	lightbox.classList.add('visible');
+	lightbox.style.alignItems = alignItems;
+	lightbox.style.display = "flex";
+	closeBtn.style.display = "block";
+	if (showNav) {
+		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
+	}
+	lightbox_visible = true;
+}
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
@@ -89,20 +96,11 @@ function lightboxClick(event) {
 		}
 		flkty.select(i, true, true);
 
-		lightbox.classList.add('visible');
-		lightbox.style.alignItems = "center";
-		lightbox.style.display = "flex";
-		closeBtn.style.display = "block";
-		lightbox_visible = true;
+		openOverlay(lightbox, closeBtn, { alignItems: "center", showNav: false });
 	}
 
 	else if (mobileBtn) {
-		lightbox.classList.add('visible');
-		lightbox.style.alignItems = "initial";
-		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
-		lightbox.style.display = "flex";
-		closeBtn.style.display = "block";
-		lightbox_visible = true;
+		openOverlay(lightbox, closeBtn, { alignItems: "initial", showNav: true });
 	}
 
 }
