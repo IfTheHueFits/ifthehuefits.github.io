@@ -84,7 +84,9 @@ init();
 try {
     const swup = new Swup({
         containers: ['.side-heading', '.main-window'],
-        plugins: [new SwupScrollPlugin()]
+        plugins: [new SwupScrollPlugin({
+            animateScroll: false,
+        })]
     });
     swup.on('willReplaceContent', unload);
     swup.on('contentReplaced', init);
