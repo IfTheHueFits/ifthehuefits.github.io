@@ -1,0 +1,13 @@
+# Open monthly PRs when Ruby gems or Actions majors/patches move.
+# Those PRs run checks.yml; merge only if the site still builds.
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directory: /
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
