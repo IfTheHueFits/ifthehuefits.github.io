@@ -153,7 +153,6 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-paginate
-  jekyll-sass-converter (~> 3.0)
   jekyll-seo-tag
   jekyll-sitemap
   jekyll_picture_tag (~> 2.1)
