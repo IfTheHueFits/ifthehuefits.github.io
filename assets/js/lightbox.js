@@ -1,138 +1,107 @@
----
-layout: none
----
 /*
- * - Add an event listener for document click
- * - Define a function that filters the unwanted click events on the document
+ * Manages the lightbox carousel and overlay.
  */
 
 // configure carousel.
-var flkty
-var flkty_set = false;
-var lightbox_visible = false;
-var comments_on = false;
+let flkty;
+let flkty_set = false;
+let lightbox_visible = false;
+
+function openOverlay(lightbox, closeBtn, { alignItems, showNav }) {
+    lightbox.classList.add('visible');
+    lightbox.style.alignItems = alignItems;
+    lightbox.style.display = "flex";
+    closeBtn.style.display = "block";
+    if (showNav) {
+        lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
+    }
+    lightbox_visible = true;
+}
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
 
 // Define a function that filters the unwanted click events on the document
 function lightboxClick(event) {
-	var elem = event.target,
-		lightboxCar = document.getElementById('lightbox-carousel'),
-		lightbox = document.getElementById("lightbox-overlay"),
-		closeBtn = document.querySelector('.close')
+    const target = event.target;
+    const lightboxCar = document.getElementById('lightbox-carousel');
+    const lightbox = document.getElementById("lightbox-overlay");
+    const closeBtn = document.querySelector('.close');
+    const img = target.closest('main img');
+    const mobileBtn = target.closest('#mobile');
 
-	// If we click any of these 2 elements, close the lightbox
-	if (elem.id == 'comments') {
-		commentbox = document.querySelector('.comments');
-		commentbox.id="graphcomment";
-		elem.id='off';
-		// comments_on = true;
+    if (lightbox_visible){
+        if (target === lightbox || target.closest('#close') || target.closest('#lightbox-overlay nav')) {
+            event.preventDefault();
 
+            lightbox.classList.remove('visible');
+            if (flkty_set){
+                flkty.destroy()
+                lightboxCar.innerHTML = '';
+                flkty_set = false;
+            }
+            lightboxCar.style.display = "none";
+            lightbox.getElementsByTagName("NAV")[0].style.display = "none";
+            closeBtn.style.display = "none";
+            lightbox_visible = false;
+        }
+    }
+    else if (img) {
+        const pageImgs = document.querySelector("main").getElementsByTagName("img");
+        lightboxCar.style.display = "initial";
+        flkty = new Flickity( '#lightbox-carousel', {
+            cellAlign: 'center',
+            lazyLoad: true,
+            pageDots: false,
+            setGallerySize: false // flickity gallery doesn't show if this is not set to false
+        });
 
-		// comment box parameters that need to be set based on the website
-		var __semio__params = {
-			graphcommentId: "If-the-Hue-Fits", // do not change, used to match with commentbox
+        flkty_set = true;
 
-			behaviour: {
-				// HIGHLY RECOMMENDED
-				uid: commentbox.dataset.uid, // uniq identifer for the comments thread on your page (ex: your page id)
-			}
-		}
+        // find clicked element in list
+        let i;
+        for (let j=0; j<pageImgs.length; j++){
+            if (pageImgs[j] == img){
+                i = j;
+                break;
+            }
+        }
 
-		// commentbox setup DO NOT EDIT
-		function __semio__onload() {
-			__semio__gc_graphlogin(__semio__params)
-		}
+        // load images as new div in page
+        // NOTE if not lazloaded, opacity needs to be set to 1
+        /* NOTE in jekyll serve, the lazyload appears that it might be causing
+        some timeout or bad requests, if this causes a problem on the server
+        a manual lazy load needs to be implemented*/
+        for (let j=0; j<pageImgs.length; j++){
+            const newCell = document.createElement("div");
+            newCell.className = "gallery-cell";
 
+            // clone img from the main page
+            const newImg = pageImgs[j].cloneNode(true);
+            newImg.className = "carousel-image";
 
-		(function() {
-			var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-			gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-		})();
+            // set the data load attributes for flickity from the img div
+            newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
+            newImg.setAttribute("data-flickity-lazyload", newImg.src );
+            // now clear the src attributes in the actual image so they don't automatically load
+            newImg.srcset = '';
+            newImg.src = '';
+            // remove any bespoke styling such as height limits
+            newImg.style = '';
 
-	}
-	else if (lightbox_visible){
-		if (elem.id == 'lightbox-overlay' || elem.tagName == "NAV" || elem.tagName == "A" || elem.closest('#close')) {
-			event.preventDefault();
+            // sizes describes the image on the page, not in the full-screen
+            // carousel, so let the browser fall back to 100vw
+            newImg.removeAttribute('sizes');
+            newCell.appendChild(newImg);
+            flkty.append(newCell);
+        }
+        flkty.select(i, true, true);
 
-			lightbox.classList.remove('visible');
-			if (flkty_set){
-				flkty.destroy()
-				lightboxCar.innerHTML = '';
-				flkty_set = false;
-			}
-			lightboxCar.style.display = "none";
-			lightbox.getElementsByTagName("NAV")[0].style.display = "none";
-			closeBtn.style.display = "none";
-			lightbox_visible = false;
-		}
-	}
-	else if ((elem.tagName == "IMG") && !(lightbox.classList.contains('visible'))) {
-		pageImgs = document.querySelector("main").getElementsByTagName("img");
-		lightboxCar.style.display = "initial";
-		flkty = new Flickity( '#lightbox-carousel', {
-			cellAlign: 'center',
-			lazyLoad: true,
-			pageDots: false
-		});
+        openOverlay(lightbox, closeBtn, { alignItems: "center", showNav: false });
+    }
 
-		flkty_set = true;
-
-		// find clicked element in list
-		var i;
-		for (j=0; j<pageImgs.length; j++){
-			if (pageImgs[j] == elem){
-				i = j;
-				break;
-			}
-		}
-
-		// load images as new div in page
-		// NOTE if not lazloaded, opacity needs to be set to 1
-		/* NOTE in jekyll serve, the lazyload appears that it might be causing
-		some timeout or bad requests, if this causes a problem on the server
-		a manual lazy load needs to be implemented*/
-		for (j=0; j<pageImgs.length; j++){
-			var newCell = document.createElement("div");
-			newCell.className = "gallery-cell";
-
-			// clone img from the main page
-			var newImg = pageImgs[j].cloneNode(true);
-			newImg.className = "carousel-image";
-
-			// set the data load attributes for flickity from the img div
-			newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
-			newImg.setAttribute("data-flickity-lazyload", newImg.src );
-			// now clear the src attributes in the actual image so they don't automatically load
-			newImg.srcset = '';
-			newImg.src = '';
-			// remove any bespoke styling such as height limits
-			newImg.style = '';
-
-			// sizes describes the image on the page, not in the full-screen
-			// carousel, so let the browser fall back to 100vw
-			newImg.removeAttribute('sizes');
-			newCell.appendChild(newImg);
-			flkty.append(newCell);
-		}
-		flkty.select(i, true, true);
-
-		lightbox.classList.add('visible');
-		lightbox.style.alignItems = "center";
-		lightbox.style.display = "flex";
-		closeBtn.style.display = "block";
-		lightbox_visible = true;
-	}
-
-	else if (elem.closest('#mobile')) {
-		lightbox.classList.add('visible');
-		lightbox.style.alignItems = "initial";
-		lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
-		lightbox.style.display = "flex";
-		closeBtn.style.display = "block";
-		lightbox_visible = true;
-	}
+    else if (mobileBtn) {
+        openOverlay(lightbox, closeBtn, { alignItems: "initial", showNav: true });
+    }
 
 }
