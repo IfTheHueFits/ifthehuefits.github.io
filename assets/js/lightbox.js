@@ -52,7 +52,8 @@ function lightboxClick(event) {
         flkty = new Flickity( '#lightbox-carousel', {
             cellAlign: 'center',
             lazyLoad: true,
-            pageDots: false
+            pageDots: false,
+            setGallerySize: false // flickity gallery doesn't show if this is not set to false
         });
 
         flkty_set = true;
