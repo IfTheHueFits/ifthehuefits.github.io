@@ -32,8 +32,6 @@ paginate_path: "page:num/"
 sass:
     style: compressed
 
-include: [".nojekyll"]
-
 url: https://ifthehuefits.github.io/
 
 # Read by jekyll-seo-tag and jekyll-feed
