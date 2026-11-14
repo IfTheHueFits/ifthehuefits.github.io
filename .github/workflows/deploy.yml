@@ -36,7 +36,7 @@ jobs:
       # existing resized files, so restoring this cache avoids re-encoding
       # every photo on each push.
       - name: Cache generated images
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: _site/generated
           key: jpt-${{ hashFiles('assets/images/_2kpx/**', '_data/picture.yml') }}

@@ -27,7 +27,7 @@ jobs:
       # Same cache key as deploy.yml so PR builds reuse resized images from
       # main (and successful PR runs can warm the cache for deploy).
       - name: Cache generated images
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: _site/generated
           key: jpt-${{ hashFiles('assets/images/_2kpx/**', '_data/picture.yml') }}
