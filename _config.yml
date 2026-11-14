@@ -51,3 +51,4 @@ social:
 picture:
     source: "assets/images/_2kpx"
     output: "generated/images"
+    suppress_warnings: true

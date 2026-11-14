@@ -9,7 +9,7 @@ media_queries:
 presets:
     default:
         formats: [original]
-        widths: [600, 800, 1000]
+        widths: [600, 800, 1000, 2000]
         fallback_width: 800
         fallback_format: original
         noscript: false
@@ -17,22 +17,12 @@ presets:
         strip_metadata: true
 
 
-    smaller:
-        formats: [original]
-        widths: [400, 600, 800]
-        fallback_width: 600
-        sizes:
-            mobile: calc(100vw-10px)
-            tablet: calc(100vw-25px)
-            standard_screen: 601px
-            wide: 601px
-
     # Thumbnails in _includes/gallery.html. Sizes are the width of a 3:2
     # landscape image at the --row-height of each breakpoint in gallery.scss.
     gallery_html:
         markup: img
         formats: [original]
-        widths: [250, 600, 1000]
+        widths: [250, 600, 1000, 2000]
         fallback_width: 600
         sizes:
             mobile: 60vw
@@ -52,23 +42,4 @@ presets:
     banner_srcset:
         markup: naked_srcset
         formats: [original]
-        widths: [600, 800, 1000]
-
-    # about/holi.jpg is 720px wide. Same banner output as banner_srcset, asking
-    # only for widths the file has.
-    banner_srcset_720:
-        markup: naked_srcset
-        formats: [original]
-        widths: [600, 720]
-        fallback_width: 720
-
-    # 2021-10-31-compendium/soper.jpg and penaut.jpg are 680px wide. Same output
-    # as default, asking only for widths the files have.
-    max_680:
-        formats: [original]
-        widths: [600, 680]
-        fallback_width: 680
-        fallback_format: original
-        noscript: false
-        link_source: false
-        strip_metadata: true
+        widths: [600, 800, 1000, 2000]

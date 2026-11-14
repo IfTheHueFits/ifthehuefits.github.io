@@ -55,11 +55,10 @@ Markdown images; paths relative to the post file (or under `picture.source` in `
 
 Optional Kramdown-style IAL after an image is passed through to `image.html`:
 
-- `preset` — Jekyll Picture Tag preset (for sources narrower than the default widths)
+- `preset` — Jekyll Picture Tag preset (optional; default is fine for most images)
 - `style` — inline CSS on the `<img>`
 
 ```markdown
-![David Soper's Eldar Warrior](../assets/images/_2kpx/folder/soper.jpg "Caption"){: preset="max_680"}
 ![Skin paint mixes](../assets/images/_2kpx/folder/skin.jpg){: style="max-width:250px"}
 ```
 
