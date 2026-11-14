@@ -1,0 +1,40 @@
+# Build the Jekyll site on pull requests (no deploy).
+# Post validator and html-proofer run inside `jekyll build`.
+name: Checks
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Install image tools
+        run: sudo apt-get update && sudo apt-get install -y libvips-tools imagemagick
+
+      # Same cache key as deploy.yml so PR builds reuse resized images from
+      # main (and successful PR runs can warm the cache for deploy).
+      - name: Cache generated images
+        uses: actions/cache@v4
+        with:
+          path: _site/generated
+          key: jpt-${{ hashFiles('assets/images/_2kpx/**', '_data/picture.yml') }}
+          restore-keys: |
+            jpt-
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
