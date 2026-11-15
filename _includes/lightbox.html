@@ -3,9 +3,16 @@
 <dialog id="lightbox-overlay" aria-label="Lightbox" tabindex="-1">
 	<div id="lightbox-carousel">
 	</div>
-	{% include navigation.html %}
 	<div class="close">
 		<button type="button" id="close" aria-label="Close">
+			{% include icons/close.svg %}
+		</button>
+	</div>
+</dialog>
+<dialog id="nav-overlay" aria-label="Navigation Lightbox" tabindex="-1">
+	{% include navigation.html %}
+	<div class="close">
+		<button type="button" id="nav-close" aria-label="Close">
 			{% include icons/close.svg %}
 		</button>
 	</div>
