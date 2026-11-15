@@ -4,7 +4,7 @@
 // Overlay
 // -----------------------------------------------------------------------------
 
-#lightbox-overlay {
+dialog {
     opacity: 0;
     padding: 0;
     border: 0;
@@ -32,9 +32,17 @@
         background: transparent;
     }
 
-    nav {
-        display: none;
-        margin-top: 20px;
+
+    &#image-overlay {
+        align-items: center;
+    }
+
+    &#nav-overlay {
+        align-items: initial;
+
+        nav {
+            margin-top: 20px;
+        }
     }
 }
 

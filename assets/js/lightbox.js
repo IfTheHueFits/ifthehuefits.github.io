@@ -7,15 +7,7 @@ let flkty;
 let flkty_set = false;
 
 function openOverlay(type) {
-    const alignment = {
-        "nav": "initial",
-        "lightbox": "center"
-    }
-    if (type === "image") {
-        type = "lightbox";
-    }
     const lightbox = document.getElementById(type + "-overlay");
-    lightbox.style.alignItems = alignment[type];
     lightbox.showModal();
     lightbox.focus();
     lightbox.classList.add('visible');
@@ -23,7 +15,7 @@ function openOverlay(type) {
 
 function dismissOverlay() {
     const lightboxCar = document.getElementById('lightbox-carousel');
-    const lightbox = document.getElementById("lightbox-overlay");
+    const lightbox = document.getElementById("image-overlay");
     if (!lightbox.open || !lightbox.classList.contains('visible')) return;
 
     lightbox.classList.remove('visible');
@@ -103,9 +95,8 @@ document.addEventListener('click', lightboxClick);
 document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
 document.getElementById("close").addEventListener("click", (event) => dismissOverlay());
 
-const lightboxRoot = document.getElementById("lightbox-overlay");
 // Escape closes immediately unless cancelled; fade out instead.
-lightboxRoot.addEventListener('cancel', (event) => {
+document.getElementById("image-overlay").addEventListener('cancel', (event) => {
     event.preventDefault();
-    dismissOverlay(lightboxRoot, document.getElementById('lightbox-carousel'));
+    dismissOverlay();
 });
