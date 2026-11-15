@@ -15,14 +15,15 @@ function openOverlay(type) {
         type = "lightbox";
     }
     const lightbox = document.getElementById(type + "-overlay");
-    console.log(alignment[type]);
     lightbox.style.alignItems = alignment[type];
     lightbox.showModal();
     lightbox.focus();
     lightbox.classList.add('visible');
 }
 
-function dismissOverlay(lightbox, lightboxCar) {
+function dismissOverlay() {
+    const lightboxCar = document.getElementById('lightbox-carousel');
+    const lightbox = document.getElementById("lightbox-overlay");
     if (!lightbox.open || !lightbox.classList.contains('visible')) return;
 
     lightbox.classList.remove('visible');
@@ -93,31 +94,14 @@ function buildCarousel(img){
 
 // Define a function that filters the unwanted click events on the document
 function lightboxClick(event) {
-    const target = event.target;
-    const lightboxCar = document.getElementById('lightbox-carousel');
-    const lightbox = document.getElementById("lightbox-overlay");
-    const img = target.closest('main img');
-    const mobileBtn = target.closest('#mobile');
-
-    // if the lightbox is open, dismiss it
-    if (lightbox.open){
-        if (target === lightbox || target.closest('#close') || target.closest('#lightbox-overlay nav')) {
-            event.preventDefault();
-            dismissOverlay(lightbox, lightboxCar);
-        }
-    }
-    // if the image is clicked, open the lightbox
-    else if (img) {
-        buildCarousel(img);
-    }
-
-    else if (mobileBtn) {
-        openOverlay("nav");
-    }
+    if (event.target.tagName !== 'IMG') return;
+    buildCarousel(event.target);
 }
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
+document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
+document.getElementById("close").addEventListener("click", (event) => dismissOverlay());
 
 const lightboxRoot = document.getElementById("lightbox-overlay");
 // Escape closes immediately unless cancelled; fade out instead.
