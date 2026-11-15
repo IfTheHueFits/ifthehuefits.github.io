@@ -4,7 +4,6 @@
 
 // configure carousel.
 let flkty;
-let flkty_set = false;
 
 function openOverlay(type) {
     const lightbox = document.getElementById(type + "-overlay");
@@ -13,22 +12,18 @@ function openOverlay(type) {
     lightbox.classList.add('visible');
 }
 
-function dismissOverlay() {
-    const lightboxCar = document.getElementById('lightbox-carousel');
-    const lightbox = document.getElementById("image-overlay");
-    if (!lightbox.open || !lightbox.classList.contains('visible')) return;
-
+function dismissOverlay(type) {
+    const lightbox = document.getElementById(type + "-overlay");
     lightbox.classList.remove('visible');
-
-    // event listener for transition end to ensure the overlay is closed after the transition
     lightbox.addEventListener('transitionend', function onFade(event) {
         if (event.propertyName !== 'opacity') return;
         lightbox.close();
         lightbox.removeEventListener('transitionend', onFade);
-        if (flkty_set){
+
+        if (type === "image") {
+            const lightboxCar = document.getElementById('lightbox-carousel');
             flkty.destroy()
             lightboxCar.innerHTML = '';
-            flkty_set = false;
         }
     });
 }
@@ -38,15 +33,12 @@ function buildCarousel(img){
     const pageImgs = document.querySelector("main").getElementsByTagName("img");
     lightboxCar.style.display = "initial";
     // Open first so Flickity can measure a laid-out dialog (closed <dialog> is display:none).
-    openOverlay("image");
     flkty = new Flickity( '#lightbox-carousel', {
         cellAlign: 'center',
         lazyLoad: true,
         pageDots: false,
         setGallerySize: false // flickity gallery doesn't show if this is not set to false
     });
-
-    flkty_set = true;
 
     // find clicked element in list
     let i;
@@ -87,16 +79,20 @@ function buildCarousel(img){
 // Define a function that filters the unwanted click events on the document
 function lightboxClick(event) {
     if (event.target.tagName !== 'IMG') return;
+    openOverlay("image");
     buildCarousel(event.target);
 }
 
 // Add an event listener for document click
 document.addEventListener('click', lightboxClick);
 document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
-document.getElementById("close").addEventListener("click", (event) => dismissOverlay());
 
-// Escape closes immediately unless cancelled; fade out instead.
-document.getElementById("image-overlay").addEventListener('cancel', (event) => {
-    event.preventDefault();
-    dismissOverlay();
-});
+const lightboxTypes = ["image", "nav"]
+for (const type of lightboxTypes){
+    document.getElementById(type + "-close").addEventListener("click", (event) => dismissOverlay(type));
+    // Escape closes immediately unless cancelled; fade out instead.
+    document.getElementById(type + "-overlay").addEventListener('cancel', (event) => {
+        event.preventDefault();
+        dismissOverlay(type);
+    });
+}
