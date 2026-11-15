@@ -29,9 +29,7 @@ function dismissOverlay(type) {
 }
 
 function buildCarousel(img){
-    const lightboxCar = document.getElementById('lightbox-carousel');
     const pageImgs = document.querySelector("main").getElementsByTagName("img");
-    lightboxCar.style.display = "initial";
     // Open first so Flickity can measure a laid-out dialog (closed <dialog> is display:none).
     flkty = new Flickity( '#lightbox-carousel', {
         cellAlign: 'center',
