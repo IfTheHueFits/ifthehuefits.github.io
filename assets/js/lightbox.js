@@ -80,9 +80,13 @@ function dismissOverlay(type) {
     });
 }
 
-document.querySelector("main").addEventListener("click", openImgOverlay);
-document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
+// events that get replaced on swup so need to be reloaded later in page.js
+function initLightboxEvents(){
+    document.querySelector("main").addEventListener("click", openImgOverlay);
+    document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
+}
 
+initLightboxEvents();
 const lightboxTypes = ["image", "nav"]
 for (const type of lightboxTypes){
     document.getElementById(type + "-close").addEventListener("click", (event) => dismissOverlay(type));
