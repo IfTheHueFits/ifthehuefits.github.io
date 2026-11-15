@@ -9,11 +9,11 @@ function openOverlay(type) {
     const lightbox = document.getElementById(type + "-overlay");
     lightbox.showModal();
     lightbox.focus();
-    lightbox.classList.add('visible');
+    lightbox.classList.add("visible");
 }
 
 function openImgOverlay(event) {
-    if (event.target.tagName !== 'IMG') return;
+    if (event.target.tagName !== "IMG") return;
     openOverlay("image");
     buildCarousel(event.target);
 }
@@ -21,11 +21,11 @@ function openImgOverlay(event) {
 function buildCarousel(img){
     const pageImgs = document.querySelector("main").getElementsByTagName("img");
     // Open first so Flickity can measure a laid-out dialog (closed <dialog> is display:none).
-    flkty = new Flickity( '#lightbox-carousel', {
-        cellAlign: 'center',
+    flkty = new Flickity( "#lightbox-carousel", {
+        cellAlign: "center",
         lazyLoad: true,
         pageDots: false,
-        setGallerySize: false // flickity gallery doesn't show if this is not set to false
+        setGallerySize: false // flickity gallery doesn"t show if this is not set to false
     });
 
     // find clicked element in list
@@ -49,15 +49,15 @@ function buildCarousel(img){
         // set the data load attributes for flickity from the img div
         newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
         newImg.setAttribute("data-flickity-lazyload", newImg.src );
-        // now clear the src attributes in the actual image so they don't automatically load
-        newImg.srcset = '';
-        newImg.src = '';
+        // now clear the src attributes in the actual image so they don"t automatically load
+        newImg.srcset = "";
+        newImg.src = "";
         // remove any bespoke styling such as height limits
-        newImg.style = '';
+        newImg.style = "";
 
         // sizes describes the image on the page, not in the full-screen
         // carousel, so let the browser fall back to 100vw
-        newImg.removeAttribute('sizes');
+        newImg.removeAttribute("sizes");
         newCell.appendChild(newImg);
         flkty.append(newCell);
     }
@@ -66,28 +66,28 @@ function buildCarousel(img){
 
 function dismissOverlay(type) {
     const lightbox = document.getElementById(type + "-overlay");
-    lightbox.classList.remove('visible');
-    lightbox.addEventListener('transitionend', function onFade(event) {
-        if (event.propertyName !== 'opacity') return;
+    lightbox.classList.remove("visible");
+    lightbox.addEventListener("transitionend", function onFade(event) {
+        if (event.propertyName !== "opacity") return;
         lightbox.close();
-        lightbox.removeEventListener('transitionend', onFade);
+        lightbox.removeEventListener("transitionend", onFade);
 
         if (type === "image") {
-            const lightboxCar = document.getElementById('lightbox-carousel');
+            const lightboxCar = document.getElementById("lightbox-carousel");
             flkty.destroy()
-            lightboxCar.innerHTML = '';
+            lightboxCar.innerHTML = "";
         }
     });
 }
 
-document.querySelector("main").addEventListener('click', openImgOverlay);
+document.querySelector("main").addEventListener("click", openImgOverlay);
 document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
 
 const lightboxTypes = ["image", "nav"]
 for (const type of lightboxTypes){
     document.getElementById(type + "-close").addEventListener("click", (event) => dismissOverlay(type));
     // Escape closes immediately unless cancelled; fade out instead.
-    document.getElementById(type + "-overlay").addEventListener('cancel', (event) => {
+    document.getElementById(type + "-overlay").addEventListener("cancel", (event) => {
         event.preventDefault();
         dismissOverlay(type);
     });
