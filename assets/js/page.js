@@ -46,6 +46,8 @@ function gen_background_file(srcset, ratio, backgrounds){
 }
 
 function init(){
+    initLightboxEvents(); // from lightbox.js
+
     // PART 1 if there is a gallery fade in gallery images once loaded
     document.querySelectorAll(".gallery-item img").forEach(function(img){
         if (img.complete) {

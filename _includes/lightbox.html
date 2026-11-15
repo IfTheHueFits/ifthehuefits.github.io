@@ -1,13 +1,19 @@
 <!-- lightbox snippet for images to be expanded into, styling in lightbox.scss -->
 
-<div id="lightbox-overlay">
+<dialog id="image-overlay" aria-label="Lightbox" tabindex="-1">
 	<div id="lightbox-carousel">
 	</div>
-	{% include navigation.html %}
 	<div class="close">
-		<button type="button" id="close" aria-label="Close">
+		<button type="button" id="image-close" aria-label="Close">
 			{% include icons/close.svg %}
 		</button>
 	</div>
-</div> <!-- end lightbox-overlay -->
-
+</dialog>
+<dialog id="nav-overlay" aria-label="Navigation Lightbox" tabindex="-1">
+	{% include navigation.html %}
+	<div class="close">
+		<button type="button" id="nav-close" aria-label="Close">
+			{% include icons/close.svg %}
+		</button>
+	</div>
+</dialog>

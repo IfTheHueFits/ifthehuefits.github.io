@@ -1,107 +1,96 @@
 /*
- * Manages the lightbox carousel and overlay.
+ * Manages the nav and image lightboxes
  */
 
-// configure carousel.
 let flkty;
-let flkty_set = false;
-let lightbox_visible = false;
 
-function openOverlay(lightbox, closeBtn, { alignItems, showNav }) {
-    lightbox.classList.add('visible');
-    lightbox.style.alignItems = alignItems;
-    lightbox.style.display = "flex";
-    closeBtn.style.display = "block";
-    if (showNav) {
-        lightbox.getElementsByTagName("NAV")[0].style.display = "flex";
-    }
-    lightbox_visible = true;
+function openOverlay(type) {
+    const lightbox = document.getElementById(type + "-overlay");
+    lightbox.showModal();
+    lightbox.focus();
+    lightbox.classList.add("visible");
 }
 
-// Add an event listener for document click
-document.addEventListener('click', lightboxClick);
+function openImgOverlay(event) {
+    if (event.target.tagName !== "IMG") return;
+    // Open first so Flickity can measure a laid-out dialog (closed <dialog> is display:none).
+    openOverlay("image");
+    buildCarousel(event.target);
+}
 
-// Define a function that filters the unwanted click events on the document
-function lightboxClick(event) {
-    const target = event.target;
-    const lightboxCar = document.getElementById('lightbox-carousel');
-    const lightbox = document.getElementById("lightbox-overlay");
-    const closeBtn = document.querySelector('.close');
-    const img = target.closest('main img');
-    const mobileBtn = target.closest('#mobile');
+function buildCarousel(img){
+    const pageImgs = document.querySelector("main").getElementsByTagName("img");
+    flkty = new Flickity( "#lightbox-carousel", {
+        cellAlign: "center",
+        lazyLoad: true,
+        pageDots: false,
+        setGallerySize: false // flickity gallery doesn"t show if this is not set to false
+    });
 
-    if (lightbox_visible){
-        if (target === lightbox || target.closest('#close') || target.closest('#lightbox-overlay nav')) {
-            event.preventDefault();
+    // load images as new div in page
+    for (let j=0; j<pageImgs.length; j++){
+        const newCell = document.createElement("div");
+        newCell.className = "gallery-cell";
 
-            lightbox.classList.remove('visible');
-            if (flkty_set){
-                flkty.destroy()
-                lightboxCar.innerHTML = '';
-                flkty_set = false;
-            }
-            lightboxCar.style.display = "none";
-            lightbox.getElementsByTagName("NAV")[0].style.display = "none";
-            closeBtn.style.display = "none";
-            lightbox_visible = false;
-        }
-    }
-    else if (img) {
-        const pageImgs = document.querySelector("main").getElementsByTagName("img");
-        lightboxCar.style.display = "initial";
-        flkty = new Flickity( '#lightbox-carousel', {
-            cellAlign: 'center',
-            lazyLoad: true,
-            pageDots: false,
-            setGallerySize: false // flickity gallery doesn't show if this is not set to false
-        });
+        // clone img from the main page
+        const newImg = pageImgs[j].cloneNode(true);
+        newImg.className = "carousel-image";
 
-        flkty_set = true;
+        // set the data load attributes for flickity from the img div
+        newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
+        newImg.setAttribute("data-flickity-lazyload", newImg.src );
 
-        // find clicked element in list
-        let i;
-        for (let j=0; j<pageImgs.length; j++){
-            if (pageImgs[j] == img){
-                i = j;
-                break;
-            }
-        }
+        // now clear the src attributes in the actual image so they don"t automatically load
+        newImg.srcset = "";
+        newImg.src = "";
+        newImg.style = "";
 
-        // load images as new div in page
-        // NOTE if not lazloaded, opacity needs to be set to 1
-        /* NOTE in jekyll serve, the lazyload appears that it might be causing
-        some timeout or bad requests, if this causes a problem on the server
-        a manual lazy load needs to be implemented*/
-        for (let j=0; j<pageImgs.length; j++){
-            const newCell = document.createElement("div");
-            newCell.className = "gallery-cell";
-
-            // clone img from the main page
-            const newImg = pageImgs[j].cloneNode(true);
-            newImg.className = "carousel-image";
-
-            // set the data load attributes for flickity from the img div
-            newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
-            newImg.setAttribute("data-flickity-lazyload", newImg.src );
-            // now clear the src attributes in the actual image so they don't automatically load
-            newImg.srcset = '';
-            newImg.src = '';
-            // remove any bespoke styling such as height limits
-            newImg.style = '';
-
-            // sizes describes the image on the page, not in the full-screen
-            // carousel, so let the browser fall back to 100vw
-            newImg.removeAttribute('sizes');
-            newCell.appendChild(newImg);
-            flkty.append(newCell);
-        }
-        flkty.select(i, true, true);
-
-        openOverlay(lightbox, closeBtn, { alignItems: "center", showNav: false });
+        // sizes describes the image on the page, not in the full-screen
+        // carousel, so let the browser fall back to 100vw
+        newImg.removeAttribute("sizes");
+        newCell.appendChild(newImg);
+        flkty.append(newCell);
     }
 
-    else if (mobileBtn) {
-        openOverlay(lightbox, closeBtn, { alignItems: "initial", showNav: true });
+    // find clicked element in list
+    let i;
+    for (let j=0; j<pageImgs.length; j++){
+        if (pageImgs[j] == img){
+            i = j;
+            break;
+        }
     }
+    flkty.select(i, true, true);
+}
 
+function dismissOverlay(type) {
+    const lightbox = document.getElementById(type + "-overlay");
+    lightbox.classList.remove("visible");
+    lightbox.addEventListener("transitionend", function onFade(event) {
+        if (event.propertyName !== "opacity") return;
+        lightbox.close();
+        lightbox.removeEventListener("transitionend", onFade);
+
+        if (type === "image") {
+            const lightboxCar = document.getElementById("lightbox-carousel");
+            flkty.destroy()
+            lightboxCar.innerHTML = "";
+        }
+    });
+}
+
+// events that get replaced on swup - this is called in page.js
+function initLightboxEvents(){
+    document.querySelector("main").addEventListener("click", openImgOverlay);
+    document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
+}
+
+const lightboxTypes = ["image", "nav"]
+for (const type of lightboxTypes){
+    document.getElementById(type + "-close").addEventListener("click", (event) => dismissOverlay(type));
+    // Escape closes immediately unless cancelled; fade out instead.
+    document.getElementById(type + "-overlay").addEventListener("cancel", (event) => {
+        event.preventDefault();
+        dismissOverlay(type);
+    });
 }
