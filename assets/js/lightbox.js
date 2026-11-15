@@ -1,8 +1,7 @@
 /*
- * Manages the lightbox carousel and overlay.
+ * Manages the nav and image lightboxes
  */
 
-// configure carousel.
 let flkty;
 
 function openOverlay(type) {
@@ -14,28 +13,19 @@ function openOverlay(type) {
 
 function openImgOverlay(event) {
     if (event.target.tagName !== "IMG") return;
+    // Open first so Flickity can measure a laid-out dialog (closed <dialog> is display:none).
     openOverlay("image");
     buildCarousel(event.target);
 }
 
 function buildCarousel(img){
     const pageImgs = document.querySelector("main").getElementsByTagName("img");
-    // Open first so Flickity can measure a laid-out dialog (closed <dialog> is display:none).
     flkty = new Flickity( "#lightbox-carousel", {
         cellAlign: "center",
         lazyLoad: true,
         pageDots: false,
         setGallerySize: false // flickity gallery doesn"t show if this is not set to false
     });
-
-    // find clicked element in list
-    let i;
-    for (let j=0; j<pageImgs.length; j++){
-        if (pageImgs[j] == img){
-            i = j;
-            break;
-        }
-    }
 
     // load images as new div in page
     for (let j=0; j<pageImgs.length; j++){
@@ -49,10 +39,10 @@ function buildCarousel(img){
         // set the data load attributes for flickity from the img div
         newImg.setAttribute("data-flickity-lazyload-srcset", newImg.srcset );
         newImg.setAttribute("data-flickity-lazyload", newImg.src );
+
         // now clear the src attributes in the actual image so they don"t automatically load
         newImg.srcset = "";
         newImg.src = "";
-        // remove any bespoke styling such as height limits
         newImg.style = "";
 
         // sizes describes the image on the page, not in the full-screen
@@ -60,6 +50,15 @@ function buildCarousel(img){
         newImg.removeAttribute("sizes");
         newCell.appendChild(newImg);
         flkty.append(newCell);
+    }
+
+    // find clicked element in list
+    let i;
+    for (let j=0; j<pageImgs.length; j++){
+        if (pageImgs[j] == img){
+            i = j;
+            break;
+        }
     }
     flkty.select(i, true, true);
 }
