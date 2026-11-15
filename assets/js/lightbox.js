@@ -12,20 +12,10 @@ function openOverlay(type) {
     lightbox.classList.add('visible');
 }
 
-function dismissOverlay(type) {
-    const lightbox = document.getElementById(type + "-overlay");
-    lightbox.classList.remove('visible');
-    lightbox.addEventListener('transitionend', function onFade(event) {
-        if (event.propertyName !== 'opacity') return;
-        lightbox.close();
-        lightbox.removeEventListener('transitionend', onFade);
-
-        if (type === "image") {
-            const lightboxCar = document.getElementById('lightbox-carousel');
-            flkty.destroy()
-            lightboxCar.innerHTML = '';
-        }
-    });
+function openImgOverlay(event) {
+    if (event.target.tagName !== 'IMG') return;
+    openOverlay("image");
+    buildCarousel(event.target);
 }
 
 function buildCarousel(img){
@@ -74,15 +64,23 @@ function buildCarousel(img){
     flkty.select(i, true, true);
 }
 
-// Define a function that filters the unwanted click events on the document
-function lightboxClick(event) {
-    if (event.target.tagName !== 'IMG') return;
-    openOverlay("image");
-    buildCarousel(event.target);
+function dismissOverlay(type) {
+    const lightbox = document.getElementById(type + "-overlay");
+    lightbox.classList.remove('visible');
+    lightbox.addEventListener('transitionend', function onFade(event) {
+        if (event.propertyName !== 'opacity') return;
+        lightbox.close();
+        lightbox.removeEventListener('transitionend', onFade);
+
+        if (type === "image") {
+            const lightboxCar = document.getElementById('lightbox-carousel');
+            flkty.destroy()
+            lightboxCar.innerHTML = '';
+        }
+    });
 }
 
-// Add an event listener for document click
-document.addEventListener('click', lightboxClick);
+document.querySelector("main").addEventListener('click', openImgOverlay);
 document.getElementById("mobile").addEventListener("click", (event) => openOverlay("nav"));
 
 const lightboxTypes = ["image", "nav"]
